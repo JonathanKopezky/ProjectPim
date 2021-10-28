@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectKopezkzky.model
+namespace ProjectKopezkzky.src.repository
 {
-    class Cliente
+    class LoginRepository
     {
     }
 }

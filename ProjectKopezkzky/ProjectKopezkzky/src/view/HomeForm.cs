@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectKopezkzky.view
+namespace ProjectKopezkzky.src.view
 {
-    public partial class LoginFmrcs : Form
+    public partial class HomeForm : Form
     {
-        public LoginFmrcs()
+        public HomeForm()
         {
             InitializeComponent();
         }
