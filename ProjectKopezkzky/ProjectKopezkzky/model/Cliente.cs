@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectKopezkzky.model
 {
-    class Clientecs
+    class Cliente
     {
     }
 }
