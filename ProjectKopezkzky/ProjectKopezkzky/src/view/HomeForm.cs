@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjectKopezkzky.src.model;
 
 namespace ProjectKopezkzky.src.view
 {
@@ -27,7 +28,6 @@ namespace ProjectKopezkzky.src.view
         {
             //Primeiro inicia o system com os painel fechados 
             panelCadCliente.Visible = false;
-            panelConsulta.Visible = false;
 
         }
 
@@ -38,10 +38,7 @@ namespace ProjectKopezkzky.src.view
                 panelCadCliente.Visible = false;
             }
 
-            if (panelConsulta.Visible == true) 
-            {
-                panelConsulta.Visible = false;
-            }
+            
         }
 
         private void ShowPanelCad(Panel Cadastro)
@@ -56,15 +53,7 @@ namespace ProjectKopezkzky.src.view
                 panelCadCliente.Visible = false;
             }
 
-            if (panelConsulta.Visible == false)
-            {
-                HidePanel();
-                panelConsulta.Visible = true;
-            }
-            else 
-            {
-                panelConsulta.Visible = false;
-            }
+  
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -80,6 +69,47 @@ namespace ProjectKopezkzky.src.view
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void txbNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            //Passando os parametros para o model
+
+            Cliente Cliente = new Cliente () ;
+            Cliente.nome = txbNome.Text;
+            Cliente.dataNascimento = txbNascimento.Text;
+            Cliente.CPF = txbCpf.Text;
+            Cliente.email = txbEmail.Text;
+            Cliente.endereco = txbEndereco.Text;
+            Cliente.complemento = txtComplemento.Text;
+            Cliente.cidade = txbCidade.Text;
+            Cliente.pais = txbCidade.Text;
+            Cliente.numero = txbnumero.Text;
+            Cliente.CEP = txbCep.Text;
+            Cliente.estado = txbEstado.Text;
+            Cliente.telefone = txbTelefone.Text;
+            //fim
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelCadCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txbNumero(object sender, EventArgs e)
+        {
+
         }
     }
 }

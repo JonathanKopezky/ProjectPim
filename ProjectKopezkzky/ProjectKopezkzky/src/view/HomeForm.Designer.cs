@@ -40,26 +40,22 @@ namespace ProjectKopezkzky.src.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCargo = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
-            this.lblCargo = new System.Windows.Forms.Label();
-            this.LblNome = new System.Windows.Forms.Label();
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelCadCliente = new System.Windows.Forms.Panel();
-            this.panelConsulta = new System.Windows.Forms.Panel();
-            this.lblConsulta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txbNascimento = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbEndereco = new System.Windows.Forms.TextBox();
-            this.txbNumero = new System.Windows.Forms.TextBox();
+            this.txbnumero = new System.Windows.Forms.TextBox();
             this.txbCep = new System.Windows.Forms.TextBox();
             this.txbEstado = new System.Windows.Forms.TextBox();
             this.txbCpf = new System.Windows.Forms.TextBox();
             this.txbTelefone = new System.Windows.Forms.TextBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbCidade = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
@@ -76,7 +72,6 @@ namespace ProjectKopezkzky.src.view
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelCadCliente.SuspendLayout();
-            this.panelConsulta.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,14 +135,13 @@ namespace ProjectKopezkzky.src.view
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.labelCargo);
             this.panel1.Controls.Add(this.labelName);
-            this.panel1.Controls.Add(this.lblCargo);
-            this.panel1.Controls.Add(this.LblNome);
             this.panel1.Controls.Add(this.btnHomeSair);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(784, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 587);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // labelCargo
             // 
@@ -167,26 +161,6 @@ namespace ProjectKopezkzky.src.view
             this.labelName.Size = new System.Drawing.Size(0, 15);
             this.labelName.TabIndex = 3;
             // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.ForeColor = System.Drawing.Color.White;
-            this.lblCargo.Location = new System.Drawing.Point(26, 108);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(45, 15);
-            this.lblCargo.TabIndex = 2;
-            this.lblCargo.Text = "Cargo :";
-            // 
-            // LblNome
-            // 
-            this.LblNome.AutoSize = true;
-            this.LblNome.ForeColor = System.Drawing.Color.White;
-            this.LblNome.Location = new System.Drawing.Point(26, 83);
-            this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(46, 15);
-            this.LblNome.TabIndex = 1;
-            this.LblNome.Text = "Nome :";
-            // 
             // btnHomeSair
             // 
             this.btnHomeSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHomeSair.BackgroundImage")));
@@ -204,21 +178,20 @@ namespace ProjectKopezkzky.src.view
             // 
             // panelCadCliente
             // 
-            this.panelCadCliente.Controls.Add(this.panelConsulta);
             this.panelCadCliente.Controls.Add(this.label1);
             this.panelCadCliente.Controls.Add(this.btnSalvar);
             this.panelCadCliente.Controls.Add(this.btnCancelar);
             this.panelCadCliente.Controls.Add(this.textBox1);
             this.panelCadCliente.Controls.Add(this.txbNascimento);
-            this.panelCadCliente.Controls.Add(this.textBox10);
+            this.panelCadCliente.Controls.Add(this.txbEmail);
             this.panelCadCliente.Controls.Add(this.txbEndereco);
-            this.panelCadCliente.Controls.Add(this.txbNumero);
+            this.panelCadCliente.Controls.Add(this.txbnumero);
             this.panelCadCliente.Controls.Add(this.txbCep);
             this.panelCadCliente.Controls.Add(this.txbEstado);
             this.panelCadCliente.Controls.Add(this.txbCpf);
             this.panelCadCliente.Controls.Add(this.txbTelefone);
             this.panelCadCliente.Controls.Add(this.txtComplemento);
-            this.panelCadCliente.Controls.Add(this.textBox2);
+            this.panelCadCliente.Controls.Add(this.txbCidade);
             this.panelCadCliente.Controls.Add(this.txbNome);
             this.panelCadCliente.Controls.Add(this.lblPais);
             this.panelCadCliente.Controls.Add(this.lblCidade);
@@ -238,26 +211,7 @@ namespace ProjectKopezkzky.src.view
             this.panelCadCliente.Size = new System.Drawing.Size(784, 587);
             this.panelCadCliente.TabIndex = 4;
             this.panelCadCliente.Visible = false;
-            // 
-            // panelConsulta
-            // 
-            this.panelConsulta.Controls.Add(this.lblConsulta);
-            this.panelConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConsulta.Location = new System.Drawing.Point(0, 0);
-            this.panelConsulta.Name = "panelConsulta";
-            this.panelConsulta.Size = new System.Drawing.Size(784, 587);
-            this.panelConsulta.TabIndex = 24;
-            this.panelConsulta.Visible = false;
-            // 
-            // lblConsulta
-            // 
-            this.lblConsulta.AutoSize = true;
-            this.lblConsulta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblConsulta.Location = new System.Drawing.Point(286, 266);
-            this.lblConsulta.Name = "lblConsulta";
-            this.lblConsulta.Size = new System.Drawing.Size(75, 21);
-            this.lblConsulta.TabIndex = 0;
-            this.lblConsulta.Text = "Consulta ";
+            this.panelCadCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCadCliente_Paint);
             // 
             // label1
             // 
@@ -277,6 +231,7 @@ namespace ProjectKopezkzky.src.view
             this.btnSalvar.TabIndex = 22;
             this.btnSalvar.Text = "Salvar ";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCancelar
             // 
@@ -301,12 +256,12 @@ namespace ProjectKopezkzky.src.view
             this.txbNascimento.Size = new System.Drawing.Size(100, 23);
             this.txbNascimento.TabIndex = 2;
             // 
-            // textBox10
+            // txbEmail
             // 
-            this.textBox10.Location = new System.Drawing.Point(67, 175);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(220, 23);
-            this.textBox10.TabIndex = 3;
+            this.txbEmail.Location = new System.Drawing.Point(67, 175);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(220, 23);
+            this.txbEmail.TabIndex = 3;
             // 
             // txbEndereco
             // 
@@ -315,12 +270,13 @@ namespace ProjectKopezkzky.src.view
             this.txbEndereco.Size = new System.Drawing.Size(263, 23);
             this.txbEndereco.TabIndex = 4;
             // 
-            // txbNumero
+            // txbnumero
             // 
-            this.txbNumero.Location = new System.Drawing.Point(67, 263);
-            this.txbNumero.Name = "txbNumero";
-            this.txbNumero.Size = new System.Drawing.Size(100, 23);
-            this.txbNumero.TabIndex = 20;
+            this.txbnumero.Location = new System.Drawing.Point(67, 263);
+            this.txbnumero.Name = "txbnumero";
+            this.txbnumero.Size = new System.Drawing.Size(100, 23);
+            this.txbnumero.TabIndex = 20;
+            this.txbnumero.Click += new System.EventHandler(this.txbNumero);
             // 
             // txbCep
             // 
@@ -357,12 +313,12 @@ namespace ProjectKopezkzky.src.view
             this.txtComplemento.Size = new System.Drawing.Size(135, 23);
             this.txtComplemento.TabIndex = 10;
             // 
-            // textBox2
+            // txbCidade
             // 
-            this.textBox2.Location = new System.Drawing.Point(470, 219);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(109, 23);
-            this.textBox2.TabIndex = 11;
+            this.txbCidade.Location = new System.Drawing.Point(470, 219);
+            this.txbCidade.Name = "txbCidade";
+            this.txbCidade.Size = new System.Drawing.Size(109, 23);
+            this.txbCidade.TabIndex = 11;
             // 
             // txbNome
             // 
@@ -370,6 +326,7 @@ namespace ProjectKopezkzky.src.view
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(263, 23);
             this.txbNome.TabIndex = 1;
+            this.txbNome.TextChanged += new System.EventHandler(this.txbNome_TextChanged);
             // 
             // lblPais
             // 
@@ -498,8 +455,6 @@ namespace ProjectKopezkzky.src.view
             this.panel1.PerformLayout();
             this.panelCadCliente.ResumeLayout(false);
             this.panelCadCliente.PerformLayout();
-            this.panelConsulta.ResumeLayout(false);
-            this.panelConsulta.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,20 +471,18 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHomeSair;
-        private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.Label LblNome;
         private System.Windows.Forms.Panel panelCadCliente;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.TextBox txbNascimento;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbEndereco;
-        private System.Windows.Forms.TextBox txbNumero;
+        private System.Windows.Forms.TextBox txbnumero;
         private System.Windows.Forms.TextBox txbCep;
         private System.Windows.Forms.TextBox txbEstado;
         private System.Windows.Forms.TextBox txbCpf;
         private System.Windows.Forms.TextBox txbTelefone;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblCidade;
@@ -547,8 +500,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label labelCargo;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Panel panelConsulta;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblConsulta;
     }
 }

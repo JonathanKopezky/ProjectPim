@@ -17,7 +17,7 @@ namespace ProjectKopezkzky.src.model
         public string telefone { get; set; }
         public string endereco { get; set; }
         public string CEP { get; set; }
-        public int numero { get; set; }
+        public string numero { get; set; }
         public string complemento { get; set; }
         public string cidade { get; set; }
         public string estado { get; set; }

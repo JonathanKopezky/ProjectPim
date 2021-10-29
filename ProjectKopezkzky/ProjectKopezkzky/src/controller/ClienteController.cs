@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace ProjectKopezkzky.src.controller
 {
     class ClienteController
-    {
+    { 
+        public 
     }
+
 }
