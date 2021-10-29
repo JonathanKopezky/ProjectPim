@@ -29,40 +29,40 @@ namespace ProjectKopezkzky.src.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.passwordTXT = new System.Windows.Forms.TextBox();
+            this.cpfTXT = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.signinTXT = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox2
+            // passwordTXT
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(198, 275);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 23);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Password";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passwordTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.passwordTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordTXT.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTXT.ForeColor = System.Drawing.Color.White;
+            this.passwordTXT.Location = new System.Drawing.Point(198, 275);
+            this.passwordTXT.Name = "passwordTXT";
+            this.passwordTXT.Size = new System.Drawing.Size(229, 23);
+            this.passwordTXT.TabIndex = 1;
+            this.passwordTXT.Text = "Password";
+            this.passwordTXT.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // cpfTXT
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(198, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 23);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "Username";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.cpfTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.cpfTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cpfTXT.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cpfTXT.ForeColor = System.Drawing.Color.White;
+            this.cpfTXT.Location = new System.Drawing.Point(198, 202);
+            this.cpfTXT.Name = "cpfTXT";
+            this.cpfTXT.Size = new System.Drawing.Size(229, 23);
+            this.cpfTXT.TabIndex = 4;
+            this.cpfTXT.Text = "CPF";
+            this.cpfTXT.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // panel1
             // 
@@ -96,20 +96,20 @@ namespace ProjectKopezkzky.src.view
             this.label1.Text = "Kopezky";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // button1
+            // signinTXT
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(198, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 36);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.signinTXT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signinTXT.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.signinTXT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signinTXT.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.signinTXT.ForeColor = System.Drawing.Color.White;
+            this.signinTXT.Location = new System.Drawing.Point(198, 372);
+            this.signinTXT.Name = "signinTXT";
+            this.signinTXT.Size = new System.Drawing.Size(199, 36);
+            this.signinTXT.TabIndex = 8;
+            this.signinTXT.Text = "Sign In";
+            this.signinTXT.UseVisualStyleBackColor = true;
+            this.signinTXT.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -134,12 +134,12 @@ namespace ProjectKopezkzky.src.view
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(600, 500);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.signinTXT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cpfTXT);
+            this.Controls.Add(this.passwordTXT);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -154,12 +154,12 @@ namespace ProjectKopezkzky.src.view
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox passwordTXT;
+        private System.Windows.Forms.TextBox cpfTXT;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button signinTXT;
         private System.Windows.Forms.Button button2;
     }
 }

@@ -8,10 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ProjectKopezkzky.src.model;
+using ProjectKopezkzky.src.controller;
+using ProjectKopezkzky.src.view;
+
+
 namespace ProjectKopezkzky.src.view
 {
     public partial class LoginForm : Form
     {
+
+        LoginController loginController;
+        Funcionario funcionario;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -54,6 +63,21 @@ namespace ProjectKopezkzky.src.view
 
         private void button1_Click(object sender, EventArgs e)
         {
+            funcionario = new Funcionario();
+            loginController = new LoginController();
+
+            funcionario.CPF = this.cpfTXT.Text;
+            funcionario.senha = this.passwordTXT.Text;
+
+            if (loginController.verifyLogin(funcionario))
+            {
+                MessageBox.Show("Mais q logado Onfire");
+            }
+            else
+            {
+                MessageBox.Show("Nao deu bom, então deu ruim");
+            }
+
 
         }
 
