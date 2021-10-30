@@ -63,7 +63,8 @@ namespace ProjectKopezkzky.src.view
 
         private void CadastralClienteMenu_Click(object sender, EventArgs e)
         {
-            ShowPanelCad(panelCadCliente);
+            FormCadCliente formcadcliente = new FormCadCliente();
+            formcadcliente.ShowDialog();
         }
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)

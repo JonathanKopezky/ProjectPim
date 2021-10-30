@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace ProjectKopezkzky.src.view
 {
-    public partial class LoginForm : Form
+    public partial class FormCadCliente : Form
     {
-        public LoginForm()
+        public FormCadCliente()
         {
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void lbl_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCep_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,35 +37,34 @@ namespace ProjectKopezkzky.src.view
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void lblCpf_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void txbEmail_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            HomeForm homeForm = new HomeForm();
-            homeForm.ShowDialog();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace ProjectKopezkzky.src.controller
 {
     class ClienteController
     { 
-        public 
+ 
     }
 
 }
