@@ -112,5 +112,10 @@ namespace ProjectKopezkzky.src.view
         {
 
         }
+
+        private void btnHomeSair_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

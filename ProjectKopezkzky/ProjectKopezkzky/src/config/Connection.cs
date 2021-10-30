@@ -13,7 +13,7 @@ namespace ProjectKopezkzky.src.config
 
         public Connection()
         {
-            conn.ConnectionString = "";
+            conn.ConnectionString = @"Data Source = kopezky - database.database.windows.net; Initial Catalog = Kopezky; Persist Security Info = True; User ID = kopezky; Password = Tico#2212123";
         }
 
         public SqlConnection connect()

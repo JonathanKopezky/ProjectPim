@@ -119,14 +119,14 @@ namespace ProjectKopezkzky.src.view
             // CadastralClienteMenu
             // 
             this.CadastralClienteMenu.Name = "CadastralClienteMenu";
-            this.CadastralClienteMenu.Size = new System.Drawing.Size(167, 22);
+            this.CadastralClienteMenu.Size = new System.Drawing.Size(180, 22);
             this.CadastralClienteMenu.Text = "Cadastrar Cliente ";
             this.CadastralClienteMenu.Click += new System.EventHandler(this.CadastralClienteMenu_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
@@ -168,13 +168,14 @@ namespace ProjectKopezkzky.src.view
             this.btnHomeSair.FlatAppearance.BorderSize = 0;
             this.btnHomeSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomeSair.ForeColor = System.Drawing.Color.White;
-            this.btnHomeSair.Location = new System.Drawing.Point(99, 555);
+            this.btnHomeSair.Location = new System.Drawing.Point(99, 552);
             this.btnHomeSair.Name = "btnHomeSair";
             this.btnHomeSair.Size = new System.Drawing.Size(101, 32);
             this.btnHomeSair.TabIndex = 0;
             this.btnHomeSair.Text = "Sair";
             this.btnHomeSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHomeSair.UseVisualStyleBackColor = true;
+            this.btnHomeSair.Click += new System.EventHandler(this.btnHomeSair_Click);
             // 
             // panelCadCliente
             // 
