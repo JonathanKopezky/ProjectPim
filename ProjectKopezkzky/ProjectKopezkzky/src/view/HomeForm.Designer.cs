@@ -241,6 +241,7 @@ namespace ProjectKopezkzky.src.view
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Limpar ";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // textBox1
             // 
@@ -248,6 +249,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 23);
             this.textBox1.TabIndex = 12;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txbNascimento
             // 
@@ -255,6 +257,7 @@ namespace ProjectKopezkzky.src.view
             this.txbNascimento.Name = "txbNascimento";
             this.txbNascimento.Size = new System.Drawing.Size(100, 23);
             this.txbNascimento.TabIndex = 2;
+            this.txbNascimento.TextChanged += new System.EventHandler(this.txbNascimento_TextChanged);
             // 
             // txbEmail
             // 
@@ -262,6 +265,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(220, 23);
             this.txbEmail.TabIndex = 3;
+            this.txbEmail.TextChanged += new System.EventHandler(this.txbEmail_TextChanged);
             // 
             // txbEndereco
             // 
@@ -269,6 +273,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(263, 23);
             this.txbEndereco.TabIndex = 4;
+            this.txbEndereco.TextChanged += new System.EventHandler(this.txbEndereco_TextChanged);
             // 
             // txbnumero
             // 
@@ -277,6 +282,7 @@ namespace ProjectKopezkzky.src.view
             this.txbnumero.Size = new System.Drawing.Size(100, 23);
             this.txbnumero.TabIndex = 20;
             this.txbnumero.Click += new System.EventHandler(this.txbNumero);
+            this.txbnumero.TextChanged += new System.EventHandler(this.txbnumero_TextChanged);
             // 
             // txbCep
             // 
@@ -284,6 +290,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCep.Name = "txbCep";
             this.txbCep.Size = new System.Drawing.Size(106, 23);
             this.txbCep.TabIndex = 19;
+            this.txbCep.TextChanged += new System.EventHandler(this.txbCep_TextChanged);
             // 
             // txbEstado
             // 
@@ -291,6 +298,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEstado.Name = "txbEstado";
             this.txbEstado.Size = new System.Drawing.Size(100, 23);
             this.txbEstado.TabIndex = 18;
+            this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
             // 
             // txbCpf
             // 
@@ -298,6 +306,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(160, 23);
             this.txbCpf.TabIndex = 8;
+            this.txbCpf.TextChanged += new System.EventHandler(this.txbCpf_TextChanged);
             // 
             // txbTelefone
             // 
@@ -305,6 +314,7 @@ namespace ProjectKopezkzky.src.view
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(160, 23);
             this.txbTelefone.TabIndex = 9;
+            this.txbTelefone.TextChanged += new System.EventHandler(this.txbTelefone_TextChanged);
             // 
             // txtComplemento
             // 
@@ -312,6 +322,7 @@ namespace ProjectKopezkzky.src.view
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(135, 23);
             this.txtComplemento.TabIndex = 10;
+            this.txtComplemento.TextChanged += new System.EventHandler(this.txtComplemento_TextChanged);
             // 
             // txbCidade
             // 
@@ -319,6 +330,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(109, 23);
             this.txbCidade.TabIndex = 11;
+            this.txbCidade.TextChanged += new System.EventHandler(this.txbCidade_TextChanged);
             // 
             // txbNome
             // 
@@ -336,6 +348,7 @@ namespace ProjectKopezkzky.src.view
             this.lblPais.Size = new System.Drawing.Size(34, 15);
             this.lblPais.TabIndex = 11;
             this.lblPais.Text = "Pais :";
+            this.lblPais.Click += new System.EventHandler(this.lblPais_Click);
             // 
             // lblCidade
             // 
@@ -345,6 +358,7 @@ namespace ProjectKopezkzky.src.view
             this.lblCidade.Size = new System.Drawing.Size(50, 15);
             this.lblCidade.TabIndex = 10;
             this.lblCidade.Text = "Cidade :";
+            this.lblCidade.Click += new System.EventHandler(this.lblCidade_Click);
             // 
             // lblComplemento
             // 
@@ -354,6 +368,7 @@ namespace ProjectKopezkzky.src.view
             this.lblComplemento.Size = new System.Drawing.Size(90, 15);
             this.lblComplemento.TabIndex = 9;
             this.lblComplemento.Text = "Complemento :";
+            this.lblComplemento.Click += new System.EventHandler(this.lblComplemento_Click);
             // 
             // label9
             // 
@@ -363,6 +378,7 @@ namespace ProjectKopezkzky.src.view
             this.label9.Size = new System.Drawing.Size(57, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "Telefone :";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // lblCpf
             // 
@@ -372,6 +388,7 @@ namespace ProjectKopezkzky.src.view
             this.lblCpf.Size = new System.Drawing.Size(32, 15);
             this.lblCpf.TabIndex = 7;
             this.lblCpf.Text = "Cpf :";
+            this.lblCpf.Click += new System.EventHandler(this.lblCpf_Click);
             // 
             // lblEstado
             // 
@@ -381,6 +398,7 @@ namespace ProjectKopezkzky.src.view
             this.lblEstado.Size = new System.Drawing.Size(48, 15);
             this.lblEstado.TabIndex = 6;
             this.lblEstado.Text = "Estado :";
+            this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
             // 
             // lblCep
             // 
@@ -390,6 +408,7 @@ namespace ProjectKopezkzky.src.view
             this.lblCep.Size = new System.Drawing.Size(34, 15);
             this.lblCep.TabIndex = 5;
             this.lblCep.Text = "Cep :";
+            this.lblCep.Click += new System.EventHandler(this.lblCep_Click);
             // 
             // label5
             // 
@@ -399,6 +418,7 @@ namespace ProjectKopezkzky.src.view
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "Número :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lbl
             // 
@@ -408,6 +428,7 @@ namespace ProjectKopezkzky.src.view
             this.lbl.Size = new System.Drawing.Size(62, 15);
             this.lbl.TabIndex = 3;
             this.lbl.Text = "Endereco :";
+            this.lbl.Click += new System.EventHandler(this.lbl_Click);
             // 
             // lblEmail
             // 
@@ -417,6 +438,7 @@ namespace ProjectKopezkzky.src.view
             this.lblEmail.Size = new System.Drawing.Size(47, 15);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "E-mail :";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // labelDatanasc
             // 
@@ -426,6 +448,7 @@ namespace ProjectKopezkzky.src.view
             this.labelDatanasc.Size = new System.Drawing.Size(120, 15);
             this.labelDatanasc.TabIndex = 1;
             this.labelDatanasc.Text = "Data de Nascimento :";
+            this.labelDatanasc.Click += new System.EventHandler(this.labelDatanasc_Click);
             // 
             // labelNome
             // 
@@ -435,6 +458,7 @@ namespace ProjectKopezkzky.src.view
             this.labelNome.Size = new System.Drawing.Size(46, 15);
             this.labelNome.TabIndex = 0;
             this.labelNome.Text = "Nome :";
+            this.labelNome.Click += new System.EventHandler(this.labelNome_Click);
             // 
             // HomeForm
             // 

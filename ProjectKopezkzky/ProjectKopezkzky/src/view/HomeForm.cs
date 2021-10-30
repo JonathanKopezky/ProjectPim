@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjectKopezkzky.src.model;
+using ProjectKopezkzky.src.controller;
 
 namespace ProjectKopezkzky.src.view
 {
@@ -78,6 +79,7 @@ namespace ProjectKopezkzky.src.view
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            ClienteController ClienteController = new ClienteController();
             //Passando os parametros para o model
 
             Cliente Cliente = new Cliente () ;
@@ -95,6 +97,15 @@ namespace ProjectKopezkzky.src.view
             Cliente.telefone = txbTelefone.Text;
             //fim
 
+            if (ClienteController.VerificaCad(Cliente))
+            {
+                MessageBox.Show("criando ");
+            }
+            else 
+            {
+                MessageBox.Show("Cadastre algum cliente");
+            }
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -108,6 +119,126 @@ namespace ProjectKopezkzky.src.view
         }
 
         private void txbNumero(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbNascimento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbnumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbEstado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCpf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbTelefone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtComplemento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPais_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblComplemento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCpf_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEstado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDatanasc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNome_Click(object sender, EventArgs e)
         {
 
         }
