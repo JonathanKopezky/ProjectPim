@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectKopezkzky.src.view
 {
-    public partial class LoginForm : Form
+    public partial class FrmLogin : Form
     {
-        public LoginForm()
+        FrmHome homeForm = new FrmHome();
+
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -54,7 +56,7 @@ namespace ProjectKopezkzky.src.view
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           homeForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
