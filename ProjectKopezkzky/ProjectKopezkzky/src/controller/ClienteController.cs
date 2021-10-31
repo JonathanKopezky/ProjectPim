@@ -10,50 +10,42 @@ using System.Windows.Forms;
 namespace ProjectKopezkzky.src.controller
 {
     class ClienteController
-<<<<<<< HEAD
-    { 
- 
-=======
+
     {
-        
+        public String message = "";
 
 
-        public ClienteController() 
+        ClienteRepository clienteRepository;
+
+        public ClienteController()
         {
-            
+            new ClienteRepository();
         }
 
-        public bool VerificaCad(Cliente Cliente) 
+        public bool VerificaCad(Cliente cliente)
         {
-            ClienteRepository ClienteRepository = new ClienteRepository();
-            MessageBox.Show("chegou no Controle");
-            // Se nao forem vazio , eu mando para o repository  
-            if (!string.IsNullOrEmpty(Cliente.nome) ||
-                !string.IsNullOrEmpty(Cliente.dataNascimento) ||
-                !string.IsNullOrEmpty(Cliente.email) ||
-                !string.IsNullOrEmpty(Cliente.endereco) ||
-                !string.IsNullOrEmpty(Cliente.numero) ||
-                !string.IsNullOrEmpty(Cliente.CEP) ||
-                !string.IsNullOrEmpty(Cliente.estado) ||
-                !string.IsNullOrEmpty(Cliente.CPF) ||
-                !string.IsNullOrEmpty(Cliente.telefone) ||
-                !string.IsNullOrEmpty(Cliente.complemento) ||
-                !string.IsNullOrEmpty(Cliente.cidade) ||
-                !string.IsNullOrEmpty(Cliente.pais)
-               )
+            if (!cliente.nome.Equals("") && !cliente.sobrenome.Equals("") &&
+               !cliente.CPF.Equals("") && !cliente.RG.Equals("") &&
+               !cliente.dataNascimento.Equals("") && !cliente.genero.Equals("") &&
+               !cliente.telefone.Equals("") && !cliente.email.Equals("") &&
+               !cliente.email.Equals("") && !cliente.endereco.Equals("") &&
+               !cliente.CEP.Equals("") && !cliente.numero.Equals("") &&
+               !cliente.estado.Equals("") && !cliente.cidade.Equals("") &&
+               !cliente.pais.Equals("") && !cliente.complemento.Equals("") &&
+               !cliente.senha.Equals(""))
             {
-                 ClienteRepository.CriarCadCliente(Cliente);
+                clienteRepository.CriarCadCliente(cliente);
             }
-            else
+            else 
             {
-                return false;
+                this.message = "Preencha todos os campos !";
             }
 
             return true;
         }
 
-       
->>>>>>> a03f0a32ccbcf4441e07b33758ac43c4850a40a7
+
+
     }
 
 }

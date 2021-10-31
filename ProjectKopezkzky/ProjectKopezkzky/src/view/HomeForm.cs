@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjectKopezkzky.src.controller;
 using ProjectKopezkzky.src.model;
 
 namespace ProjectKopezkzky.src.view
@@ -95,7 +96,7 @@ namespace ProjectKopezkzky.src.view
             Cliente.estado = txbEstado.Text;
             Cliente.telefone = txbTelefone.Text;
             //fim
-
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

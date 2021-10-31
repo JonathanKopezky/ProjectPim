@@ -30,7 +30,7 @@ namespace ProjectKopezkzky.src.view
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbPais = new System.Windows.Forms.TextBox();
             this.txbNascimento = new System.Windows.Forms.TextBox();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbEndereco = new System.Windows.Forms.TextBox();
@@ -38,7 +38,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCep = new System.Windows.Forms.TextBox();
             this.txbEstado = new System.Windows.Forms.TextBox();
             this.txbCpf = new System.Windows.Forms.TextBox();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txbComplemento = new System.Windows.Forms.TextBox();
             this.txbCidade = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.lblPais = new System.Windows.Forms.Label();
@@ -54,18 +54,18 @@ namespace ProjectKopezkzky.src.view
             this.labelNome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbSobrenome = new System.Windows.Forms.TextBox();
+            this.txbRg = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbTelefone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txbSenha = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txbConfSenha = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,12 +81,13 @@ namespace ProjectKopezkzky.src.view
             this.label1.TabIndex = 48;
             this.label1.Text = "Cadastrar Clientes";
             // 
-            // textBox1
+            // txbPais
             // 
-            this.textBox1.Location = new System.Drawing.Point(590, 261);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 23);
-            this.textBox1.TabIndex = 44;
+            this.txbPais.Location = new System.Drawing.Point(590, 261);
+            this.txbPais.Name = "txbPais";
+            this.txbPais.Size = new System.Drawing.Size(160, 23);
+            this.txbPais.TabIndex = 44;
+            this.txbPais.TextChanged += new System.EventHandler(this.txbPais_TextChanged);
             // 
             // txbNascimento
             // 
@@ -138,12 +139,12 @@ namespace ProjectKopezkzky.src.view
             this.txbCpf.Size = new System.Drawing.Size(160, 23);
             this.txbCpf.TabIndex = 36;
             // 
-            // txtComplemento
+            // txbComplemento
             // 
-            this.txtComplemento.Location = new System.Drawing.Point(23, 318);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(263, 23);
-            this.txtComplemento.TabIndex = 40;
+            this.txbComplemento.Location = new System.Drawing.Point(23, 318);
+            this.txbComplemento.Name = "txbComplemento";
+            this.txbComplemento.Size = new System.Drawing.Size(263, 23);
+            this.txbComplemento.TabIndex = 40;
             // 
             // txbCidade
             // 
@@ -282,20 +283,20 @@ namespace ProjectKopezkzky.src.view
             this.label3.Text = "Sobrenome :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // txbSobrenome
             // 
-            this.textBox2.Location = new System.Drawing.Point(308, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 23);
-            this.textBox2.TabIndex = 52;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txbSobrenome.Location = new System.Drawing.Point(308, 85);
+            this.txbSobrenome.Name = "txbSobrenome";
+            this.txbSobrenome.Size = new System.Drawing.Size(263, 23);
+            this.txbSobrenome.TabIndex = 52;
+            this.txbSobrenome.TextChanged += new System.EventHandler(this.txbSobrenome_TextChanged);
             // 
-            // textBox3
+            // txbRg
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 53;
+            this.txbRg.Location = new System.Drawing.Point(23, 142);
+            this.txbRg.Name = "txbRg";
+            this.txbRg.Size = new System.Drawing.Size(100, 23);
+            this.txbRg.TabIndex = 53;
             // 
             // label4
             // 
@@ -316,12 +317,13 @@ namespace ProjectKopezkzky.src.view
             this.label6.TabIndex = 55;
             this.label6.Text = "Gênero :";
             // 
-            // textBox4
+            // txtGenero
             // 
-            this.textBox4.Location = new System.Drawing.Point(308, 142);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(263, 23);
-            this.textBox4.TabIndex = 56;
+            this.txtGenero.Location = new System.Drawing.Point(308, 142);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(263, 23);
+            this.txtGenero.TabIndex = 56;
+            this.txtGenero.TextChanged += new System.EventHandler(this.txtGenero_TextChanged);
             // 
             // label2
             // 
@@ -332,12 +334,12 @@ namespace ProjectKopezkzky.src.view
             this.label2.TabIndex = 57;
             this.label2.Text = "Telefone :";
             // 
-            // textBox5
+            // txbTelefone
             // 
-            this.textBox5.Location = new System.Drawing.Point(590, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 23);
-            this.textBox5.TabIndex = 58;
+            this.txbTelefone.Location = new System.Drawing.Point(590, 142);
+            this.txbTelefone.Name = "txbTelefone";
+            this.txbTelefone.Size = new System.Drawing.Size(160, 23);
+            this.txbTelefone.TabIndex = 58;
             // 
             // label7
             // 
@@ -348,23 +350,24 @@ namespace ProjectKopezkzky.src.view
             this.label7.TabIndex = 59;
             this.label7.Text = "Senha :";
             // 
-            // textBox6
+            // txbSenha
             // 
-            this.textBox6.Location = new System.Drawing.Point(308, 318);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(117, 23);
-            this.textBox6.TabIndex = 60;
+            this.txbSenha.Location = new System.Drawing.Point(308, 318);
+            this.txbSenha.Name = "txbSenha";
+            this.txbSenha.Size = new System.Drawing.Size(117, 23);
+            this.txbSenha.TabIndex = 60;
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(713, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSalvar.Location = new System.Drawing.Point(713, 415);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 61;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar);
             // 
             // label8
             // 
@@ -375,13 +378,13 @@ namespace ProjectKopezkzky.src.view
             this.label8.TabIndex = 62;
             this.label8.Text = "Confirmar Senha :";
             // 
-            // textBox7
+            // txbConfSenha
             // 
-            this.textBox7.Location = new System.Drawing.Point(451, 318);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(117, 23);
-            this.textBox7.TabIndex = 63;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txbConfSenha.Location = new System.Drawing.Point(451, 318);
+            this.txbConfSenha.Name = "txbConfSenha";
+            this.txbConfSenha.Size = new System.Drawing.Size(117, 23);
+            this.txbConfSenha.TabIndex = 63;
+            this.txbConfSenha.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button2
             // 
@@ -401,21 +404,21 @@ namespace ProjectKopezkzky.src.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txbConfSenha);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbRg);
+            this.Controls.Add(this.txbSobrenome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbPais);
             this.Controls.Add(this.txbNascimento);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.txbEndereco);
@@ -423,7 +426,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.txbCep);
             this.Controls.Add(this.txbEstado);
             this.Controls.Add(this.txbCpf);
-            this.Controls.Add(this.txtComplemento);
+            this.Controls.Add(this.txbComplemento);
             this.Controls.Add(this.txbCidade);
             this.Controls.Add(this.txbNome);
             this.Controls.Add(this.lblPais);
@@ -449,7 +452,7 @@ namespace ProjectKopezkzky.src.view
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbPais;
         private System.Windows.Forms.TextBox txbNascimento;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbEndereco;
@@ -457,7 +460,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox txbCep;
         private System.Windows.Forms.TextBox txbEstado;
         private System.Windows.Forms.TextBox txbCpf;
-        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.TextBox txbComplemento;
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label lblPais;
@@ -473,18 +476,18 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbSobrenome;
+        private System.Windows.Forms.TextBox txbRg;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbTelefone;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txbSenha;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txbConfSenha;
         private System.Windows.Forms.Button button2;
     }
 }

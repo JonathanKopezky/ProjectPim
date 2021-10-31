@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjectKopezkzky.src.controller;
+using ProjectKopezkzky.src.model;
 
 namespace ProjectKopezkzky.src.view
 {
     public partial class FormCadCliente : Form
     {
+        ClienteController ClienteController = new ClienteController();
         public FormCadCliente()
         {
+
             InitializeComponent();
         }
 
@@ -28,11 +32,6 @@ namespace ProjectKopezkzky.src.view
         }
 
         private void lblCep_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -64,7 +63,52 @@ namespace ProjectKopezkzky.src.view
 
         private void button2_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
+        }
+
+        private void BtnSalvar(object sender, EventArgs e)
+        {   // pasando parametros para cliente
+            Cliente cliente = new Cliente();
+            cliente.nome = txbNome.Text;
+            cliente.sobrenome = txbSobrenome.Text;
+            cliente.CPF = txbCpf.Text;
+            cliente.RG = txbRg.Text;
+            cliente.dataNascimento = txbNascimento.Text;
+            cliente.genero = txtGenero.Text;
+            cliente.telefone = txbTelefone.Text;
+            cliente.email = txbEmail.Text;
+            cliente.endereco = txbEndereco.Text;
+            cliente.CEP = txbEndereco.Text;
+            cliente.numero = txbnumero.Text;
+            cliente.estado = txbEstado.Text;
+            cliente.cidade = txbCidade.Text;
+            cliente.pais = txbPais.Text;
+            cliente.complemento = txbComplemento.Text;
+            cliente.senha = txbConfSenha.Text;
+
+            if (ClienteController.VerificaCad(cliente)) 
+            {
+                MessageBox.Show(ClienteController.message);
+            }
+           
+           
+
+
+        }
+
+        private void txbSobrenome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGenero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbPais_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
