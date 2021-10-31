@@ -21,7 +21,7 @@ namespace ProjectKopezkzky.src.view
         LoginController loginController;
         Funcionario funcionario;
 
-        public LoginForm()
+        public FrmLogin()
         {
             InitializeComponent();
         }
