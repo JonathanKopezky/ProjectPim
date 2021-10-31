@@ -14,13 +14,14 @@ namespace ProjectKopezkzky.src.repository
 {
     class ClienteRepository
     {
+        Cliente cliente = new Cliente();
         public String Message = "";
         
         SqlDataReader dr;
         SqlCommand Comando = new SqlCommand();
         Connection conn = new Connection(); 
        
-
+        //VERICAR 
 
         public bool CriarCadCliente(Cliente cliente) 
         {   // Comando para inserir os dados no banco 

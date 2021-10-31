@@ -67,7 +67,7 @@ namespace ProjectKopezkzky.src.view
         }
 
         private void BtnSalvar(object sender, EventArgs e)
-        {   // pasando parametros para cliente
+        {   // pasando parametros para cliente 
             Cliente cliente = new Cliente();
             cliente.nome = txbNome.Text;
             cliente.sobrenome = txbSobrenome.Text;
@@ -85,7 +85,7 @@ namespace ProjectKopezkzky.src.view
             cliente.pais = txbPais.Text;
             cliente.complemento = txbComplemento.Text;
             cliente.senha = txbConfSenha.Text;
-
+            //check all 
             if (ClienteController.VerificaCad(cliente)) 
             {
                 MessageBox.Show(ClienteController.message);

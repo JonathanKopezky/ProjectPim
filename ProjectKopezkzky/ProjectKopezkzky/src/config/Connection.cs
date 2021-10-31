@@ -10,10 +10,10 @@ namespace ProjectKopezkzky.src.config
     class Connection
     {
         SqlConnection conn = new SqlConnection();
-
+        //check
         public Connection()
         {
-            conn.ConnectionString = @"Data Source = kopezky - database.database.windows.net; Initial Catalog = Kopezky; Persist Security Info = True; User ID = kopezky; Password = Tico#2212123";
+          conn.ConnectionString = @"Data Source = kopezky - database.database.windows.net; Initial Catalog = Kopezky; Persist Security Info = True; User ID = kopezky; Password = Tico#2212123";
         }
 
         public SqlConnection connect()

@@ -23,7 +23,7 @@ namespace ProjectKopezkzky.src.controller
         }
 
         public bool VerificaCad(Cliente cliente)
-        {
+        {       //check ok todos
             if (!cliente.nome.Equals("") && !cliente.sobrenome.Equals("") &&
                !cliente.CPF.Equals("") && !cliente.RG.Equals("") &&
                !cliente.dataNascimento.Equals("") && !cliente.genero.Equals("") &&
