@@ -15,9 +15,9 @@ using ProjectKopezkzky.src.view;
 
 namespace ProjectKopezkzky.src.view
 {
-    public partial class LoginForm : Form
+    public partial class FrmLogin : Form
     {
-
+        FrmHome homeForm = new FrmHome();
         LoginController loginController;
         Funcionario funcionario;
 
@@ -77,8 +77,8 @@ namespace ProjectKopezkzky.src.view
             {
                 MessageBox.Show("Nao deu bom, então deu ruim");
             }
-
-
+            
+           homeForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
