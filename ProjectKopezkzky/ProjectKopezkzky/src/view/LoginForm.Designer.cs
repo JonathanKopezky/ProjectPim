@@ -34,7 +34,7 @@ namespace ProjectKopezkzky.src.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.signinTXT = new System.Windows.Forms.Button();
+            this.signinBTN = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@ namespace ProjectKopezkzky.src.view
             this.passwordTXT.Location = new System.Drawing.Point(198, 275);
             this.passwordTXT.Name = "passwordTXT";
             this.passwordTXT.Size = new System.Drawing.Size(229, 23);
-            this.passwordTXT.TabIndex = 1;
+            this.passwordTXT.TabIndex = 0;
             this.passwordTXT.Text = "Password";
             this.passwordTXT.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -60,7 +60,7 @@ namespace ProjectKopezkzky.src.view
             this.cpfTXT.Location = new System.Drawing.Point(198, 202);
             this.cpfTXT.Name = "cpfTXT";
             this.cpfTXT.Size = new System.Drawing.Size(229, 23);
-            this.cpfTXT.TabIndex = 4;
+            this.cpfTXT.TabIndex = 1;
             this.cpfTXT.Text = "CPF";
             this.cpfTXT.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -96,20 +96,20 @@ namespace ProjectKopezkzky.src.view
             this.label1.Text = "Kopezky";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // signinTXT
+            // signinBTN
             // 
-            this.signinTXT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signinTXT.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.signinTXT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signinTXT.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.signinTXT.ForeColor = System.Drawing.Color.White;
-            this.signinTXT.Location = new System.Drawing.Point(198, 372);
-            this.signinTXT.Name = "signinTXT";
-            this.signinTXT.Size = new System.Drawing.Size(199, 36);
-            this.signinTXT.TabIndex = 8;
-            this.signinTXT.Text = "Sign In";
-            this.signinTXT.UseVisualStyleBackColor = true;
-            this.signinTXT.Click += new System.EventHandler(this.button1_Click);
+            this.signinBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signinBTN.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.signinBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signinBTN.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.signinBTN.ForeColor = System.Drawing.Color.White;
+            this.signinBTN.Location = new System.Drawing.Point(198, 372);
+            this.signinBTN.Name = "signinBTN";
+            this.signinBTN.Size = new System.Drawing.Size(199, 36);
+            this.signinBTN.TabIndex = 8;
+            this.signinBTN.Text = "Sign In";
+            this.signinBTN.UseVisualStyleBackColor = true;
+            this.signinBTN.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -134,7 +134,7 @@ namespace ProjectKopezkzky.src.view
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(600, 500);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.signinTXT);
+            this.Controls.Add(this.signinBTN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -159,7 +159,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button signinTXT;
+        private System.Windows.Forms.Button signinBTN;
         private System.Windows.Forms.Button button2;
     }
 }
