@@ -98,6 +98,7 @@ namespace ProjectKopezkzky.src.view
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // CadastralClienteMenu
             // 
@@ -188,7 +189,7 @@ namespace ProjectKopezkzky.src.view
             this.panelHome.Size = new System.Drawing.Size(784, 587);
             this.panelHome.TabIndex = 4;
             // 
-            // HomeForm
+            // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,7 +198,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.panelHome);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "HomeForm";
+            this.Name = "FrmHome";
             this.ShowIcon = false;
             this.Text = " Kopesky";
             this.Load += new System.EventHandler(this.HomeForm_Load);

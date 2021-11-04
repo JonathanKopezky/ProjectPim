@@ -50,7 +50,9 @@ namespace ProjectKopezkzky.src.view
 
         private void CadastralClienteMenu_Click(object sender, EventArgs e)
         {
-            
+            FrmCadastroFuncionario frmCadastroFuncionario = new FrmCadastroFuncionario();
+
+            frmCadastroFuncionario.ShowDialog();
         }
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +63,11 @@ namespace ProjectKopezkzky.src.view
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FecharFormAtivo();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
