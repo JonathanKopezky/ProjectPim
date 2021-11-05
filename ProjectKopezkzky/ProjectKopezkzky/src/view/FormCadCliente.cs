@@ -78,22 +78,48 @@ namespace ProjectKopezkzky.src.view
             cliente.telefone = txbTelefone.Text;
             cliente.email = txbEmail.Text;
             cliente.endereco = txbEndereco.Text;
-            cliente.CEP = txbEndereco.Text;
+            cliente.CEP = txbCep.Text;
             cliente.numero = txbnumero.Text;
             cliente.estado = txbEstado.Text;
             cliente.cidade = txbCidade.Text;
             cliente.pais = txbPais.Text;
             cliente.complemento = txbComplemento.Text;
             cliente.senha = txbConfSenha.Text;
+            ClienteController.VerificaCad(cliente);
             //check all 
-            if (ClienteController.VerificaCad(cliente)) 
+
+            if (ClienteController.VerificaCad(cliente))
             {
-                MessageBox.Show(ClienteController.message);
+                MessageBox.Show("Cadastrado com sucesso");
+                limpar(); 
+                this.Close();
             }
-           
-           
+            else 
+            {
+                MessageBox.Show("erro");
+            }
 
+        }
 
+        private void limpar()
+        { // vai limpar todos textbox
+            txbNome.Text = "";
+            txbSobrenome.Text = "";
+            txbCpf.Text = "";
+            txbRg.Text = "";
+            txbNascimento.Text = "";
+            txtGenero.Text = "";
+            txbTelefone.Text = "";
+            txbEmail.Text = "";
+            txbEndereco.Text = "";
+            txbCep.Text = "";
+            txbnumero.Text = "";
+            txbEstado.Text = "";
+            txbCidade.Text = "";
+            txbPais.Text = "";
+            txbComplemento.Text = "";
+            txbConfSenha.Text = "";
+            txbSenha.Text = "";
         }
 
         private void txbSobrenome_TextChanged(object sender, EventArgs e)

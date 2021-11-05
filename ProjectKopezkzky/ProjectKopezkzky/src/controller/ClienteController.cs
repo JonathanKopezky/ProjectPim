@@ -13,17 +13,15 @@ namespace ProjectKopezkzky.src.controller
 
     {
         public String message = "";
+        
 
 
-        ClienteRepository clienteRepository;
+        ClienteRepository clienteRepository = new ClienteRepository();
 
-        public ClienteController()
-        {
-            new ClienteRepository();
-        }
+        public ClienteController(){ }
 
         public bool VerificaCad(Cliente cliente)
-        {       //check ok todos
+        {   // vai verificar se todos os campos estao preenchidos 
             if (!cliente.nome.Equals("") && !cliente.sobrenome.Equals("") &&
                !cliente.CPF.Equals("") && !cliente.RG.Equals("") &&
                !cliente.dataNascimento.Equals("") && !cliente.genero.Equals("") &&
@@ -34,14 +32,26 @@ namespace ProjectKopezkzky.src.controller
                !cliente.pais.Equals("") && !cliente.complemento.Equals("") &&
                !cliente.senha.Equals(""))
             {
-                clienteRepository.CriarCadCliente(cliente);
-            }
+                // Manda para o verificador que vai returna false se nao tiver 
+                if (clienteRepository.VerificaCad(cliente))
+                    {
+
+                    // Se não tiver executara o cadastro 
+                     return clienteRepository.CriarCadCliente(cliente);
+
+                   
+                }
+
+
+              
+             }
             else 
             {
+                return false;
                 this.message = "Preencha todos os campos !";
             }
-
             return true;
+           
         }
 
 

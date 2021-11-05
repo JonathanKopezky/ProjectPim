@@ -14,20 +14,56 @@ namespace ProjectKopezkzky.src.repository
 {
     class ClienteRepository
     {
-        Cliente cliente = new Cliente();
+        
         public String Message = "";
         
         SqlDataReader dr;
         SqlCommand Comando = new SqlCommand();
-        Connection conn = new Connection(); 
-       
-        //VERICAR 
+        Connection conn = new Connection();
+        public bool tem = false;
 
-        public bool CriarCadCliente(Cliente cliente) 
-        {   // Comando para inserir os dados no banco 
-            Comando.CommandText = "INSERT INTO Cliente VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Ativo ,@Senha";
-            //fim 
+        //VERICAR 
+        public bool VerificaCad(Cliente cliente) 
+        {
+            //Procurar no banco se existe  
+            Comando.CommandText = @"SELECT* FROM Cliente WHERE CPF =@cpf; ";
+
+            //PARAMETROS
             
+            Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
+            try
+            {   
+                Comando.Connection = conn.connect();
+
+                // verificando se tem linhas com os parametro 
+                dr = Comando.ExecuteReader();
+                if (dr.HasRows) 
+                {
+                    this.tem = true;
+                }
+                
+            }
+            catch (SqlException)
+            {
+                this.Message = "Erro Com Banco de Dados ";
+            }
+            finally
+            {
+                conn.disconnect();
+                dr.Close();
+            }
+                return tem;
+            
+        }
+        public bool CriarCadCliente(Cliente cliente) 
+        {  
+            //Essa funcao ira pegar o texto das textbox criar no banco 
+            
+            // Comando para inserir os dados no banco 
+            
+            Comando.CommandText = @"INSERT INTO Cliente  VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Ativo ,@Senha)";
+            //fim 
+          
             //Preenchendo os as colunas da tabelas
             Comando.Parameters.AddWithValue("@Nome",cliente.nome);
             Comando.Parameters.AddWithValue("@Sobrenome", cliente.sobrenome);
@@ -37,35 +73,26 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@Telefone", cliente.telefone);
             Comando.Parameters.AddWithValue("@Endereço", cliente.endereco);
             Comando.Parameters.AddWithValue("@CEP", cliente.CEP);
-            Comando.Parameters.AddWithValue("@Numero", cliente.numero);
+            Comando.Parameters.AddWithValue("@Numero", int.Parse(cliente.numero));
             Comando.Parameters.AddWithValue("@Complemento", cliente.complemento);
             Comando.Parameters.AddWithValue("@Cidade", cliente.cidade);
             Comando.Parameters.AddWithValue("@Estado", cliente.estado);
             Comando.Parameters.AddWithValue("@Genero", cliente.genero);
             Comando.Parameters.AddWithValue("@Pais", cliente.pais);
             Comando.Parameters.AddWithValue("@Data_nascimento", cliente.dataNascimento);
-        //    if (cliente.ativo)
-       ///     {
-                Comando.Parameters.AddWithValue("@Ativo", 1);
-         //   }
-       //     else
-       //     { 
-         //       Comando.Parameters.AddWithValue("@Ativo", 0); 
-          //  }
-
-          //  Comando.Parameters.AddWithValue("@Ativo", cliente.ativo);
+            Comando.Parameters.AddWithValue("@Ativo", 1);
             Comando.Parameters.AddWithValue("@Senha", cliente.senha);
             //FIM
 
             try
             {
-                Comando.Connection = conn.connect();
-                dr = Comando.ExecuteReader();
+                
+                Comando.Connection =conn.connect();
+               
 
-                if (dr.HasRows) 
-                {
+            
                     Comando.ExecuteNonQuery();
-                }
+              
             }
             catch (SqlException)
             {
@@ -74,6 +101,7 @@ namespace ProjectKopezkzky.src.repository
             finally 
             {
                 this.Message = "Cadastrado com sucesso";
+              
                 conn.disconnect();
             }
             return true;
