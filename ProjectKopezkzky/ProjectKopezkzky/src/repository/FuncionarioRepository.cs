@@ -17,23 +17,23 @@ namespace ProjectKopezkzky.src.repository
 
         public FuncionarioRepository()
         {
-            funcionario. 
+            
         }
 
 
         public bool createFuncionario(Funcionario funcionario)
         {
-
+            return true;
         }
 
         public bool deleteFuncionario(Funcionario funcionario)
         {
-
+            return true;
         }
      
         public bool updateFuncionario(Funcionario funcionario)
         {
-
+            return true;
         }
             
 

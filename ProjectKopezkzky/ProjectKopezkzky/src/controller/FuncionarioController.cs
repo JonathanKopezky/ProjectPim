@@ -11,14 +11,13 @@ namespace ProjectKopezkzky.src.controller
 {
     public class FuncionarioController
     {
-        Funcionario funcionario = new Funcionario();
         FuncionarioRepository funcionarioRepository = new FuncionarioRepository();
 
         public FuncionarioController() { }
 
         public bool createFuncionario(Funcionario funcionario)
         {
-            return funcionarioRepository.createFuncionario(funcionario);
+            return true;
         }
         public bool updateFuncionario(Funcionario funcionario)
         {

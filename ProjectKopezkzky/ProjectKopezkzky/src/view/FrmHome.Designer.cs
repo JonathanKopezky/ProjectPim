@@ -45,8 +45,10 @@ namespace ProjectKopezkzky.src.view
             this.LblNome = new System.Windows.Forms.Label();
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
+            this.cadastrarFuncBTN = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -103,14 +105,14 @@ namespace ProjectKopezkzky.src.view
             // CadastralClienteMenu
             // 
             this.CadastralClienteMenu.Name = "CadastralClienteMenu";
-            this.CadastralClienteMenu.Size = new System.Drawing.Size(180, 22);
+            this.CadastralClienteMenu.Size = new System.Drawing.Size(170, 22);
             this.CadastralClienteMenu.Text = "Cadastrar Cliente ";
             this.CadastralClienteMenu.Click += new System.EventHandler(this.CadastralClienteMenu_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
@@ -183,11 +185,22 @@ namespace ProjectKopezkzky.src.view
             // 
             // panelHome
             // 
+            this.panelHome.Controls.Add(this.cadastrarFuncBTN);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHome.Location = new System.Drawing.Point(0, 24);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(784, 587);
             this.panelHome.TabIndex = 4;
+            // 
+            // cadastrarFuncBTN
+            // 
+            this.cadastrarFuncBTN.Location = new System.Drawing.Point(613, 498);
+            this.cadastrarFuncBTN.Name = "cadastrarFuncBTN";
+            this.cadastrarFuncBTN.Size = new System.Drawing.Size(145, 23);
+            this.cadastrarFuncBTN.TabIndex = 0;
+            this.cadastrarFuncBTN.Text = "Cadastrar Funcionário";
+            this.cadastrarFuncBTN.UseVisualStyleBackColor = true;
+            this.cadastrarFuncBTN.Click += new System.EventHandler(this.cadastrarFuncBTN_Click);
             // 
             // FrmHome
             // 
@@ -206,6 +219,7 @@ namespace ProjectKopezkzky.src.view
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelHome.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +242,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.Button cadastrarFuncBTN;
     }
 }

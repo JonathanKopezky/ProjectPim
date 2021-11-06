@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ProjectKopezkzky.src.view;
+
 namespace ProjectKopezkzky.src.view
 {
     public partial class FrmHome : Form
     {
+        
 
         private Form frmAtivo;
 
@@ -68,6 +71,13 @@ namespace ProjectKopezkzky.src.view
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cadastrarFuncBTN_Click(object sender, EventArgs e)
+        {
+            FrmCadastroFuncionario fmrCadastroFuncionario = new FrmCadastroFuncionario();
+
+            fmrCadastroFuncionario.ShowDialog();
         }
     }
 }
