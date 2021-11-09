@@ -64,8 +64,6 @@ namespace ProjectKopezkzky.src.view
             this.label7 = new System.Windows.Forms.Label();
             this.txbSenha = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txbConfSenha = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +93,7 @@ namespace ProjectKopezkzky.src.view
             this.txbNascimento.Name = "txbNascimento";
             this.txbNascimento.Size = new System.Drawing.Size(141, 23);
             this.txbNascimento.TabIndex = 28;
+            this.txbNascimento.TextChanged += new System.EventHandler(this.txbNascimento_TextChanged);
             // 
             // txbEmail
             // 
@@ -110,6 +109,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(263, 23);
             this.txbEndereco.TabIndex = 31;
+            this.txbEndereco.TextChanged += new System.EventHandler(this.txbEndereco_TextChanged);
             // 
             // txbnumero
             // 
@@ -117,6 +117,7 @@ namespace ProjectKopezkzky.src.view
             this.txbnumero.Name = "txbnumero";
             this.txbnumero.Size = new System.Drawing.Size(100, 23);
             this.txbnumero.TabIndex = 47;
+            this.txbnumero.TextChanged += new System.EventHandler(this.txbnumero_TextChanged);
             // 
             // txbCep
             // 
@@ -124,6 +125,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCep.Name = "txbCep";
             this.txbCep.Size = new System.Drawing.Size(160, 23);
             this.txbCep.TabIndex = 46;
+            this.txbCep.TextChanged += new System.EventHandler(this.txbCep_TextChanged);
             // 
             // txbEstado
             // 
@@ -131,6 +133,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEstado.Name = "txbEstado";
             this.txbEstado.Size = new System.Drawing.Size(141, 23);
             this.txbEstado.TabIndex = 45;
+            this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
             // 
             // txbCpf
             // 
@@ -138,6 +141,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(160, 23);
             this.txbCpf.TabIndex = 36;
+            this.txbCpf.TextChanged += new System.EventHandler(this.txbCpf_TextChanged);
             // 
             // txbComplemento
             // 
@@ -145,6 +149,7 @@ namespace ProjectKopezkzky.src.view
             this.txbComplemento.Name = "txbComplemento";
             this.txbComplemento.Size = new System.Drawing.Size(263, 23);
             this.txbComplemento.TabIndex = 40;
+            this.txbComplemento.TextChanged += new System.EventHandler(this.txbComplemento_TextChanged);
             // 
             // txbCidade
             // 
@@ -152,6 +157,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(263, 23);
             this.txbCidade.TabIndex = 43;
+            this.txbCidade.TextChanged += new System.EventHandler(this.txbCidade_TextChanged);
             // 
             // txbNome
             // 
@@ -159,6 +165,7 @@ namespace ProjectKopezkzky.src.view
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(263, 23);
             this.txbNome.TabIndex = 26;
+            this.txbNome.TextChanged += new System.EventHandler(this.txbNome_TextChanged);
             // 
             // lblPais
             // 
@@ -297,6 +304,7 @@ namespace ProjectKopezkzky.src.view
             this.txbRg.Name = "txbRg";
             this.txbRg.Size = new System.Drawing.Size(100, 23);
             this.txbRg.TabIndex = 53;
+            this.txbRg.TextChanged += new System.EventHandler(this.txbRg_TextChanged);
             // 
             // label4
             // 
@@ -340,6 +348,7 @@ namespace ProjectKopezkzky.src.view
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(160, 23);
             this.txbTelefone.TabIndex = 58;
+            this.txbTelefone.TextChanged += new System.EventHandler(this.txbTelefone_TextChanged);
             // 
             // label7
             // 
@@ -356,6 +365,7 @@ namespace ProjectKopezkzky.src.view
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(117, 23);
             this.txbSenha.TabIndex = 60;
+            this.txbSenha.TextChanged += new System.EventHandler(this.txbSenha_TextChanged);
             // 
             // btnSalvar
             // 
@@ -368,23 +378,6 @@ namespace ProjectKopezkzky.src.view
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(451, 300);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 15);
-            this.label8.TabIndex = 62;
-            this.label8.Text = "Confirmar Senha :";
-            // 
-            // txbConfSenha
-            // 
-            this.txbConfSenha.Location = new System.Drawing.Point(451, 318);
-            this.txbConfSenha.Name = "txbConfSenha";
-            this.txbConfSenha.Size = new System.Drawing.Size(117, 23);
-            this.txbConfSenha.TabIndex = 63;
-            this.txbConfSenha.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button2
             // 
@@ -404,8 +397,6 @@ namespace ProjectKopezkzky.src.view
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txbConfSenha);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label7);
@@ -442,6 +433,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.labelNome);
             this.Name = "FormCadCliente";
             this.Text = "FormCadCliente";
+            this.Load += new System.EventHandler(this.FormCadCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -486,8 +478,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbConfSenha;
         private System.Windows.Forms.Button button2;
     }
 }

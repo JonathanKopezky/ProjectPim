@@ -80,22 +80,7 @@ namespace ProjectKopezkzky.src.view
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //Passando os parametros para o model
-
-            Cliente Cliente = new Cliente () ;
-            Cliente.nome = txbNome.Text;
-            Cliente.dataNascimento = txbNascimento.Text;
-            Cliente.CPF = txbCpf.Text;
-            Cliente.email = txbEmail.Text;
-            Cliente.endereco = txbEndereco.Text;
-            Cliente.complemento = txtComplemento.Text;
-            Cliente.cidade = txbCidade.Text;
-            Cliente.pais = txbCidade.Text;
-            Cliente.numero = txbnumero.Text;
-            Cliente.CEP = txbCep.Text;
-            Cliente.estado = txbEstado.Text;
-            Cliente.telefone = txbTelefone.Text;
-            //fim
+            
            
         }
 

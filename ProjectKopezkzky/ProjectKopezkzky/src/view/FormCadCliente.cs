@@ -15,10 +15,12 @@ namespace ProjectKopezkzky.src.view
     public partial class FormCadCliente : Form
     {
         ClienteController ClienteController = new ClienteController();
+        Cliente cliente = new Cliente();
         public FormCadCliente()
         {
-
+            
             InitializeComponent();
+            btnSalvar.Enabled = false;
         }
 
         private void lbl_Click(object sender, EventArgs e)
@@ -53,7 +55,7 @@ namespace ProjectKopezkzky.src.view
 
         private void txbEmail_TextChanged(object sender, EventArgs e)
         {
-
+            blockButton();
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
@@ -68,73 +70,157 @@ namespace ProjectKopezkzky.src.view
 
         private void BtnSalvar(object sender, EventArgs e)
         {   // pasando parametros para cliente 
-            Cliente cliente = new Cliente();
-            cliente.nome = txbNome.Text;
-            cliente.sobrenome = txbSobrenome.Text;
-            cliente.CPF = txbCpf.Text;
-            cliente.RG = txbRg.Text;
-            cliente.dataNascimento = txbNascimento.Text;
-            cliente.genero = txtGenero.Text;
-            cliente.telefone = txbTelefone.Text;
-            cliente.email = txbEmail.Text;
-            cliente.endereco = txbEndereco.Text;
-            cliente.CEP = txbCep.Text;
-            cliente.numero = txbnumero.Text;
-            cliente.estado = txbEstado.Text;
-            cliente.cidade = txbCidade.Text;
-            cliente.pais = txbPais.Text;
-            cliente.complemento = txbComplemento.Text;
-            cliente.senha = txbConfSenha.Text;
-            ClienteController.VerificaCad(cliente);
-            //check all 
-
-            if (ClienteController.VerificaCad(cliente))
+            
+            this.cliente.nome = txbNome.Text;
+            this.cliente.sobrenome = txbSobrenome.Text;
+            this.cliente.CPF = txbCpf.Text;
+            this.cliente.RG = txbRg.Text;
+            this.cliente.dataNascimento = txbNascimento.Text;
+            this.cliente.genero = txtGenero.Text;
+            this.cliente.telefone = txbTelefone.Text;
+            this.cliente.email = txbEmail.Text;
+            this.cliente.endereco = txbEndereco.Text;
+            this.cliente.CEP = txbCep.Text;
+            this.cliente.numero = txbnumero.Text;
+            this.cliente.estado = txbEstado.Text;
+            this.cliente.cidade = txbCidade.Text;
+            this.cliente.pais = txbPais.Text;
+            this.cliente.complemento = txbComplemento.Text;
+            this.cliente.senha = txbSenha.Text;
+            if (!ClienteController.VerificaCad(cliente))
             {
-                MessageBox.Show("Cadastrado com sucesso");
-                limpar(); 
-                this.Close();
+                MessageBox.Show("Cadastrado com suceeso");
+               // Close();
+                limpar();
             }
             else 
             {
-                MessageBox.Show("erro");
+                MessageBox.Show("Cadastro existe");
             }
+            
+
+            
 
         }
 
         private void limpar()
         { // vai limpar todos textbox
-            txbNome.Text = "";
-            txbSobrenome.Text = "";
-            txbCpf.Text = "";
-            txbRg.Text = "";
-            txbNascimento.Text = "";
-            txtGenero.Text = "";
-            txbTelefone.Text = "";
-            txbEmail.Text = "";
-            txbEndereco.Text = "";
-            txbCep.Text = "";
-            txbnumero.Text = "";
-            txbEstado.Text = "";
-            txbCidade.Text = "";
-            txbPais.Text = "";
-            txbComplemento.Text = "";
-            txbConfSenha.Text = "";
-            txbSenha.Text = "";
+            cliente.nome = txbNome.Text ="";
+            cliente.sobrenome = txbSobrenome.Text= "";
+            cliente.CPF = txbCpf.Text="";
+            cliente.RG = txbRg.Text = "";
+            cliente.dataNascimento = txbNascimento.Text = "";
+            cliente.genero = txtGenero.Text = "";
+            cliente.telefone = txbTelefone.Text = "";
+            cliente.endereco = txbEndereco.Text = "";
+            cliente.CEP = txbCep.Text = "";
+            cliente.numero = txbnumero.Text = "";
+            cliente.estado = txbEstado.Text = "";
+            cliente.cidade = txbCidade.Text = "";
+            cliente.pais = txbPais.Text = "";
+            cliente.complemento = txbComplemento.Text = "";
+            cliente.senha = txbSenha.Text = "";
+            cliente.email = txbEmail.Text = "";
         }
 
         private void txbSobrenome_TextChanged(object sender, EventArgs e)
         {
-
+            blockButton();
         }
 
         private void txtGenero_TextChanged(object sender, EventArgs e)
         {
-
+            blockButton();
         }
 
         private void txbPais_TextChanged(object sender, EventArgs e)
         {
+            blockButton();
+        }
 
+        private void FormCadCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void blockButton()
+        {// funcao desativa o botao enquanto texbox for vazio 
+
+            if (!string.IsNullOrWhiteSpace(txbNome.Text) && !string.IsNullOrWhiteSpace(txbSobrenome.Text)
+                && !string.IsNullOrWhiteSpace(txbCpf.Text) && !string.IsNullOrWhiteSpace(txbRg.Text)
+                 && !string.IsNullOrWhiteSpace(txbNascimento.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
+                  && !string.IsNullOrWhiteSpace(txbTelefone.Text) && !string.IsNullOrWhiteSpace(txbEmail.Text)
+                   && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(txbCep.Text)
+                    && !string.IsNullOrWhiteSpace(txbnumero.Text) && !string.IsNullOrWhiteSpace(txbEstado.Text)
+                     && !string.IsNullOrWhiteSpace(txbCidade.Text) && !string.IsNullOrWhiteSpace(txbPais.Text)
+                     && !string.IsNullOrWhiteSpace(txbComplemento.Text) && !string.IsNullOrWhiteSpace(txbSenha.Text))
+            {
+                btnSalvar.Enabled = true;
+            }
+            else 
+            {
+                btnSalvar.Enabled = false;
+            }
+        }
+
+        private void txbNome_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbCpf_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbRg_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbNascimento_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbTelefone_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbEndereco_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbCep_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbnumero_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbEstado_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbCidade_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbComplemento_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
+        }
+
+        private void txbSenha_TextChanged(object sender, EventArgs e)
+        {
+            blockButton();
         }
     }
 }

@@ -10,62 +10,67 @@ using System.Data.SqlClient;
 using ProjectKopezkzky.src.model;
 using ProjectKopezkzky.src.config;
 using System.Windows.Forms;
+using ProjectKopezkzky.src.controller;
+
 namespace ProjectKopezkzky.src.repository
 {
     class ClienteRepository
     {
-        
-        public String Message = "";
-        
+
+        public bool status = false;
+        ClienteController clienteController = new ClienteController();
         SqlDataReader dr;
         SqlCommand Comando = new SqlCommand();
         Connection conn = new Connection();
         public bool tem = false;
 
         //VERICAR 
-        public bool VerificaCad(Cliente cliente) 
+        public bool VerificaCad(Cliente cliente)
         {
             //Procurar no banco se existe  
-            Comando.CommandText = @"SELECT* FROM Cliente WHERE CPF =@cpf; ";
+            Comando.CommandText = "SELECT* FROM Cliente WHERE CPF = @cpf; ";
 
             //PARAMETROS
-            
+
             Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
+
             try
-            {   
+            {
                 Comando.Connection = conn.connect();
 
                 // verificando se tem linhas com os parametro 
                 dr = Comando.ExecuteReader();
-                if (dr.HasRows) 
+                if (dr.HasRows)
                 {
-                    this.tem = true;
+                    return true;
+
                 }
-                
+
             }
             catch (SqlException)
             {
-                this.Message = "Erro Com Banco de Dados ";
+
             }
             finally
             {
                 conn.disconnect();
                 dr.Close();
             }
-                return tem;
-            
+
+            return false;
+
         }
-        public bool CriarCadCliente(Cliente cliente) 
-        {  
+        public bool CriarCadCliente(Cliente cliente)
+        {
             //Essa funcao ira pegar o texto das textbox criar no banco 
-            
+
             // Comando para inserir os dados no banco 
-            
-            Comando.CommandText = @"INSERT INTO Cliente  VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Ativo ,@Senha)";
+
+            Comando.CommandText = "INSERT INTO Cliente  VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Ativo ,@Senha)";
             //fim 
-          
+
             //Preenchendo os as colunas da tabelas
-            Comando.Parameters.AddWithValue("@Nome",cliente.nome);
+            Comando.Parameters.AddWithValue("@Nome", cliente.nome);
             Comando.Parameters.AddWithValue("@Sobrenome", cliente.sobrenome);
             Comando.Parameters.AddWithValue("@RG", cliente.RG);
             Comando.Parameters.AddWithValue("@CPF", cliente.CPF);
@@ -86,29 +91,32 @@ namespace ProjectKopezkzky.src.repository
 
             try
             {
-                
-                Comando.Connection =conn.connect();
-               
 
-            
-                    Comando.ExecuteNonQuery();
-              
+                Comando.Connection = conn.connect();
+
+
+
+                Comando.ExecuteNonQuery();
+
             }
             catch (SqlException)
             {
-                this.Message = "Erro com o Banco de Dados ";
+
             }
-            finally 
+            finally
             {
-                this.Message = "Cadastrado com sucesso";
-              
+
+
                 conn.disconnect();
             }
             return true;
         }
 
+        public bool AtualizarCadCliente(Cliente cliente) { return false; }
+        public bool DeletarCadCliente(Cliente cliente) { return false; }
+        public bool ConsultaCadCliente(Cliente cliente) { return false; }
 
-        
+
 
     }
 }

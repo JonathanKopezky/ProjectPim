@@ -12,49 +12,36 @@ namespace ProjectKopezkzky.src.controller
     class ClienteController
 
     {
-        public String message = "";
-        
-
-
         ClienteRepository clienteRepository = new ClienteRepository();
+        Cliente cliente = new Cliente();
 
-        public ClienteController(){ }
+        public ClienteController() { }
 
         public bool VerificaCad(Cliente cliente)
-        {   // vai verificar se todos os campos estao preenchidos 
-            if (!cliente.nome.Equals("") && !cliente.sobrenome.Equals("") &&
-               !cliente.CPF.Equals("") && !cliente.RG.Equals("") &&
-               !cliente.dataNascimento.Equals("") && !cliente.genero.Equals("") &&
-               !cliente.telefone.Equals("") && !cliente.email.Equals("") &&
-               !cliente.email.Equals("") && !cliente.endereco.Equals("") &&
-               !cliente.CEP.Equals("") && !cliente.numero.Equals("") &&
-               !cliente.estado.Equals("") && !cliente.cidade.Equals("") &&
-               !cliente.pais.Equals("") && !cliente.complemento.Equals("") &&
-               !cliente.senha.Equals(""))
+        {
+            bool verifica = clienteRepository.VerificaCad(cliente);
+            
+            if (verifica == false)
             {
-                // Manda para o verificador que vai returna false se nao tiver 
-                if (clienteRepository.VerificaCad(cliente))
-                    {
-
-                    // Se não tiver executara o cadastro 
-                     return clienteRepository.CriarCadCliente(cliente);
-
-                   
-                }
-
-
-              
-             }
-            else 
-            {
-                return false;
-                this.message = "Preencha todos os campos !";
+                //se o verificador nao encontrar no banco ele cadastra
+                clienteRepository.CriarCadCliente(cliente);
             }
-            return true;
-           
+            
+                
+            return false;
+            
         }
 
+        
+        public bool AtualizaCad(Cliente cliente)
+        {
+            return false;
+        }
 
+        public bool DeletCad(Cliente cliente)
+        {
+            return false;
+        }
 
     }
 
