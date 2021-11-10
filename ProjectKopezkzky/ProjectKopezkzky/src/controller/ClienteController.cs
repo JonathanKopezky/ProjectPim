@@ -9,8 +9,7 @@ using System.Windows.Forms;
 
 namespace ProjectKopezkzky.src.controller
 {
-    class ClienteController
-
+    public class ClienteController
     {
         ClienteRepository clienteRepository = new ClienteRepository();
         Cliente cliente = new Cliente();
@@ -18,18 +17,16 @@ namespace ProjectKopezkzky.src.controller
         public ClienteController() { }
 
         public bool VerificaCad(Cliente cliente)
-        {
-            bool verifica = clienteRepository.VerificaCad(cliente);
-            
-            if (verifica == false)
+        {       
+            if (clienteRepository.VerificaCad(cliente))
             {
                 //se o verificador nao encontrar no banco ele cadastra
-                clienteRepository.CriarCadCliente(cliente);
+                return false;
             }
-            
-                
-            return false;
-            
+            else
+            {
+                return clienteRepository.CriarCadCliente(cliente); 
+            }                      
         }
 
         

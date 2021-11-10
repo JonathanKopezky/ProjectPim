@@ -17,8 +17,7 @@ namespace ProjectKopezkzky.src.view
         ClienteController ClienteController = new ClienteController();
         Cliente cliente = new Cliente();
         public FormCadCliente()
-        {
-            
+        {   
             InitializeComponent();
             btnSalvar.Enabled = false;
         }
@@ -89,13 +88,13 @@ namespace ProjectKopezkzky.src.view
             this.cliente.senha = txbSenha.Text;
             if (!ClienteController.VerificaCad(cliente))
             {
-                MessageBox.Show("Cadastrado com suceeso");
-               // Close();
-                limpar();
+                MessageBox.Show("Cadastro existe");
             }
             else 
             {
-                MessageBox.Show("Cadastro existe");
+                MessageBox.Show("Cadastrado com suceeso");
+                // Close();
+                limpar();             
             }
             
 
