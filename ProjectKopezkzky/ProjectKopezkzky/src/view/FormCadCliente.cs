@@ -17,7 +17,7 @@ namespace ProjectKopezkzky.src.view
         ClienteController ClienteController = new ClienteController();
         Cliente cliente = new Cliente();
         public FormCadCliente()
-        {   
+        {
             InitializeComponent();
             btnSalvar.Enabled = false;
         }
@@ -69,7 +69,7 @@ namespace ProjectKopezkzky.src.view
 
         private void BtnSalvar(object sender, EventArgs e)
         {   // pasando parametros para cliente 
-            
+
             this.cliente.nome = txbNome.Text;
             this.cliente.sobrenome = txbSobrenome.Text;
             this.cliente.CPF = txbCpf.Text;
@@ -90,36 +90,36 @@ namespace ProjectKopezkzky.src.view
             {
                 MessageBox.Show("Cadastro existe");
             }
-            else 
+            else
             {
                 MessageBox.Show("Cadastrado com suceeso");
                 // Close();
-                limpar();             
+                limpar();
             }
-            
 
-            
+
+
 
         }
 
         private void limpar()
         { // vai limpar todos textbox
-            cliente.nome = txbNome.Text ="";
-            cliente.sobrenome = txbSobrenome.Text= "";
-            cliente.CPF = txbCpf.Text="";
-            cliente.RG = txbRg.Text = "";
-            cliente.dataNascimento = txbNascimento.Text = "";
-            cliente.genero = txtGenero.Text = "";
-            cliente.telefone = txbTelefone.Text = "";
-            cliente.endereco = txbEndereco.Text = "";
-            cliente.CEP = txbCep.Text = "";
-            cliente.numero = txbnumero.Text = "";
-            cliente.estado = txbEstado.Text = "";
-            cliente.cidade = txbCidade.Text = "";
-            cliente.pais = txbPais.Text = "";
-            cliente.complemento = txbComplemento.Text = "";
-            cliente.senha = txbSenha.Text = "";
-            cliente.email = txbEmail.Text = "";
+            txbNome.Clear();
+            txbSobrenome.Clear();
+            txbCpf.Clear();
+            txbRg.Clear();
+            txbNascimento.Clear();
+            txtGenero.Clear();
+            txbTelefone.Clear();
+            txbEndereco.Clear();
+            txbCep.Clear();
+            txbnumero.Clear();
+            txbEstado.Clear();
+            txbCidade.Clear();
+            txbPais.Clear();
+            txbComplemento.Clear();
+            txbSenha.Clear();
+            txbEmail.Clear();
         }
 
         private void txbSobrenome_TextChanged(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace ProjectKopezkzky.src.view
             {
                 btnSalvar.Enabled = true;
             }
-            else 
+            else
             {
                 btnSalvar.Enabled = false;
             }

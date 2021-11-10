@@ -84,7 +84,7 @@ namespace ProjectKopezkzky.src.view
             this.txbPais.Location = new System.Drawing.Point(590, 261);
             this.txbPais.Name = "txbPais";
             this.txbPais.Size = new System.Drawing.Size(160, 23);
-            this.txbPais.TabIndex = 44;
+            this.txbPais.TabIndex = 14;
             this.txbPais.TextChanged += new System.EventHandler(this.txbPais_TextChanged);
             // 
             // txbNascimento
@@ -92,7 +92,7 @@ namespace ProjectKopezkzky.src.view
             this.txbNascimento.Location = new System.Drawing.Point(145, 142);
             this.txbNascimento.Name = "txbNascimento";
             this.txbNascimento.Size = new System.Drawing.Size(141, 23);
-            this.txbNascimento.TabIndex = 28;
+            this.txbNascimento.TabIndex = 5;
             this.txbNascimento.TextChanged += new System.EventHandler(this.txbNascimento_TextChanged);
             // 
             // txbEmail
@@ -100,7 +100,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEmail.Location = new System.Drawing.Point(23, 200);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(263, 23);
-            this.txbEmail.TabIndex = 29;
+            this.txbEmail.TabIndex = 8;
             this.txbEmail.TextChanged += new System.EventHandler(this.txbEmail_TextChanged);
             // 
             // txbEndereco
@@ -108,7 +108,7 @@ namespace ProjectKopezkzky.src.view
             this.txbEndereco.Location = new System.Drawing.Point(308, 200);
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(263, 23);
-            this.txbEndereco.TabIndex = 31;
+            this.txbEndereco.TabIndex = 9;
             this.txbEndereco.TextChanged += new System.EventHandler(this.txbEndereco_TextChanged);
             // 
             // txbnumero
@@ -116,7 +116,7 @@ namespace ProjectKopezkzky.src.view
             this.txbnumero.Location = new System.Drawing.Point(23, 261);
             this.txbnumero.Name = "txbnumero";
             this.txbnumero.Size = new System.Drawing.Size(100, 23);
-            this.txbnumero.TabIndex = 47;
+            this.txbnumero.TabIndex = 11;
             this.txbnumero.TextChanged += new System.EventHandler(this.txbnumero_TextChanged);
             // 
             // txbCep
@@ -124,15 +124,15 @@ namespace ProjectKopezkzky.src.view
             this.txbCep.Location = new System.Drawing.Point(590, 200);
             this.txbCep.Name = "txbCep";
             this.txbCep.Size = new System.Drawing.Size(160, 23);
-            this.txbCep.TabIndex = 46;
+            this.txbCep.TabIndex = 10;
             this.txbCep.TextChanged += new System.EventHandler(this.txbCep_TextChanged);
             // 
             // txbEstado
             // 
             this.txbEstado.Location = new System.Drawing.Point(145, 261);
             this.txbEstado.Name = "txbEstado";
-            this.txbEstado.Size = new System.Drawing.Size(141, 23);
-            this.txbEstado.TabIndex = 45;
+            this.txbEstado.Size = new System.Drawing.Size(33, 23);
+            this.txbEstado.TabIndex = 12;
             this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
             // 
             // txbCpf
@@ -140,7 +140,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCpf.Location = new System.Drawing.Point(590, 85);
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(160, 23);
-            this.txbCpf.TabIndex = 36;
+            this.txbCpf.TabIndex = 3;
             this.txbCpf.TextChanged += new System.EventHandler(this.txbCpf_TextChanged);
             // 
             // txbComplemento
@@ -148,7 +148,7 @@ namespace ProjectKopezkzky.src.view
             this.txbComplemento.Location = new System.Drawing.Point(23, 318);
             this.txbComplemento.Name = "txbComplemento";
             this.txbComplemento.Size = new System.Drawing.Size(263, 23);
-            this.txbComplemento.TabIndex = 40;
+            this.txbComplemento.TabIndex = 15;
             this.txbComplemento.TextChanged += new System.EventHandler(this.txbComplemento_TextChanged);
             // 
             // txbCidade
@@ -156,7 +156,7 @@ namespace ProjectKopezkzky.src.view
             this.txbCidade.Location = new System.Drawing.Point(308, 261);
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(263, 23);
-            this.txbCidade.TabIndex = 43;
+            this.txbCidade.TabIndex = 13;
             this.txbCidade.TextChanged += new System.EventHandler(this.txbCidade_TextChanged);
             // 
             // txbNome
@@ -164,7 +164,7 @@ namespace ProjectKopezkzky.src.view
             this.txbNome.Location = new System.Drawing.Point(23, 85);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(263, 23);
-            this.txbNome.TabIndex = 26;
+            this.txbNome.TabIndex = 1;
             this.txbNome.TextChanged += new System.EventHandler(this.txbNome_TextChanged);
             // 
             // lblPais
@@ -295,7 +295,7 @@ namespace ProjectKopezkzky.src.view
             this.txbSobrenome.Location = new System.Drawing.Point(308, 85);
             this.txbSobrenome.Name = "txbSobrenome";
             this.txbSobrenome.Size = new System.Drawing.Size(263, 23);
-            this.txbSobrenome.TabIndex = 52;
+            this.txbSobrenome.TabIndex = 2;
             this.txbSobrenome.TextChanged += new System.EventHandler(this.txbSobrenome_TextChanged);
             // 
             // txbRg
@@ -303,7 +303,7 @@ namespace ProjectKopezkzky.src.view
             this.txbRg.Location = new System.Drawing.Point(23, 142);
             this.txbRg.Name = "txbRg";
             this.txbRg.Size = new System.Drawing.Size(100, 23);
-            this.txbRg.TabIndex = 53;
+            this.txbRg.TabIndex = 4;
             this.txbRg.TextChanged += new System.EventHandler(this.txbRg_TextChanged);
             // 
             // label4
@@ -330,7 +330,7 @@ namespace ProjectKopezkzky.src.view
             this.txtGenero.Location = new System.Drawing.Point(308, 142);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(263, 23);
-            this.txtGenero.TabIndex = 56;
+            this.txtGenero.TabIndex = 6;
             this.txtGenero.TextChanged += new System.EventHandler(this.txtGenero_TextChanged);
             // 
             // label2
@@ -347,7 +347,7 @@ namespace ProjectKopezkzky.src.view
             this.txbTelefone.Location = new System.Drawing.Point(590, 142);
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(160, 23);
-            this.txbTelefone.TabIndex = 58;
+            this.txbTelefone.TabIndex = 7;
             this.txbTelefone.TextChanged += new System.EventHandler(this.txbTelefone_TextChanged);
             // 
             // label7
@@ -364,7 +364,7 @@ namespace ProjectKopezkzky.src.view
             this.txbSenha.Location = new System.Drawing.Point(308, 318);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(117, 23);
-            this.txbSenha.TabIndex = 60;
+            this.txbSenha.TabIndex = 16;
             this.txbSenha.TextChanged += new System.EventHandler(this.txbSenha_TextChanged);
             // 
             // btnSalvar
