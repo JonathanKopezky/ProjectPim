@@ -51,6 +51,7 @@ namespace ProjectKopezkzky.src.repository
         }
         public bool CriarCadCliente(Cliente cliente)
         {
+            Comando = new SqlCommand();
             //Essa funcao ira pegar o texto das textbox criar no banco 
             // Comando para inserir os dados no banco 
             Comando.CommandText = "INSERT INTO Cliente VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Ativo ,@Senha)";
