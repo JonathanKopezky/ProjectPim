@@ -14,7 +14,6 @@ namespace ProjectKopezkzky.src.repository
 {
     class LoginRepository
     {
-        public string message;
         SqlDataReader dr;
 
         SqlCommand cmd = new SqlCommand();
