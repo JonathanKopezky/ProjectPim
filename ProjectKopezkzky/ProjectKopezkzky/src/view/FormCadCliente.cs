@@ -80,7 +80,7 @@ namespace ProjectKopezkzky.src.view
             this.cliente.email = txbEmail.Text;
             this.cliente.endereco = txbEndereco.Text;
             this.cliente.CEP = txbCep.Text;
-            this.cliente.numero = txbnumero.Text;
+            this.cliente.numero = Int32.Parse(txbnumero.Text);
             this.cliente.estado = txbEstado.Text;
             this.cliente.cidade = txbCidade.Text;
             this.cliente.pais = txbPais.Text;

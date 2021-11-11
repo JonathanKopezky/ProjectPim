@@ -66,7 +66,7 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@Telefone", cliente.telefone);
             Comando.Parameters.AddWithValue("@Endereço", cliente.endereco);
             Comando.Parameters.AddWithValue("@CEP", cliente.CEP);
-            Comando.Parameters.AddWithValue("@Numero", int.Parse(cliente.numero));
+            Comando.Parameters.AddWithValue("@Numero", cliente.numero);
             Comando.Parameters.AddWithValue("@Complemento", cliente.complemento);
             Comando.Parameters.AddWithValue("@Cidade", cliente.cidade);
             Comando.Parameters.AddWithValue("@Estado", cliente.estado);
