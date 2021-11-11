@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using ProjectKopezkzky.src.model;
+using ProjectKopezkzky.src.repository;
+
 namespace ProjectKopezkzky.src.controller
 {
     class ClienteController
     {
+        public ClienteController() { }
+
     }
 }

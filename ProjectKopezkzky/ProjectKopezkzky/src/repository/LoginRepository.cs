@@ -14,7 +14,6 @@ namespace ProjectKopezkzky.src.repository
 {
     class LoginRepository
     {
-        public string message;
         SqlDataReader dr;
 
         SqlCommand cmd = new SqlCommand();
@@ -22,9 +21,6 @@ namespace ProjectKopezkzky.src.repository
 
         public bool getOneLogin(Funcionario funcionario)
         {
-            MessageBox.Show(funcionario.CPF);
-            MessageBox.Show(funcionario.senha);
-
             cmd.CommandText = "SELECT * FROM Funcionarios WHERE CPF = @cpf and senha = @senha ";
 
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);

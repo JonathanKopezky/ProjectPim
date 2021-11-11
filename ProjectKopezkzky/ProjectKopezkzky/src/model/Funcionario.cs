@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectKopezkzky.src.model
 {
-    class Funcionario : Pessoa
+    public class Funcionario : Pessoa
     {
         public string tituloEleitor { get; set; }
         public string reservista { get; set; }

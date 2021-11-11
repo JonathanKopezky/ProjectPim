@@ -71,16 +71,16 @@ namespace ProjectKopezkzky.src.view
 
             if (loginController.verifyLogin(funcionario))
             {
-                MessageBox.Show("Mais q logado Onfire");
+                this.Hide();
+                homeForm.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Nao deu bom, então deu ruim");
             }
             
-           homeForm.ShowDialog();
-        }
 
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
