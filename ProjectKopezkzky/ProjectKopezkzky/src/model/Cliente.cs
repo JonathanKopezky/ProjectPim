@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectKopezkzky.src.model
 {
-    class Cliente : Pessoa
+   public class Cliente : Pessoa
     {
     }
 }

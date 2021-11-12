@@ -116,6 +116,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(204, 23);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -123,6 +124,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 23);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -195,6 +197,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(192, 23);
             this.textBox6.TabIndex = 14;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label13
             // 
@@ -211,6 +214,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(192, 23);
             this.textBox7.TabIndex = 17;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label15
             // 
@@ -245,6 +249,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(146, 23);
             this.textBox10.TabIndex = 26;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label21
             // 
@@ -262,6 +267,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(146, 23);
             this.maskedTextBox1.TabIndex = 32;
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // maskedTextBox2
             // 
@@ -272,6 +278,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox2.TabIndex = 33;
             this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             // 
             // maskedTextBox3
             // 
@@ -279,6 +286,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(192, 23);
             this.maskedTextBox3.TabIndex = 34;
+            this.maskedTextBox3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             // 
             // maskedTextBox4
             // 
@@ -287,6 +295,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(146, 23);
             this.maskedTextBox4.TabIndex = 35;
+            this.maskedTextBox4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
             // 
             // maskedTextBox5
             // 
@@ -295,6 +304,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(146, 23);
             this.maskedTextBox5.TabIndex = 36;
+            this.maskedTextBox5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox5_MaskInputRejected);
             // 
             // textBox3
             // 
@@ -302,6 +312,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(82, 23);
             this.textBox3.TabIndex = 37;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // textBox4
             // 
@@ -309,6 +320,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(191, 23);
             this.textBox4.TabIndex = 39;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
             // 
@@ -325,6 +337,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(191, 23);
             this.textBox5.TabIndex = 41;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label8
             // 
@@ -341,6 +354,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(128, 23);
             this.textBox8.TabIndex = 43;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label10
             // 
@@ -357,6 +371,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox6.Name = "maskedTextBox6";
             this.maskedTextBox6.Size = new System.Drawing.Size(192, 23);
             this.maskedTextBox6.TabIndex = 45;
+            this.maskedTextBox6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox6_MaskInputRejected);
             // 
             // label12
             // 
@@ -373,6 +388,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(122, 23);
             this.maskedTextBox7.TabIndex = 47;
+            this.maskedTextBox7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox7_MaskInputRejected);
             // 
             // label14
             // 
@@ -389,6 +405,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox8.Name = "maskedTextBox8";
             this.maskedTextBox8.Size = new System.Drawing.Size(142, 23);
             this.maskedTextBox8.TabIndex = 49;
+            this.maskedTextBox8.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox8_MaskInputRejected);
             // 
             // label16
             // 
@@ -423,6 +440,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox11.Name = "maskedTextBox11";
             this.maskedTextBox11.Size = new System.Drawing.Size(167, 23);
             this.maskedTextBox11.TabIndex = 55;
+            this.maskedTextBox11.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox11_MaskInputRejected);
             // 
             // label22
             // 
@@ -439,6 +457,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox10.Name = "maskedTextBox10";
             this.maskedTextBox10.Size = new System.Drawing.Size(122, 23);
             this.maskedTextBox10.TabIndex = 53;
+            this.maskedTextBox10.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox10_MaskInputRejected);
             // 
             // maskedTextBox12
             // 
@@ -446,6 +465,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox12.Name = "maskedTextBox12";
             this.maskedTextBox12.Size = new System.Drawing.Size(122, 23);
             this.maskedTextBox12.TabIndex = 57;
+            this.maskedTextBox12.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox12_MaskInputRejected);
             // 
             // label23
             // 
@@ -462,6 +482,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(128, 23);
             this.textBox9.TabIndex = 59;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label24
             // 
@@ -487,6 +508,7 @@ namespace ProjectKopezkzky.src.view
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(200, 23);
             this.textBox11.TabIndex = 60;
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // maskedTextBox13
             // 
@@ -494,6 +516,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox13.Name = "maskedTextBox13";
             this.maskedTextBox13.Size = new System.Drawing.Size(192, 23);
             this.maskedTextBox13.TabIndex = 63;
+            this.maskedTextBox13.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox13_MaskInputRejected);
             // 
             // label26
             // 
@@ -510,6 +533,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox14.Name = "maskedTextBox14";
             this.maskedTextBox14.Size = new System.Drawing.Size(192, 23);
             this.maskedTextBox14.TabIndex = 65;
+            this.maskedTextBox14.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox14_MaskInputRejected);
             // 
             // label27
             // 
@@ -528,6 +552,7 @@ namespace ProjectKopezkzky.src.view
             this.button1.TabIndex = 66;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -545,6 +570,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox15.Name = "maskedTextBox15";
             this.maskedTextBox15.Size = new System.Drawing.Size(520, 23);
             this.maskedTextBox15.TabIndex = 69;
+            this.maskedTextBox15.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox15_MaskInputRejected);
             // 
             // label28
             // 
@@ -562,6 +588,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox16.Name = "maskedTextBox16";
             this.maskedTextBox16.Size = new System.Drawing.Size(120, 23);
             this.maskedTextBox16.TabIndex = 70;
+            this.maskedTextBox16.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox16_MaskInputRejected);
             // 
             // FrmCadastroFuncionario
             // 
