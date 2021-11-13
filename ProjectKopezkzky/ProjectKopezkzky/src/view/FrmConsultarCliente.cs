@@ -15,6 +15,47 @@ namespace ProjectKopezkzky.src.view
         public FrmConsultarCliente()
         {
             InitializeComponent();
+            FecharButtons();
+        }
+
+        private void FrmConsultarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadCliente_Click(object sender, EventArgs e)
+        {   //Chama o form cadastrar cliente 
+            FormCadCliente frmCadCliente = new FormCadCliente();
+            frmCadCliente.ShowDialog();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {   // chama o form Alterar  Cadastro
+            FrmUpdateCliente frmUpdateCliente = new FrmUpdateCliente();
+            frmUpdateCliente.ShowDialog();
+        }
+
+        private void FecharButtons() 
+        {   //Deixa os botoes inativo quando abrir o form
+            btnAlterar.Enabled = false;
+            btnCadCliente.Enabled = false;
+            btnDelete.Enabled = false;
+        }
+
+        private void ShowButtons() 
+        {
+            //if()
+        }
+
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

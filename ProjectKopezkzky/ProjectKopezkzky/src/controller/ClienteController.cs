@@ -43,6 +43,11 @@ namespace ProjectKopezkzky.src.controller
             return false;
         }
 
+        public bool ConsultarCad(Cliente cliente) 
+        {   
+            return true;
+        }
+
     }
 
 }
