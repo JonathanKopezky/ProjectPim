@@ -19,7 +19,7 @@ namespace ProjectKopezkzky.src.controller
 
         public ClienteController() { }
 
-        public bool VerificaCad(Cliente cliente)
+        public bool CreateCadCliente(Cliente cliente)
         {
             if (clienteRepository.VerificaCad(cliente))
             {
@@ -43,11 +43,20 @@ namespace ProjectKopezkzky.src.controller
             return false;
         }
 
-        public bool ConsultarCad(Cliente cliente) 
-        {   
-            return true;
+        public bool ConsultarCad(Cliente cliente)
+        {
+            if (clienteRepository.VerificaCad(cliente))
+            {
+                //se o verificador nao encontrar no banco ele cadastra
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
         }
 
     }
-
 }

@@ -56,7 +56,7 @@ namespace ProjectKopezkzky.src.view
                 funcionario.sobrenome = textBox2.Text;
                 funcionario.dataNascimento = maskedTextBox2.Text;
                 funcionario.formacaoAcademica = textBox11.Text;
-                funcionario.RG = maskedTextBox4.Text;
+                funcionario.RG = maskedTextBoxRg.Text;
                 funcionario.CPF = maskedTextBox5.Text;
                 funcionario.tituloEleitor = textBox6.Text;
                 funcionario.reservista = textBox7.Text;
@@ -219,7 +219,7 @@ namespace ProjectKopezkzky.src.view
                     !string.IsNullOrWhiteSpace(textBox2.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox2.Text) ||
                     !string.IsNullOrWhiteSpace(textBox11.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox4.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBoxRg.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox5.Text) ||
                     !string.IsNullOrWhiteSpace(textBox6.Text) ||
                     !string.IsNullOrWhiteSpace(textBox7.Text) ||

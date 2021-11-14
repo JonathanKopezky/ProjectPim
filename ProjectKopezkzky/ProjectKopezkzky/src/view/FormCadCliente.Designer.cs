@@ -31,13 +31,10 @@ namespace ProjectKopezkzky.src.view
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txbPais = new System.Windows.Forms.TextBox();
-            this.txbNascimento = new System.Windows.Forms.TextBox();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbEndereco = new System.Windows.Forms.TextBox();
             this.txbnumero = new System.Windows.Forms.TextBox();
-            this.txbCep = new System.Windows.Forms.TextBox();
             this.txbEstado = new System.Windows.Forms.TextBox();
-            this.txbCpf = new System.Windows.Forms.TextBox();
             this.txbComplemento = new System.Windows.Forms.TextBox();
             this.txbCidade = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
@@ -55,16 +52,19 @@ namespace ProjectKopezkzky.src.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txbSobrenome = new System.Windows.Forms.TextBox();
-            this.txbRg = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbTelefone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbSenha = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.maskedTextBoxDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxRg = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,19 +81,11 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbPais
             // 
-            this.txbPais.Location = new System.Drawing.Point(590, 261);
+            this.txbPais.Location = new System.Drawing.Point(501, 261);
             this.txbPais.Name = "txbPais";
             this.txbPais.Size = new System.Drawing.Size(160, 23);
             this.txbPais.TabIndex = 14;
             this.txbPais.TextChanged += new System.EventHandler(this.txbPais_TextChanged);
-            // 
-            // txbNascimento
-            // 
-            this.txbNascimento.Location = new System.Drawing.Point(145, 142);
-            this.txbNascimento.Name = "txbNascimento";
-            this.txbNascimento.Size = new System.Drawing.Size(141, 23);
-            this.txbNascimento.TabIndex = 5;
-            this.txbNascimento.TextChanged += new System.EventHandler(this.txbNascimento_TextChanged);
             // 
             // txbEmail
             // 
@@ -119,14 +111,6 @@ namespace ProjectKopezkzky.src.view
             this.txbnumero.TabIndex = 11;
             this.txbnumero.TextChanged += new System.EventHandler(this.txbnumero_TextChanged);
             // 
-            // txbCep
-            // 
-            this.txbCep.Location = new System.Drawing.Point(590, 200);
-            this.txbCep.Name = "txbCep";
-            this.txbCep.Size = new System.Drawing.Size(160, 23);
-            this.txbCep.TabIndex = 10;
-            this.txbCep.TextChanged += new System.EventHandler(this.txbCep_TextChanged);
-            // 
             // txbEstado
             // 
             this.txbEstado.Location = new System.Drawing.Point(145, 261);
@@ -134,14 +118,6 @@ namespace ProjectKopezkzky.src.view
             this.txbEstado.Size = new System.Drawing.Size(33, 23);
             this.txbEstado.TabIndex = 12;
             this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
-            // 
-            // txbCpf
-            // 
-            this.txbCpf.Location = new System.Drawing.Point(590, 85);
-            this.txbCpf.Name = "txbCpf";
-            this.txbCpf.Size = new System.Drawing.Size(160, 23);
-            this.txbCpf.TabIndex = 3;
-            this.txbCpf.TextChanged += new System.EventHandler(this.txbCpf_TextChanged);
             // 
             // txbComplemento
             // 
@@ -153,7 +129,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbCidade
             // 
-            this.txbCidade.Location = new System.Drawing.Point(308, 261);
+            this.txbCidade.Location = new System.Drawing.Point(219, 261);
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(263, 23);
             this.txbCidade.TabIndex = 13;
@@ -170,7 +146,7 @@ namespace ProjectKopezkzky.src.view
             // lblPais
             // 
             this.lblPais.AutoSize = true;
-            this.lblPais.Location = new System.Drawing.Point(590, 243);
+            this.lblPais.Location = new System.Drawing.Point(501, 243);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(34, 15);
             this.lblPais.TabIndex = 42;
@@ -179,7 +155,7 @@ namespace ProjectKopezkzky.src.view
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(308, 243);
+            this.lblCidade.Location = new System.Drawing.Point(219, 243);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 15);
             this.lblCidade.TabIndex = 41;
@@ -298,14 +274,6 @@ namespace ProjectKopezkzky.src.view
             this.txbSobrenome.TabIndex = 2;
             this.txbSobrenome.TextChanged += new System.EventHandler(this.txbSobrenome_TextChanged);
             // 
-            // txbRg
-            // 
-            this.txbRg.Location = new System.Drawing.Point(23, 142);
-            this.txbRg.Name = "txbRg";
-            this.txbRg.Size = new System.Drawing.Size(100, 23);
-            this.txbRg.TabIndex = 4;
-            this.txbRg.TextChanged += new System.EventHandler(this.txbRg_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -341,14 +309,6 @@ namespace ProjectKopezkzky.src.view
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 57;
             this.label2.Text = "Telefone :";
-            // 
-            // txbTelefone
-            // 
-            this.txbTelefone.Location = new System.Drawing.Point(590, 142);
-            this.txbTelefone.Name = "txbTelefone";
-            this.txbTelefone.Size = new System.Drawing.Size(160, 23);
-            this.txbTelefone.TabIndex = 7;
-            this.txbTelefone.TextChanged += new System.EventHandler(this.txbTelefone_TextChanged);
             // 
             // label7
             // 
@@ -391,32 +351,72 @@ namespace ProjectKopezkzky.src.view
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // maskedTextBoxDataNasc
+            // 
+            this.maskedTextBoxDataNasc.Location = new System.Drawing.Point(145, 142);
+            this.maskedTextBoxDataNasc.Mask = "00/00/0000";
+            this.maskedTextBoxDataNasc.Name = "maskedTextBoxDataNasc";
+            this.maskedTextBoxDataNasc.Size = new System.Drawing.Size(101, 23);
+            this.maskedTextBoxDataNasc.TabIndex = 5;
+            // 
+            // maskedTextBoxRg
+            // 
+            this.maskedTextBoxRg.Location = new System.Drawing.Point(22, 142);
+            this.maskedTextBoxRg.Mask = "99.999.999-0";
+            this.maskedTextBoxRg.Name = "maskedTextBoxRg";
+            this.maskedTextBoxRg.Size = new System.Drawing.Size(101, 23);
+            this.maskedTextBoxRg.TabIndex = 4;
+            // 
+            // maskedTextBoxCpf
+            // 
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(590, 82);
+            this.maskedTextBoxCpf.Mask = "999.999.999-99";
+            this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(88, 23);
+            this.maskedTextBoxCpf.TabIndex = 3;
+            // 
+            // maskedTextBoxTelefone
+            // 
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(590, 142);
+            this.maskedTextBoxTelefone.Mask = "(99) 00000-0000";
+            this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(101, 23);
+            this.maskedTextBoxTelefone.TabIndex = 7;
+            // 
+            // maskedTextBoxCep
+            // 
+            this.maskedTextBoxCep.Location = new System.Drawing.Point(590, 200);
+            this.maskedTextBoxCep.Mask = "00000-000";
+            this.maskedTextBoxCep.Name = "maskedTextBoxCep";
+            this.maskedTextBoxCep.Size = new System.Drawing.Size(101, 23);
+            this.maskedTextBoxCep.TabIndex = 10;
+            // 
             // FormCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBoxCep);
+            this.Controls.Add(this.maskedTextBoxTelefone);
+            this.Controls.Add(this.maskedTextBoxCpf);
+            this.Controls.Add(this.maskedTextBoxRg);
+            this.Controls.Add(this.maskedTextBoxDataNasc);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txbRg);
             this.Controls.Add(this.txbSobrenome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txbPais);
-            this.Controls.Add(this.txbNascimento);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.txbEndereco);
             this.Controls.Add(this.txbnumero);
-            this.Controls.Add(this.txbCep);
             this.Controls.Add(this.txbEstado);
-            this.Controls.Add(this.txbCpf);
             this.Controls.Add(this.txbComplemento);
             this.Controls.Add(this.txbCidade);
             this.Controls.Add(this.txbNome);
@@ -445,13 +445,10 @@ namespace ProjectKopezkzky.src.view
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbPais;
-        private System.Windows.Forms.TextBox txbNascimento;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbEndereco;
         private System.Windows.Forms.TextBox txbnumero;
-        private System.Windows.Forms.TextBox txbCep;
         private System.Windows.Forms.TextBox txbEstado;
-        private System.Windows.Forms.TextBox txbCpf;
         private System.Windows.Forms.TextBox txbComplemento;
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbNome;
@@ -469,15 +466,18 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbSobrenome;
-        private System.Windows.Forms.TextBox txbRg;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbTelefone;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxDataNasc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxRg;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpf;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
     }
 }

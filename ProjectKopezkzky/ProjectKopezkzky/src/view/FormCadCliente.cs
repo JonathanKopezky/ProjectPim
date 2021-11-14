@@ -72,21 +72,21 @@ namespace ProjectKopezkzky.src.view
 
             this.cliente.nome = txbNome.Text;
             this.cliente.sobrenome = txbSobrenome.Text;
-            this.cliente.CPF = txbCpf.Text;
-            this.cliente.RG = txbRg.Text;
-            this.cliente.dataNascimento = txbNascimento.Text;
+            this.cliente.CPF = maskedTextBoxCpf .Text;
+            this.cliente.RG = maskedTextBoxRg.Text;
+            this.cliente.dataNascimento = maskedTextBoxDataNasc.Text;
             this.cliente.genero = txtGenero.Text;
-            this.cliente.telefone = txbTelefone.Text;
+            this.cliente.telefone = maskedTextBoxTelefone.Text;
             this.cliente.email = txbEmail.Text;
             this.cliente.endereco = txbEndereco.Text;
-            this.cliente.CEP = txbCep.Text;
+            this.cliente.CEP = maskedTextBoxCep.Text;
             this.cliente.numero = Int32.Parse(txbnumero.Text);
             this.cliente.estado = txbEstado.Text;
             this.cliente.cidade = txbCidade.Text;
             this.cliente.pais = txbPais.Text;
             this.cliente.complemento = txbComplemento.Text;
             this.cliente.senha = txbSenha.Text;
-            if (!ClienteController.VerificaCad(cliente))
+            if (!ClienteController.CreateCadCliente(cliente))
             {
                 MessageBox.Show("Cadastro existe");
             }
@@ -106,13 +106,13 @@ namespace ProjectKopezkzky.src.view
         { // vai limpar todos textbox
             txbNome.Clear();
             txbSobrenome.Clear();
-            txbCpf.Clear();
-            txbRg.Clear();
-            txbNascimento.Clear();
+            maskedTextBoxCpf.Clear();
+            maskedTextBoxRg.Clear();
+            maskedTextBoxDataNasc.Clear();
             txtGenero.Clear();
-            txbTelefone.Clear();
+            maskedTextBoxTelefone.Clear();
             txbEndereco.Clear();
-            txbCep.Clear();
+            maskedTextBoxCep.Clear();
             txbnumero.Clear();
             txbEstado.Clear();
             txbCidade.Clear();
@@ -146,10 +146,10 @@ namespace ProjectKopezkzky.src.view
         {// funcao desativa o botao enquanto texbox for vazio 
 
             if (!string.IsNullOrWhiteSpace(txbNome.Text) && !string.IsNullOrWhiteSpace(txbSobrenome.Text)
-                && !string.IsNullOrWhiteSpace(txbCpf.Text) && !string.IsNullOrWhiteSpace(txbRg.Text)
-                 && !string.IsNullOrWhiteSpace(txbNascimento.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
-                  && !string.IsNullOrWhiteSpace(txbTelefone.Text) && !string.IsNullOrWhiteSpace(txbEmail.Text)
-                   && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(txbCep.Text)
+                && !string.IsNullOrWhiteSpace(maskedTextBoxCpf.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxRg.Text)
+                 && !string.IsNullOrWhiteSpace (maskedTextBoxDataNasc.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
+                  && !string.IsNullOrWhiteSpace(maskedTextBoxTelefone.Text) && !string.IsNullOrWhiteSpace(txbEmail.Text)
+                   && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxCep.Text)
                     && !string.IsNullOrWhiteSpace(txbnumero.Text) && !string.IsNullOrWhiteSpace(txbEstado.Text)
                      && !string.IsNullOrWhiteSpace(txbCidade.Text) && !string.IsNullOrWhiteSpace(txbPais.Text)
                      && !string.IsNullOrWhiteSpace(txbComplemento.Text) && !string.IsNullOrWhiteSpace(txbSenha.Text))

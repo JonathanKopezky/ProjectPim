@@ -48,7 +48,7 @@ namespace ProjectKopezkzky.src.view
             this.passwordTXT.Location = new System.Drawing.Point(198, 275);
             this.passwordTXT.Name = "passwordTXT";
             this.passwordTXT.Size = new System.Drawing.Size(229, 23);
-            this.passwordTXT.TabIndex = 0;
+            this.passwordTXT.TabIndex = 1;
             this.passwordTXT.Text = "Password";
             this.passwordTXT.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -61,7 +61,7 @@ namespace ProjectKopezkzky.src.view
             this.cpfTXT.Location = new System.Drawing.Point(198, 202);
             this.cpfTXT.Name = "cpfTXT";
             this.cpfTXT.Size = new System.Drawing.Size(229, 23);
-            this.cpfTXT.TabIndex = 1;
+            this.cpfTXT.TabIndex = 0;
             this.cpfTXT.Text = "CPF";
             this.cpfTXT.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -111,6 +111,7 @@ namespace ProjectKopezkzky.src.view
             this.signinBTN.Text = "Sign In";
             this.signinBTN.UseVisualStyleBackColor = true;
             this.signinBTN.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSignIn
             // 
             this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -142,7 +143,7 @@ namespace ProjectKopezkzky.src.view
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // LoginForm
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +161,7 @@ namespace ProjectKopezkzky.src.view
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(700, 500);
-            this.Name = "LoginForm";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);

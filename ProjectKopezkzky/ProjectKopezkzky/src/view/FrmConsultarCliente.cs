@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectKopezkzky.src.controller;
+using ProjectKopezkzky.src.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace ProjectKopezkzky.src.view
 {
     public partial class FrmConsultarCliente : Form
     {
+        Cliente cliente = new Cliente();
+        ClienteController clienteController = new ClienteController();
         public FrmConsultarCliente()
         {
             InitializeComponent();
@@ -33,16 +37,17 @@ namespace ProjectKopezkzky.src.view
         {   // chama o form Alterar  Cadastro
             FrmUpdateCliente frmUpdateCliente = new FrmUpdateCliente();
             frmUpdateCliente.ShowDialog();
+
         }
 
-        private void FecharButtons() 
+        private void FecharButtons()
         {   //Deixa os botoes inativo quando abrir o form
             btnAlterar.Enabled = false;
             btnCadCliente.Enabled = false;
             btnDelete.Enabled = false;
         }
 
-        private void ShowButtons() 
+        private void ShowButtons()
         {
             //if()
         }
@@ -50,11 +55,21 @@ namespace ProjectKopezkzky.src.view
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            cliente.CPF = txtCpf.Text;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
+            cliente.CPF = txtCpf.Text;
+            if (clienteController.ConsultarCad(cliente))
+            {
+                MessageBox.Show("Cliente ja cadastrado");
+            }
+            else 
+            {
+                MessageBox.Show("Cliente sem cadastro");
+            }
 
         }
     }
