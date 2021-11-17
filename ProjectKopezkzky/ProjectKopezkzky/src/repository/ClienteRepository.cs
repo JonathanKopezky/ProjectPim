@@ -87,7 +87,7 @@ namespace ProjectKopezkzky.src.repository
             }
             catch (SqlException)
             {
-
+                return false;
             }
             finally
             {
@@ -99,9 +99,35 @@ namespace ProjectKopezkzky.src.repository
         }
 
         public bool AtualizarCadCliente(Cliente cliente) { return false; }
-        public bool DeletarCadCliente(Cliente cliente) { return false; }
-        public bool ConsultaCadCliente(Cliente cliente) { return false; }
+        public bool DeletarCadCliente(Cliente cliente) {
+            Comando = new SqlCommand();
 
+            Comando.CommandText = "UPDATE Cliente  SET Ativo = @ativo  WHERE  CPF = @cpf";
+            Comando.Parameters.AddWithValue("@ativo", 0);
+            Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
+            try
+            {
+
+                Comando.Connection = conn.connect();
+
+                Comando.ExecuteNonQuery();
+
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+            finally
+            {
+
+
+                conn.disconnect();
+            }
+            return true;
+        }
+
+
+          
 
 
     }

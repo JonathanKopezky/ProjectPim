@@ -40,19 +40,27 @@ namespace ProjectKopezkzky.src.controller
 
         public bool DeletCad(Cliente cliente)
         {
-            return false;
-        }
-
-        public bool ConsultarCad(Cliente cliente)
-        {
-            if (clienteRepository.VerificaCad(cliente))
+            if (clienteRepository.DeletarCadCliente(cliente)) 
             {
-                //se o verificador nao encontrar no banco ele cadastra
-                return false;
+                return true;
             }
             else
             {
+
+            return false;
+            }
+        }
+
+        public bool ConsultarCad(Cliente cliente)
+        {   // consultar se tiver vai retornar true se não false
+            if (clienteRepository.VerificaCad(cliente))
+            {
+                
                 return true;
+            }
+            else
+            {
+                return false ;
             }
 
 

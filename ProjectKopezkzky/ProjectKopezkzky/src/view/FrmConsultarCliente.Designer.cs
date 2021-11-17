@@ -53,7 +53,7 @@ namespace ProjectKopezkzky.src.view
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 187);
+            this.label2.Location = new System.Drawing.Point(224, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 1;
@@ -61,14 +61,14 @@ namespace ProjectKopezkzky.src.view
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(224, 205);
+            this.txtCpf.Location = new System.Drawing.Point(224, 176);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(189, 23);
             this.txtCpf.TabIndex = 3;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(429, 205);
+            this.btnBuscar.Location = new System.Drawing.Point(429, 176);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 4;

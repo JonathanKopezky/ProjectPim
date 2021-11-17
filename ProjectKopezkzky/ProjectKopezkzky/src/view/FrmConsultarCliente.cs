@@ -47,28 +47,36 @@ namespace ProjectKopezkzky.src.view
             btnDelete.Enabled = false;
         }
 
-        private void ShowButtons()
-        {
-            //if()
-        }
+     
 
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {
+        { 
             cliente.CPF = txtCpf.Text;
-
+            if (clienteController.DeletCad(cliente))
+            {
+                MessageBox.Show("Cliente excluido");
+            }
+            else 
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             cliente.CPF = txtCpf.Text;
             if (clienteController.ConsultarCad(cliente))
-            {
+            {// so vai ativar o botao delete e alterar se ja ouver cadastro
                 MessageBox.Show("Cliente ja cadastrado");
+                btnDelete.Enabled = true;
+                btnAlterar.Enabled = true;
             }
             else 
-            {
+            {   //vai liberar o botao cadastrar se nao haver reserva 
                 MessageBox.Show("Cliente sem cadastro");
+                btnCadCliente.Enabled = true;
+
             }
 
         }

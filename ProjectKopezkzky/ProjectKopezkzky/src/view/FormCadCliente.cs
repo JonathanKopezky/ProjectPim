@@ -86,13 +86,16 @@ namespace ProjectKopezkzky.src.view
             this.cliente.pais = txbPais.Text;
             this.cliente.complemento = txbComplemento.Text;
             this.cliente.senha = txbSenha.Text;
-            if (!ClienteController.CreateCadCliente(cliente))
+            ClienteController.CreateCadCliente(cliente);
+            if (ClienteController.CreateCadCliente(cliente))
             {
-                MessageBox.Show("Cadastro existe");
+                MessageBox.Show("Cadastrado Com Sucesso");
+                Close();
+                limpar();
             }
             else
             {
-                MessageBox.Show("Cadastrado com suceeso");
+                MessageBox.Show("Error");
                 // Close();
                 limpar();
             }
