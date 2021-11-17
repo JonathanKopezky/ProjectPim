@@ -35,7 +35,7 @@ namespace ProjectKopezkzky.src.view
             this.label7 = new System.Windows.Forms.Label();
             this.txbTelefone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.txbGenero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txbSobrenome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +61,10 @@ namespace ProjectKopezkzky.src.view
             this.labelNome = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.textBoxNumero = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,12 +121,12 @@ namespace ProjectKopezkzky.src.view
             this.label2.TabIndex = 90;
             this.label2.Text = "Telefone :";
             // 
-            // txtGenero
+            // txbGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(37, 160);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(263, 23);
-            this.txtGenero.TabIndex = 65;
+            this.txbGenero.Location = new System.Drawing.Point(37, 160);
+            this.txbGenero.Name = "txbGenero";
+            this.txbGenero.Size = new System.Drawing.Size(263, 23);
+            this.txbGenero.TabIndex = 65;
             // 
             // label6
             // 
@@ -172,28 +176,28 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbEndereco
             // 
-            this.txbEndereco.Location = new System.Drawing.Point(37, 212);
+            this.txbEndereco.Location = new System.Drawing.Point(155, 213);
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(263, 23);
             this.txbEndereco.TabIndex = 68;
             // 
             // txbnumero
             // 
-            this.txbnumero.Location = new System.Drawing.Point(501, 212);
+            this.txbnumero.Location = new System.Drawing.Point(619, 213);
             this.txbnumero.Name = "txbnumero";
             this.txbnumero.Size = new System.Drawing.Size(100, 23);
             this.txbnumero.TabIndex = 70;
             // 
             // txbCep
             // 
-            this.txbCep.Location = new System.Drawing.Point(322, 212);
+            this.txbCep.Location = new System.Drawing.Point(440, 213);
             this.txbCep.Name = "txbCep";
             this.txbCep.Size = new System.Drawing.Size(160, 23);
             this.txbCep.TabIndex = 69;
             // 
             // txbEstado
             // 
-            this.txbEstado.Location = new System.Drawing.Point(501, 212);
+            this.txbEstado.Location = new System.Drawing.Point(619, 213);
             this.txbEstado.Name = "txbEstado";
             this.txbEstado.Size = new System.Drawing.Size(33, 23);
             this.txbEstado.TabIndex = 71;
@@ -249,7 +253,7 @@ namespace ProjectKopezkzky.src.view
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(501, 194);
+            this.lblEstado.Location = new System.Drawing.Point(619, 195);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(48, 15);
             this.lblEstado.TabIndex = 82;
@@ -258,7 +262,7 @@ namespace ProjectKopezkzky.src.view
             // lblCep
             // 
             this.lblCep.AutoSize = true;
-            this.lblCep.Location = new System.Drawing.Point(322, 194);
+            this.lblCep.Location = new System.Drawing.Point(440, 195);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(34, 15);
             this.lblCep.TabIndex = 81;
@@ -267,7 +271,7 @@ namespace ProjectKopezkzky.src.view
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(501, 194);
+            this.label5.Location = new System.Drawing.Point(619, 195);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 80;
@@ -276,7 +280,7 @@ namespace ProjectKopezkzky.src.view
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(37, 194);
+            this.lbl.Location = new System.Drawing.Point(155, 195);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(62, 15);
             this.lbl.TabIndex = 79;
@@ -317,6 +321,7 @@ namespace ProjectKopezkzky.src.view
             this.btnSalvar.TabIndex = 92;
             this.btnSalvar.Text = "Atualizar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnSair
             // 
@@ -327,18 +332,54 @@ namespace ProjectKopezkzky.src.view
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             // 
+            // textBoxNumero
+            // 
+            this.textBoxNumero.Location = new System.Drawing.Point(37, 213);
+            this.textBoxNumero.Name = "textBoxNumero";
+            this.textBoxNumero.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNumero.TabIndex = 94;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(37, 213);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(33, 23);
+            this.textBox2.TabIndex = 95;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(37, 195);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(57, 15);
+            this.lblNumero.TabIndex = 97;
+            this.lblNumero.Text = "Numero :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.TabIndex = 96;
+            this.label4.Text = "Número :";
+            // 
             // FrmUpdateCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxNumero);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtGenero);
+            this.Controls.Add(this.txbGenero);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txbSobrenome);
             this.Controls.Add(this.label3);
@@ -365,6 +406,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.panel1);
             this.Name = "FrmUpdateCliente";
             this.Text = "FrmUpdateCliente";
+            this.Load += new System.EventHandler(this.FrmUpdateCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -380,7 +422,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbTelefone;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.TextBox txbGenero;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txbSobrenome;
         private System.Windows.Forms.Label label3;
@@ -406,5 +448,9 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.TextBox textBoxNumero;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label label4;
     }
 }

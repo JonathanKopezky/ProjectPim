@@ -85,10 +85,7 @@ namespace ProjectKopezkzky.src.repository
                 Comando.ExecuteNonQuery();
 
             }
-            catch (SqlException)
-            {
-                return false;
-            }
+
             finally
             {
 
@@ -98,8 +95,46 @@ namespace ProjectKopezkzky.src.repository
             return true;
         }
 
-        public bool AtualizarCadCliente(Cliente cliente) { return false; }
-        public bool DeletarCadCliente(Cliente cliente) {
+        public bool AtualizarCadCliente(Cliente cliente)
+        {
+            Comando = new SqlCommand();
+            Comando.CommandText = "UPDATE Cliente SET Nome =@nome, Sobrenome =@sobrenome, Email =@email, Telefone =@telefone,  Endereço =@endereco, CEP =@cep, Numero =@numero, Complemento =@complemento, Cidade =@cidade, Estado =@estado, Genero =@genero,  Pais =@pais,Data_nascimento =@nascimento Senha =@senha WHERE CPF =@cpf";
+
+            //parametros
+            Comando.Parameters.AddWithValue("@nome", cliente.nome);
+            Comando.Parameters.AddWithValue("@sobrenome", cliente.sobrenome);
+            Comando.Parameters.AddWithValue("@Email", cliente.email);
+            Comando.Parameters.AddWithValue("@telefone", cliente.telefone);
+            Comando.Parameters.AddWithValue("@Endereco", cliente.endereco);
+            Comando.Parameters.AddWithValue("@cep", cliente.CEP);
+            Comando.Parameters.AddWithValue("@numero", cliente.numero);
+            Comando.Parameters.AddWithValue("@complemento", cliente.complemento);
+            Comando.Parameters.AddWithValue("@cidade", cliente.cidade);
+            Comando.Parameters.AddWithValue("@estado", cliente.estado);
+            Comando.Parameters.AddWithValue("@genero", cliente.genero);
+            Comando.Parameters.AddWithValue("@pais", cliente.pais);
+            Comando.Parameters.AddWithValue("@nascimento", cliente.dataNascimento);
+            Comando.Parameters.AddWithValue("@senha", cliente.senha);
+            Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
+            try
+            {
+
+                Comando.Connection = conn.connect();
+
+                Comando.ExecuteNonQuery();
+
+            }
+            finally
+            {
+                conn.disconnect();
+            }
+
+            return true;
+        }
+
+
+        public bool DeletarCadCliente(Cliente cliente)
+        {
             Comando = new SqlCommand();
 
             Comando.CommandText = "UPDATE Cliente  SET Ativo = @ativo  WHERE  CPF = @cpf";
@@ -127,7 +162,7 @@ namespace ProjectKopezkzky.src.repository
         }
 
 
-          
+
 
 
     }

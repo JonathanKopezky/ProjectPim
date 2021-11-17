@@ -34,7 +34,6 @@ namespace ProjectKopezkzky.src.view
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbEndereco = new System.Windows.Forms.TextBox();
             this.txbnumero = new System.Windows.Forms.TextBox();
-            this.txbEstado = new System.Windows.Forms.TextBox();
             this.txbComplemento = new System.Windows.Forms.TextBox();
             this.txbCidade = new System.Windows.Forms.TextBox();
             this.txbNome = new System.Windows.Forms.TextBox();
@@ -65,6 +64,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
+            this.txbEstado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,14 +110,6 @@ namespace ProjectKopezkzky.src.view
             this.txbnumero.Size = new System.Drawing.Size(100, 23);
             this.txbnumero.TabIndex = 11;
             this.txbnumero.TextChanged += new System.EventHandler(this.txbnumero_TextChanged);
-            // 
-            // txbEstado
-            // 
-            this.txbEstado.Location = new System.Drawing.Point(145, 261);
-            this.txbEstado.Name = "txbEstado";
-            this.txbEstado.Size = new System.Drawing.Size(33, 23);
-            this.txbEstado.TabIndex = 12;
-            this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
             // 
             // txbComplemento
             // 
@@ -362,7 +354,7 @@ namespace ProjectKopezkzky.src.view
             // maskedTextBoxRg
             // 
             this.maskedTextBoxRg.Location = new System.Drawing.Point(22, 142);
-            this.maskedTextBoxRg.Mask = "99.999.999-0";
+            this.maskedTextBoxRg.Mask = "00.000.000-0";
             this.maskedTextBoxRg.Name = "maskedTextBoxRg";
             this.maskedTextBoxRg.Size = new System.Drawing.Size(101, 23);
             this.maskedTextBoxRg.TabIndex = 4;
@@ -370,7 +362,7 @@ namespace ProjectKopezkzky.src.view
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Location = new System.Drawing.Point(590, 82);
-            this.maskedTextBoxCpf.Mask = "999.999.999-99";
+            this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(88, 23);
             this.maskedTextBoxCpf.TabIndex = 3;
@@ -378,7 +370,7 @@ namespace ProjectKopezkzky.src.view
             // maskedTextBoxTelefone
             // 
             this.maskedTextBoxTelefone.Location = new System.Drawing.Point(590, 142);
-            this.maskedTextBoxTelefone.Mask = "(99) 00000-0000";
+            this.maskedTextBoxTelefone.Mask = "(00) 00000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(101, 23);
             this.maskedTextBoxTelefone.TabIndex = 7;
@@ -390,6 +382,14 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(101, 23);
             this.maskedTextBoxCep.TabIndex = 10;
+            // 
+            // txbEstado
+            // 
+            this.txbEstado.Location = new System.Drawing.Point(145, 261);
+            this.txbEstado.Name = "txbEstado";
+            this.txbEstado.Size = new System.Drawing.Size(33, 23);
+            this.txbEstado.TabIndex = 12;
+            this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
             // 
             // FormCadCliente
             // 
@@ -448,7 +448,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbEndereco;
         private System.Windows.Forms.TextBox txbnumero;
-        private System.Windows.Forms.TextBox txbEstado;
         private System.Windows.Forms.TextBox txbComplemento;
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbNome;
@@ -479,5 +478,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCpf;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
+        private System.Windows.Forms.TextBox txbEstado;
     }
 }

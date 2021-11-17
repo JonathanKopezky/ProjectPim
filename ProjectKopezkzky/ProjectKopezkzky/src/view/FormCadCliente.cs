@@ -14,8 +14,7 @@ namespace ProjectKopezkzky.src.view
 {
     public partial class FormCadCliente : Form
     {
-        ClienteController ClienteController = new ClienteController();
-        Cliente cliente = new Cliente();
+        
         public FormCadCliente()
         {
             InitializeComponent();
@@ -69,36 +68,36 @@ namespace ProjectKopezkzky.src.view
 
         private void BtnSalvar(object sender, EventArgs e)
         {   // pasando parametros para cliente 
+            ClienteController clienteController = new ClienteController();
+            Cliente cliente = new Cliente();
 
-            this.cliente.nome = txbNome.Text;
-            this.cliente.sobrenome = txbSobrenome.Text;
-            this.cliente.CPF = maskedTextBoxCpf .Text;
-            this.cliente.RG = maskedTextBoxRg.Text;
-            this.cliente.dataNascimento = maskedTextBoxDataNasc.Text;
-            this.cliente.genero = txtGenero.Text;
-            this.cliente.telefone = maskedTextBoxTelefone.Text;
-            this.cliente.email = txbEmail.Text;
-            this.cliente.endereco = txbEndereco.Text;
-            this.cliente.CEP = maskedTextBoxCep.Text;
-            this.cliente.numero = Int32.Parse(txbnumero.Text);
-            this.cliente.estado = txbEstado.Text;
-            this.cliente.cidade = txbCidade.Text;
-            this.cliente.pais = txbPais.Text;
-            this.cliente.complemento = txbComplemento.Text;
-            this.cliente.senha = txbSenha.Text;
-            ClienteController.CreateCadCliente(cliente);
-            if (ClienteController.CreateCadCliente(cliente))
+            cliente.nome = txbNome.Text;
+            cliente.sobrenome = txbSobrenome.Text;
+            cliente.CPF = maskedTextBoxCpf.Text;
+            cliente.RG = maskedTextBoxRg.Text;
+            cliente.dataNascimento = maskedTextBoxDataNasc.Text;
+            cliente.genero = txtGenero.Text;
+            cliente.telefone = maskedTextBoxTelefone.Text;
+            cliente.email = txbEmail.Text;
+            cliente.endereco = txbEndereco.Text;
+            cliente.CEP = maskedTextBoxCep.Text;
+            cliente.numero = Int32.Parse(txbnumero.Text);
+            cliente.estado = txbEstado.Text;
+            cliente.cidade = txbCidade.Text;
+            cliente.pais = txbPais.Text;
+            cliente.complemento = txbComplemento.Text;
+            cliente.senha = txbSenha.Text;
+            clienteController.CreateCadCliente(cliente);
+
+            if (clienteController.CreateCadCliente(cliente))
             {
-                MessageBox.Show("Cadastrado Com Sucesso");
-                Close();
-                limpar();
+                MessageBox.Show("true");
             }
-            else
+            else 
             {
-                MessageBox.Show("Error");
-                // Close();
-                limpar();
+                MessageBox.Show("falso");
             }
+
 
 
 
@@ -150,7 +149,7 @@ namespace ProjectKopezkzky.src.view
 
             if (!string.IsNullOrWhiteSpace(txbNome.Text) && !string.IsNullOrWhiteSpace(txbSobrenome.Text)
                 && !string.IsNullOrWhiteSpace(maskedTextBoxCpf.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxRg.Text)
-                 && !string.IsNullOrWhiteSpace (maskedTextBoxDataNasc.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
+                 && !string.IsNullOrWhiteSpace(maskedTextBoxDataNasc.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
                   && !string.IsNullOrWhiteSpace(maskedTextBoxTelefone.Text) && !string.IsNullOrWhiteSpace(txbEmail.Text)
                    && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxCep.Text)
                     && !string.IsNullOrWhiteSpace(txbnumero.Text) && !string.IsNullOrWhiteSpace(txbEstado.Text)

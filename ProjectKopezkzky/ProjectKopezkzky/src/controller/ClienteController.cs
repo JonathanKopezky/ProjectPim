@@ -14,40 +14,52 @@ namespace ProjectKopezkzky.src.controller
 {
     public class ClienteController
     {
-        ClienteRepository clienteRepository = new ClienteRepository();
-        Cliente cliente = new Cliente();
+        public ClienteRepository clienteRepository = new ClienteRepository();
+        public Cliente cliente = new Cliente();
 
-        public ClienteController() { }
+        public ClienteController()
+        {
+
+
+        }
 
         public bool CreateCadCliente(Cliente cliente)
         {
-            if (clienteRepository.VerificaCad(cliente))
+
+
+            if (clienteRepository.CriarCadCliente(cliente))
             {
-                //se o verificador nao encontrar no banco ele cadastra
-                return false;
+                return true;
             }
             else
             {
-                return clienteRepository.CriarCadCliente(cliente);
+                return false;
             }
         }
 
 
         public bool AtualizaCad(Cliente cliente)
         {
-            return false;
+            if (clienteRepository.AtualizarCadCliente(cliente))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool DeletCad(Cliente cliente)
         {
-            if (clienteRepository.DeletarCadCliente(cliente)) 
+            if (clienteRepository.DeletarCadCliente(cliente))
             {
                 return true;
             }
             else
             {
 
-            return false;
+                return false;
             }
         }
 
@@ -55,12 +67,12 @@ namespace ProjectKopezkzky.src.controller
         {   // consultar se tiver vai retornar true se não false
             if (clienteRepository.VerificaCad(cliente))
             {
-                
+
                 return true;
             }
             else
             {
-                return false ;
+                return false;
             }
 
 
