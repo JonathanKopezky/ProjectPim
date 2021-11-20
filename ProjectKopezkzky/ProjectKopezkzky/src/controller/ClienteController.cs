@@ -7,8 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using ProjectKopezkzky.src.model;
-using ProjectKopezkzky.src.repository;
 
 namespace ProjectKopezkzky.src.controller
 {
