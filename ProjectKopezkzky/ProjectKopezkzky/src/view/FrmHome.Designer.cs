@@ -83,13 +83,14 @@ namespace ProjectKopezkzky.src.view
             // consultarReservaToolStripMenuItem
             // 
             this.consultarReservaToolStripMenuItem.Name = "consultarReservaToolStripMenuItem";
-            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarReservaToolStripMenuItem.Text = "Nova Reserva";
+            this.consultarReservaToolStripMenuItem.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem_Click_1);
             // 
             // consultarReservaToolStripMenuItem1
             // 
             this.consultarReservaToolStripMenuItem1.Name = "consultarReservaToolStripMenuItem1";
-            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.consultarReservaToolStripMenuItem1.Text = "Consultar Reserva ";
             // 
             // clientesToolStripMenuItem
