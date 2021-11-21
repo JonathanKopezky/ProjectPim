@@ -38,12 +38,10 @@ namespace ProjectKopezkzky.src.view
             this.Nome = new System.Windows.Forms.ColumnHeader();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxDataSaida = new System.Windows.Forms.TextBox();
+            this.txtBoxDataEntrada = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -126,12 +124,10 @@ namespace ProjectKopezkzky.src.view
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.maskedTextBox2);
-            this.panel3.Controls.Add(this.maskedTextBox1);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtBoxDataSaida);
+            this.panel3.Controls.Add(this.txtBoxDataEntrada);
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.label5);
@@ -143,23 +139,6 @@ namespace ProjectKopezkzky.src.view
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(760, 244);
             this.panel3.TabIndex = 3;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(593, 167);
-            this.maskedTextBox2.Mask = "__/__/____";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(87, 23);
-            this.maskedTextBox2.TabIndex = 14;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(439, 167);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(86, 23);
-            this.maskedTextBox1.TabIndex = 13;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
             // label7
             // 
@@ -179,19 +158,19 @@ namespace ProjectKopezkzky.src.view
             this.label6.TabIndex = 11;
             this.label6.Text = "Entrada";
             // 
-            // textBox2
+            // txtBoxDataSaida
             // 
-            this.textBox2.Location = new System.Drawing.Point(593, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(87, 23);
-            this.textBox2.TabIndex = 10;
+            this.txtBoxDataSaida.Location = new System.Drawing.Point(593, 132);
+            this.txtBoxDataSaida.Name = "txtBoxDataSaida";
+            this.txtBoxDataSaida.Size = new System.Drawing.Size(87, 23);
+            this.txtBoxDataSaida.TabIndex = 10;
             // 
-            // textBox1
+            // txtBoxDataEntrada
             // 
-            this.textBox1.Location = new System.Drawing.Point(439, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 23);
-            this.textBox1.TabIndex = 9;
+            this.txtBoxDataEntrada.Location = new System.Drawing.Point(439, 132);
+            this.txtBoxDataEntrada.Name = "txtBoxDataEntrada";
+            this.txtBoxDataEntrada.Size = new System.Drawing.Size(87, 23);
+            this.txtBoxDataEntrada.TabIndex = 9;
             // 
             // dateTimePicker2
             // 
@@ -344,12 +323,10 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader CPF;
         private System.Windows.Forms.ColumnHeader Nome;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxDataSaida;
+        private System.Windows.Forms.TextBox txtBoxDataEntrada;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox txtBoxCPF;
         private System.Windows.Forms.Label lblCPF;
