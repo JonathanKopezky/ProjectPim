@@ -17,6 +17,17 @@ namespace ProjectKopezkzky.src.view
             InitializeComponent();
         }
 
+
+
+        private void getData()
+        {
+            MessageBox.Show("The selected value is " + dateTimePickerEntrada.Text);
+            MessageBox.Show("Number Day: " + dateTimePickerEntrada.Value.Day.ToString());
+            MessageBox.Show("DayOfWeek: " + dateTimePickerEntrada.Value.DayOfWeek.ToString());
+            MessageBox.Show("Mouth: "+ dateTimePickerEntrada.Value.Month.ToString());
+            MessageBox.Show("Year: " + dateTimePickerEntrada.Value.Year.ToString());
+        }
+        
         private void FrmNovaReserva_Load(object sender, EventArgs e)
         {
 
@@ -33,6 +44,41 @@ namespace ProjectKopezkzky.src.view
         }
 
         private void txtBoxCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            getData();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxQartIndDuplo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxQartInd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
