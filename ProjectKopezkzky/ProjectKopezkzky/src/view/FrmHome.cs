@@ -79,5 +79,12 @@ namespace ProjectKopezkzky.src.view
 
             fmrCadastroFuncionario.ShowDialog();
         }
+
+        private void consultarReservaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmNovaReserva frmNovaReserva = new FrmNovaReserva();
+
+            FormShow(frmNovaReserva);
+        }
     }
 }
