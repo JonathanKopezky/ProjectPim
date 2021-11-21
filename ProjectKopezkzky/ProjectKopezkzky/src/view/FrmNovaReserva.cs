@@ -26,5 +26,15 @@ namespace ProjectKopezkzky.src.view
         {
 
         }
+
+        private void lblCPF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
