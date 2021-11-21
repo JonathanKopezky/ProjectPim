@@ -85,5 +85,10 @@ namespace ProjectKopezkzky.src.view
         {
             this.Close();
         }
+
+        private void signinBTN_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+        }
     }
 }

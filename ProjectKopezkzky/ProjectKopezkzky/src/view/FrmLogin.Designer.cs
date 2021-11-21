@@ -111,6 +111,8 @@ namespace ProjectKopezkzky.src.view
             this.signinBTN.Text = "Sign In";
             this.signinBTN.UseVisualStyleBackColor = true;
             this.signinBTN.Click += new System.EventHandler(this.button1_Click);
+            this.signinBTN.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.signinBTN_PreviewKeyDown);
+            // 
             // btnSignIn
             // 
             this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -142,7 +144,7 @@ namespace ProjectKopezkzky.src.view
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // LoginForm
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +162,7 @@ namespace ProjectKopezkzky.src.view
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(700, 500);
-            this.Name = "LoginForm";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);

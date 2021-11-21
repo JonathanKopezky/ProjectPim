@@ -27,7 +27,7 @@ namespace ProjectKopezkzky.src.view
             MessageBox.Show("Mouth: "+ dateTimePickerEntrada.Value.Month.ToString());
             MessageBox.Show("Year: " + dateTimePickerEntrada.Value.Year.ToString());
         }
-        
+      
         private void FrmNovaReserva_Load(object sender, EventArgs e)
         {
 

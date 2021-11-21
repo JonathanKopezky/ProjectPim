@@ -86,5 +86,13 @@ namespace ProjectKopezkzky.src.view
 
             FormShow(frmNovaReserva);
         }
+
+        private void btnHomeSair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Tem certeza que deseja sair da aplicação?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();                
+            }
+        }
     }
 }
