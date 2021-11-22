@@ -82,5 +82,26 @@ namespace ProjectKopezkzky.src.view
         {
 
         }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            //txtBoxCPF
+        }
     }
 }
