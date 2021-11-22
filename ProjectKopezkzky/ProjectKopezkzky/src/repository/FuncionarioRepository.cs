@@ -68,7 +68,7 @@ namespace ProjectKopezkzky.src.repository
                 "INSERT INTO Funcionarios VALUES(@nome, @sobrenome, @rg, @cpf, @tituloEleitor, @reservista, @cnh, @telefone, " +
                 "@endereco, @cep, @numero, @complemento, @cidade, @estado, @pais, @email, @genero, " +
                 "@estadiCivil, @observacoes, @nomePai, @nomeMae, @dependentes, @formacaoAcademica, @dataNascimento," +
-                "@ativo, @senha)";
+                "@status, @senha)";
 
 
 
@@ -96,7 +96,7 @@ namespace ProjectKopezkzky.src.repository
              cmd.Parameters.AddWithValue("@dependentes", funcionario.dependentes);
              cmd.Parameters.AddWithValue("@formacaoAcademica", funcionario.formacaoAcademica);
              cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
-             cmd.Parameters.AddWithValue("@ativo", funcionario.ativo);
+             cmd.Parameters.AddWithValue("@status", funcionario.status);
              cmd.Parameters.AddWithValue("@senha", funcionario.senha);
 
 
