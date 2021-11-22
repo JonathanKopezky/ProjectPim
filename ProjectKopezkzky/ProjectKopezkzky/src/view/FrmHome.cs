@@ -94,5 +94,10 @@ namespace ProjectKopezkzky.src.view
                 this.Close();                
             }
         }
+
+        private void consultarReservaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
