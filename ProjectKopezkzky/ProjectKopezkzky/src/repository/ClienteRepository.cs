@@ -17,7 +17,7 @@ namespace ProjectKopezkzky.src.repository
     public class ClienteRepository
     {
         SqlDataReader dr;
-        SqlCommand Comando;
+        SqlCommand Comando = new SqlCommand();
         Connection conn = new Connection();
 
         //VERICAR 
@@ -54,7 +54,7 @@ namespace ProjectKopezkzky.src.repository
             Comando = new SqlCommand();
             //Essa funcao ira pegar o texto das textbox criar no banco 
             // Comando para inserir os dados no banco 
-            Comando.CommandText = "INSERT INTO Cliente VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Ativo ,@Senha)";
+            Comando.CommandText = "INSERT INTO Cliente VALUES(@Nome, @Sobrenome, @RG, @CPF, @Email, @Telefone, @Endereço, @CEP, @Numero, @Complemento, @Cidade, @Estado, @Genero, @Pais, @Data_nascimento, @Status ,@Senha)";
             //fim 
 
             //Preenchendo os as colunas da tabelas
@@ -73,7 +73,7 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@Genero", cliente.genero);
             Comando.Parameters.AddWithValue("@Pais", cliente.pais);
             Comando.Parameters.AddWithValue("@Data_nascimento", cliente.dataNascimento);
-            Comando.Parameters.AddWithValue("@Ativo", 1);
+            Comando.Parameters.AddWithValue("@Status", int.Parse(cliente.status));
             Comando.Parameters.AddWithValue("@Senha", cliente.senha);
             //FIM
 
@@ -137,8 +137,8 @@ namespace ProjectKopezkzky.src.repository
         {
             Comando = new SqlCommand();
 
-            Comando.CommandText = "UPDATE Cliente  SET Ativo = @ativo  WHERE  CPF = @cpf";
-            Comando.Parameters.AddWithValue("@ativo", 0);
+            Comando.CommandText = "UPDATE Cliente  SET Ativo = @Status  WHERE  CPF = @cpf";
+            Comando.Parameters.AddWithValue("@Status", int.Parse(cliente.status));
             Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
             try
             {

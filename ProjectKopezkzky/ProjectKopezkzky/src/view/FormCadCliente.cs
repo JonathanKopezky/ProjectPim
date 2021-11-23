@@ -76,7 +76,7 @@ namespace ProjectKopezkzky.src.view
             cliente.CPF = maskedTextBoxCpf.Text;
             cliente.RG = maskedTextBoxRg.Text;
             cliente.dataNascimento = maskedTextBoxDataNasc.Text;
-            cliente.genero = txtGenero.Text;
+            cliente.genero = comboxGenero.Text;
             cliente.telefone = maskedTextBoxTelefone.Text;
             cliente.email = txbEmail.Text;
             cliente.endereco = txbEndereco.Text;
@@ -87,11 +87,13 @@ namespace ProjectKopezkzky.src.view
             cliente.pais = txbPais.Text;
             cliente.complemento = txbComplemento.Text;
             cliente.senha = txbSenha.Text;
-            clienteController.CreateCadCliente(cliente);
+            cliente.status = "1";
+          
 
             if (clienteController.CreateCadCliente(cliente))
             {
-                MessageBox.Show("true");
+                MessageBox.Show("Cadastrado com Sucesso! ");
+                limpar();
             }
             else 
             {
@@ -111,7 +113,7 @@ namespace ProjectKopezkzky.src.view
             maskedTextBoxCpf.Clear();
             maskedTextBoxRg.Clear();
             maskedTextBoxDataNasc.Clear();
-            txtGenero.Clear();
+            comboxGenero.Text ="";
             maskedTextBoxTelefone.Clear();
             txbEndereco.Clear();
             maskedTextBoxCep.Clear();
@@ -149,7 +151,7 @@ namespace ProjectKopezkzky.src.view
 
             if (!string.IsNullOrWhiteSpace(txbNome.Text) && !string.IsNullOrWhiteSpace(txbSobrenome.Text)
                 && !string.IsNullOrWhiteSpace(maskedTextBoxCpf.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxRg.Text)
-                 && !string.IsNullOrWhiteSpace(maskedTextBoxDataNasc.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
+                 && !string.IsNullOrWhiteSpace(maskedTextBoxDataNasc.Text) && !string.IsNullOrWhiteSpace(comboxGenero.Text)
                   && !string.IsNullOrWhiteSpace(maskedTextBoxTelefone.Text) && !string.IsNullOrWhiteSpace(txbEmail.Text)
                    && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxCep.Text)
                     && !string.IsNullOrWhiteSpace(txbnumero.Text) && !string.IsNullOrWhiteSpace(txbEstado.Text)

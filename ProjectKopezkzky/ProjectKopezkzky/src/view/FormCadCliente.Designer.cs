@@ -53,7 +53,6 @@ namespace ProjectKopezkzky.src.view
             this.txbSobrenome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtGenero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txbSenha = new System.Windows.Forms.TextBox();
@@ -65,6 +64,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.txbEstado = new System.Windows.Forms.TextBox();
+            this.comboxGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -285,18 +285,10 @@ namespace ProjectKopezkzky.src.view
             this.label6.TabIndex = 55;
             this.label6.Text = "Gênero :";
             // 
-            // txtGenero
-            // 
-            this.txtGenero.Location = new System.Drawing.Point(308, 142);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(263, 23);
-            this.txtGenero.TabIndex = 6;
-            this.txtGenero.TextChanged += new System.EventHandler(this.txtGenero_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(590, 124);
+            this.label2.Location = new System.Drawing.Point(479, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 57;
@@ -369,7 +361,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // maskedTextBoxTelefone
             // 
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(590, 142);
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(479, 142);
             this.maskedTextBoxTelefone.Mask = "(00) 00000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(101, 23);
@@ -391,11 +383,23 @@ namespace ProjectKopezkzky.src.view
             this.txbEstado.TabIndex = 12;
             this.txbEstado.TextChanged += new System.EventHandler(this.txbEstado_TextChanged);
             // 
+            // comboxGenero
+            // 
+            this.comboxGenero.FormattingEnabled = true;
+            this.comboxGenero.Items.AddRange(new object[] {
+            "Feminino",
+            "Masculino"});
+            this.comboxGenero.Location = new System.Drawing.Point(308, 142);
+            this.comboxGenero.Name = "comboxGenero";
+            this.comboxGenero.Size = new System.Drawing.Size(121, 23);
+            this.comboxGenero.TabIndex = 65;
+            // 
             // FormCadCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboxGenero);
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.maskedTextBoxTelefone);
             this.Controls.Add(this.maskedTextBoxCpf);
@@ -406,7 +410,6 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txbSobrenome);
@@ -467,7 +470,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox txbSobrenome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbSenha;
@@ -479,5 +481,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
         private System.Windows.Forms.TextBox txbEstado;
+        private System.Windows.Forms.ComboBox comboxGenero;
     }
 }

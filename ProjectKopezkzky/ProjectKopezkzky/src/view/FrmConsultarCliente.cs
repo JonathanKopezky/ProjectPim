@@ -53,6 +53,7 @@ namespace ProjectKopezkzky.src.view
         private void btnDelete_Click(object sender, EventArgs e)
         { 
             cliente.CPF = txtCpf.Text;
+            cliente.status = "1";
             if (clienteController.DeletCad(cliente))
             {
                 MessageBox.Show("Cliente excluido");
