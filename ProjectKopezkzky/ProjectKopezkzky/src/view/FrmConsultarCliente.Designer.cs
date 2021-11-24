@@ -120,7 +120,8 @@ namespace ProjectKopezkzky.src.view
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(212, 283);
+            this.maskedTextBox1.Location = new System.Drawing.Point(172, 241);
+            this.maskedTextBox1.Mask = "00.00.00-00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
             this.maskedTextBox1.TabIndex = 11;

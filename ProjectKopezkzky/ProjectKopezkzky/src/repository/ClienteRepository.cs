@@ -59,7 +59,7 @@ namespace ProjectKopezkzky.src.repository
 
             //PARAMETROS
             Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
-
+            MessageBox.Show(cliente.CPF);
             Comando.Connection = conn.connect();
             dr = Comando.ExecuteReader();
 
@@ -90,10 +90,7 @@ namespace ProjectKopezkzky.src.repository
                         cliente.dataNascimento = dr[14].ToString();
                         cliente.senha = dr[16].ToString();
                     }
-                    //  MessageBox.Show(cliente.nome);
-                    //    MessageBox.Show(cliente.sobrenome);
-                    //   MessageBox.Show(cliente.RG);
-                  //  cliente.showcpf();
+                    
                     return cliente;
                 }
             }
@@ -155,7 +152,7 @@ namespace ProjectKopezkzky.src.repository
         public bool AtualizarCadCliente(Cliente cliente)
         {
             Comando = new SqlCommand();
-            Comando.CommandText = "UPDATE Cliente SET Nome=@nome, Sobrenome=@sobrenome, Genero=@genero, Telefone=@telefone, Email=@email, Endereco=@endereco, CEP=@cep," +
+            Comando.CommandText = "UPDATE Cliente SET Nome=@nome, Sobrenome=@sobrenome, Genero=@genero, Telefone=@telefone, Email=@email, Endereço=@endereco, CEP=@cep," +
                 "Numero=@numero, Estado=@estado ,Cidade=@cidade ,Pais=@pais ,Complemento=@complemento ,Senha=@senha" +
                 " WHERE CPF=@cpf";
 
@@ -165,8 +162,8 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@nascimento",cliente.dataNascimento);
             Comando.Parameters.AddWithValue("@genero",cliente.genero);
             Comando.Parameters.AddWithValue("@telefone",cliente.telefone);
-            Comando.Parameters.AddWithValue("@Email",cliente.email);
-            Comando.Parameters.AddWithValue("@Endereco",cliente.endereco);
+            Comando.Parameters.AddWithValue("@email",cliente.email);
+            Comando.Parameters.AddWithValue("@endereco",cliente.endereco);
             Comando.Parameters.AddWithValue("@cep",cliente.CEP);
             Comando.Parameters.AddWithValue("@numero",cliente.numero);
             Comando.Parameters.AddWithValue("@estado",cliente.estado);
@@ -176,6 +173,7 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@senha",cliente.senha);
          
             Comando.Parameters.AddWithValue("@cpf",cliente.CPF);
+            
             try
             {
 

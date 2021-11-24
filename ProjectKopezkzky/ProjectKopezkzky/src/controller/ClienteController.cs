@@ -47,7 +47,7 @@ namespace ProjectKopezkzky.src.controller
 
 
         public bool setCadCliente(Cliente cliente)
-        {   //funcao insere o cliente no baco
+        {   //funcao insere o cliente no baco 
             if (clienteRepository.AtualizarCadCliente(cliente))
             {
                 return true;

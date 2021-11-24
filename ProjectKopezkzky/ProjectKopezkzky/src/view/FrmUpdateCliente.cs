@@ -15,8 +15,8 @@ namespace ProjectKopezkzky.src.view
     public partial class FrmUpdateCliente : Form
     {
         ClienteController clienteController = new ClienteController();
-        //  Cliente cliente = new Cliente();
-          // Cliente cliente = new Cliente();
+         Cliente cliente = new Cliente();
+       
 
         public FrmUpdateCliente()
         {
@@ -37,8 +37,9 @@ namespace ProjectKopezkzky.src.view
 
         public void preencher(Cliente cliente)
         {
-            
-          //  clienteController.getCadCliente(cliente);
+          //preenche as todas as txb  com parametros do obj cliente 
+          // do form consultar cliente
+          
             txbNome.Text = cliente.nome;
             txbSobrenome.Text = cliente.sobrenome;
             txbCpf.Text = cliente.CPF;
@@ -61,10 +62,10 @@ namespace ProjectKopezkzky.src.view
         
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-
+          // salva os parametros alterados 
             cliente.nome = txbNome.Text;
             cliente.sobrenome = txbSobrenome.Text;
+            cliente.CPF = txbCpf.Text;
             cliente.dataNascimento = maskedTextBoxDataNasc.Text;
             cliente.genero = comboxGenero.Text;
             cliente.telefone = maskedTextBoxTelefone.Text;
@@ -77,9 +78,11 @@ namespace ProjectKopezkzky.src.view
             cliente.pais = txbPais.Text;
             cliente.complemento = txbComplemento.Text;
             cliente.senha = txbSenha.Text;
+          
             if (clienteController.setCadCliente(cliente))
             {
                 MessageBox.Show("Aterado Com Sucesso");
+                this.Close();
             }
             else
             {

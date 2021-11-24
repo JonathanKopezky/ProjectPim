@@ -14,7 +14,7 @@ namespace ProjectKopezkzky.src.view
 {
     public partial class FrmConsultarCliente : Form
     {
-        Cliente cliente = new Cliente();
+         Cliente cliente = new Cliente();
         ClienteController clienteController = new ClienteController();
         public FrmConsultarCliente()
         {
@@ -36,6 +36,7 @@ namespace ProjectKopezkzky.src.view
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {   // chama o form Alterar  Cadastro
+          //  Cliente cliente = new Cliente();
             clienteController.getCadCliente(cliente);
 
             FrmUpdateCliente frmUpdateCliente = new FrmUpdateCliente();
@@ -58,6 +59,7 @@ namespace ProjectKopezkzky.src.view
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+         
             cliente.CPF = txtcpf.Text;
             cliente.status = "0";
             if (clienteController.DeletCad(cliente))
@@ -73,6 +75,7 @@ namespace ProjectKopezkzky.src.view
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+           
             cliente.CPF = txtcpf.Text;
             if (clienteController.ConsultarCad(cliente))
             {// so vai ativar o botao delete e alterar se ja ouver cadastro
