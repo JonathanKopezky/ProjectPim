@@ -38,15 +38,16 @@ namespace ProjectKopezkzky.src.controller
 
         public Cliente getCadCliente(Cliente cliente)
         {   //funcao pega o cliente da consulta do banco
-             Cliente result = clienteRepository.AlteraCliente(cliente);
+            Cliente result = clienteRepository.AlteraCliente(cliente);
+           
             return result;
 
-           
+
         }
 
 
         public bool setCadCliente(Cliente cliente)
-        {   //funcao altera o cliente
+        {   //funcao insere o cliente no baco
             if (clienteRepository.AtualizarCadCliente(cliente))
             {
                 return true;

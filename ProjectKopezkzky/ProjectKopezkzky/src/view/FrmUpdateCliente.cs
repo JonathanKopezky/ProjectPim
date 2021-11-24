@@ -13,24 +13,32 @@ using System.Windows.Forms;
 namespace ProjectKopezkzky.src.view
 {
     public partial class FrmUpdateCliente : Form
-    {   Cliente cliente = new Cliente();
+    {
         ClienteController clienteController = new ClienteController();
+        //  Cliente cliente = new Cliente();
+          // Cliente cliente = new Cliente();
+
         public FrmUpdateCliente()
         {
             InitializeComponent();
-            ShowClient();
-            txbSenha.Text = cliente.senha;
+            txbCpf.Enabled = false;
+            txbRg.Enabled = false;
+
+
         }
 
         private void FrmUpdateCliente_Load(object sender, EventArgs e)
         {
+            
 
         }
-      
 
-        public void ShowClient() 
-        { // Quando chamar o form ja vai carregar  as textbox com os texto 
-           // clienteController.getCadCliente(cliente);
+
+
+        public void preencher(Cliente cliente)
+        {
+            
+          //  clienteController.getCadCliente(cliente);
             txbNome.Text = cliente.nome;
             txbSobrenome.Text = cliente.sobrenome;
             txbCpf.Text = cliente.CPF;
@@ -42,19 +50,19 @@ namespace ProjectKopezkzky.src.view
             txbNumero.Text = Convert.ToString(cliente.numero);
             txbEndereco.Text = cliente.endereco;
             maskedTextBoxCep.Text = cliente.CEP;
-            txbEstado.Text = cliente.CEP;
-            cliente.cidade = cliente.cidade;
+            txbEstado.Text = cliente.estado;
+            txbCidade.Text = cliente.cidade;
             txbPais.Text = cliente.pais;
             txbComplemento.Text = cliente.complemento;
-            txbSenha.Text = cliente.senha;
-
-            txbCpf.Enabled = false;
-            txbRg.Enabled = false;
-            MessageBox.Show(cliente.nome, cliente.CPF);
+            txbSenha.Text = cliente.senha; 
+           
         }
+
         
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            Cliente cliente = new Cliente();
+
             cliente.nome = txbNome.Text;
             cliente.sobrenome = txbSobrenome.Text;
             cliente.dataNascimento = maskedTextBoxDataNasc.Text;
@@ -69,14 +77,20 @@ namespace ProjectKopezkzky.src.view
             cliente.pais = txbPais.Text;
             cliente.complemento = txbComplemento.Text;
             cliente.senha = txbSenha.Text;
-            if (clienteController.setCadCliente(cliente)) 
+            if (clienteController.setCadCliente(cliente))
             {
                 MessageBox.Show("Aterado Com Sucesso");
-            } else 
+            }
+            else
             {
                 MessageBox.Show("Erro ao alterar !!!");
             }
 
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

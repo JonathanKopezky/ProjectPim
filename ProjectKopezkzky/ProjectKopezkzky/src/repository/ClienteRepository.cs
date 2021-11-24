@@ -65,13 +65,14 @@ namespace ProjectKopezkzky.src.repository
 
             if (dr.HasRows)
             {
-                MessageBox.Show("entrando na condizao IF -1");
+               
                 // verificando se tem linhas com os parametro 
                 using (dr)
                 {
-                    MessageBox.Show("entrando na condizao IF 2");
+                   
                     while (dr.Read())
                     {
+                       
                         cliente.nome = dr[0].ToString();
                         cliente.sobrenome = dr[1].ToString();
                         cliente.RG = dr[2].ToString();
@@ -89,12 +90,15 @@ namespace ProjectKopezkzky.src.repository
                         cliente.dataNascimento = dr[14].ToString();
                         cliente.senha = dr[16].ToString();
                     }
+                    //  MessageBox.Show(cliente.nome);
+                    //    MessageBox.Show(cliente.sobrenome);
+                    //   MessageBox.Show(cliente.RG);
+                  //  cliente.showcpf();
                     return cliente;
                 }
             }
             else
             {
-                MessageBox.Show("SAI");
                 conn.disconnect();
                 cliente.LimpaCliente();
                 return cliente;
@@ -144,31 +148,34 @@ namespace ProjectKopezkzky.src.repository
 
                 conn.disconnect();
             }
-            cliente.LimpaCliente();
             return true;
+            cliente.LimpaCliente();
         }
 
         public bool AtualizarCadCliente(Cliente cliente)
         {
             Comando = new SqlCommand();
-            Comando.CommandText = "UPDATE Cliente SET Nome =@nome, Sobrenome =@sobrenome, Email =@email, Telefone =@telefone,  Endereço =@endereco, CEP =@cep, Numero =@numero, Complemento =@complemento, Cidade =@cidade, Estado =@estado, Genero =@genero,  Pais =@pais,Data_nascimento =@nascimento Senha =@senha WHERE CPF =@cpf";
+            Comando.CommandText = "UPDATE Cliente SET Nome=@nome, Sobrenome=@sobrenome, Genero=@genero, Telefone=@telefone, Email=@email, Endereco=@endereco, CEP=@cep," +
+                "Numero=@numero, Estado=@estado ,Cidade=@cidade ,Pais=@pais ,Complemento=@complemento ,Senha=@senha" +
+                " WHERE CPF=@cpf";
 
             //parametros
-            Comando.Parameters.AddWithValue("@nome", cliente.nome);
-            Comando.Parameters.AddWithValue("@sobrenome", cliente.sobrenome);
-            Comando.Parameters.AddWithValue("@Email", cliente.email);
-            Comando.Parameters.AddWithValue("@telefone", cliente.telefone);
-            Comando.Parameters.AddWithValue("@Endereco", cliente.endereco);
-            Comando.Parameters.AddWithValue("@cep", cliente.CEP);
-            Comando.Parameters.AddWithValue("@numero", cliente.numero);
-            Comando.Parameters.AddWithValue("@complemento", cliente.complemento);
-            Comando.Parameters.AddWithValue("@cidade", cliente.cidade);
-            Comando.Parameters.AddWithValue("@estado", cliente.estado);
-            Comando.Parameters.AddWithValue("@genero", cliente.genero);
-            Comando.Parameters.AddWithValue("@pais", cliente.pais);
-            Comando.Parameters.AddWithValue("@nascimento", cliente.dataNascimento);
-            Comando.Parameters.AddWithValue("@senha", cliente.senha);
-            Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
+            Comando.Parameters.AddWithValue("@nome",cliente.nome);
+            Comando.Parameters.AddWithValue("@sobrenome",cliente.sobrenome);
+            Comando.Parameters.AddWithValue("@nascimento",cliente.dataNascimento);
+            Comando.Parameters.AddWithValue("@genero",cliente.genero);
+            Comando.Parameters.AddWithValue("@telefone",cliente.telefone);
+            Comando.Parameters.AddWithValue("@Email",cliente.email);
+            Comando.Parameters.AddWithValue("@Endereco",cliente.endereco);
+            Comando.Parameters.AddWithValue("@cep",cliente.CEP);
+            Comando.Parameters.AddWithValue("@numero",cliente.numero);
+            Comando.Parameters.AddWithValue("@estado",cliente.estado);
+            Comando.Parameters.AddWithValue("@cidade",cliente.cidade);
+            Comando.Parameters.AddWithValue("@pais",cliente.pais);
+            Comando.Parameters.AddWithValue("@complemento",cliente.complemento);
+            Comando.Parameters.AddWithValue("@senha",cliente.senha);
+         
+            Comando.Parameters.AddWithValue("@cpf",cliente.CPF);
             try
             {
 
@@ -181,8 +188,8 @@ namespace ProjectKopezkzky.src.repository
             {
                 conn.disconnect();
             }
-            cliente.LimpaCliente();
             return true;
+            cliente.LimpaCliente();
         }
 
 
@@ -190,7 +197,7 @@ namespace ProjectKopezkzky.src.repository
         {
             Comando = new SqlCommand();
 
-            Comando.CommandText = "UPDATE Cliente  SET Ativo = @Status  WHERE  CPF = @cpf";
+            Comando.CommandText = "UPDATE Cliente  SET Status = @Status  WHERE  CPF = @cpf";
             Comando.Parameters.AddWithValue("@Status", int.Parse(cliente.status));
             Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
             try
@@ -211,8 +218,8 @@ namespace ProjectKopezkzky.src.repository
 
                 conn.disconnect();
             }
-            cliente.LimpaCliente();
             return true;
+            cliente.LimpaCliente();
         }
 
 

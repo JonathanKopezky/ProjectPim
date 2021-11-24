@@ -37,9 +37,11 @@ namespace ProjectKopezkzky.src.view
         private void btnAlterar_Click(object sender, EventArgs e)
         {   // chama o form Alterar  Cadastro
             clienteController.getCadCliente(cliente);
+
             FrmUpdateCliente frmUpdateCliente = new FrmUpdateCliente();
+            frmUpdateCliente.preencher(cliente);
             frmUpdateCliente.ShowDialog();
-            MessageBox.Show(cliente.CPF);
+           
 
         }
 
@@ -57,7 +59,7 @@ namespace ProjectKopezkzky.src.view
         private void btnDelete_Click(object sender, EventArgs e)
         {
             cliente.CPF = txtcpf.Text;
-            cliente.status = "1";
+            cliente.status = "0";
             if (clienteController.DeletCad(cliente))
             {
                 MessageBox.Show("Cliente excluido");
@@ -77,7 +79,7 @@ namespace ProjectKopezkzky.src.view
                 MessageBox.Show("Cliente ja cadastrado");
                 btnDelete.Enabled = true;
                 btnAlterar.Enabled = true;
-                MessageBox.Show(cliente.CPF);
+                
             }
             else
             {   //vai liberar o botao cadastrar se nao haver reserva 
