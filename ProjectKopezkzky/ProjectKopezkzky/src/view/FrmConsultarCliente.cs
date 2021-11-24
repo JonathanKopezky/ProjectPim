@@ -16,5 +16,19 @@ namespace ProjectKopezkzky.src.view
         {
             InitializeComponent();
         }
+
+        private void btnNovaReserva_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarCliente frmCadastrarCliente = new FrmCadastrarCliente();
+
+            frmCadastrarCliente.ShowDialog();
+        }
+
+        private void btnEditarReserva_Click(object sender, EventArgs e)
+        {
+            FrmEditarCliente frmEditarCliente = new FrmEditarCliente();
+
+            frmEditarCliente.ShowDialog();
+        }
     }
 }

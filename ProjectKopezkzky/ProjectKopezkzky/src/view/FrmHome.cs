@@ -23,7 +23,7 @@ namespace ProjectKopezkzky.src.view
             InitializeComponent();
         }
 
-        private void FormShow(Form frm)
+        private void AbrirNaHome(Form frm)
         {
             FecharFormAtivo();
             frmAtivo = frm;
@@ -53,14 +53,16 @@ namespace ProjectKopezkzky.src.view
 
         private void CadastralClienteMenu_Click(object sender, EventArgs e)
         {
-            FrmCadastroFuncionario frmCadastroFuncionario = new FrmCadastroFuncionario();
+            FrmCadastrarCliente frmCadastrarCliente = new FrmCadastrarCliente();
 
-            frmCadastroFuncionario.ShowDialog();
+            frmCadastrarCliente.ShowDialog();
         }
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormShow(new FrmConsultarCliente());
+            FrmConsultarCliente frmConsultarCliente = new FrmConsultarCliente();
+
+            AbrirNaHome(frmConsultarCliente);
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,16 +77,14 @@ namespace ProjectKopezkzky.src.view
 
         private void cadastrarFuncBTN_Click(object sender, EventArgs e)
         {
-            FrmCadastroFuncionario fmrCadastroFuncionario = new FrmCadastroFuncionario();
-
-            fmrCadastroFuncionario.ShowDialog();
+            
         }
 
         private void consultarReservaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmNovaReserva frmNovaReserva = new FrmNovaReserva();
 
-            FormShow(frmNovaReserva);
+            frmNovaReserva.ShowDialog();
         }
 
         private void btnHomeSair_Click(object sender, EventArgs e)
@@ -99,7 +99,21 @@ namespace ProjectKopezkzky.src.view
         {
             FrmConsultarReserva frmConsultarReserva = new FrmConsultarReserva();
 
-            FormShow(frmConsultarReserva);
+            AbrirNaHome(frmConsultarReserva);
+        }
+
+        private void cadastrarFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarFuncionario frmConsultarFuncionario = new FrmConsultarFuncionario();
+
+            AbrirNaHome(frmConsultarFuncionario);
+        }
+
+        private void cadastrarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroFuncionario frmCadastroFuncionario = new FrmCadastroFuncionario();
+
+            frmCadastroFuncionario.ShowDialog();
         }
     }
 }

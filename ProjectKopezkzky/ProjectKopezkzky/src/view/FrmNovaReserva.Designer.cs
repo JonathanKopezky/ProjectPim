@@ -30,8 +30,6 @@ namespace ProjectKopezkzky.src.view
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.listViewCliente = new System.Windows.Forms.ListView();
@@ -71,7 +69,8 @@ namespace ProjectKopezkzky.src.view
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePickerSaida = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -79,51 +78,32 @@ namespace ProjectKopezkzky.src.view
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
             this.label1.Location = new System.Drawing.Point(13, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecionar Cliente";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 42);
-            this.panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(350, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nova Reserva";
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel2.Controls.Add(this.txtBoxCPF);
             this.panel2.Controls.Add(this.listViewCliente);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.lblCPF);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 62);
+            this.panel2.Location = new System.Drawing.Point(12, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(760, 196);
+            this.panel2.Size = new System.Drawing.Size(744, 196);
             this.panel2.TabIndex = 2;
             // 
             // txtBoxCPF
@@ -167,7 +147,7 @@ namespace ProjectKopezkzky.src.view
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label19.Location = new System.Drawing.Point(462, 61);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(100, 13);
@@ -187,6 +167,7 @@ namespace ProjectKopezkzky.src.view
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
+            this.lblCPF.ForeColor = System.Drawing.SystemColors.Info;
             this.lblCPF.Location = new System.Drawing.Point(424, 38);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(31, 15);
@@ -204,7 +185,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.button2);
@@ -214,9 +195,9 @@ namespace ProjectKopezkzky.src.view
             this.panel3.Controls.Add(this.dateTimePickerSaida);
             this.panel3.Controls.Add(this.dateTimePickerEntrada);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(12, 277);
+            this.panel3.Location = new System.Drawing.Point(12, 259);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(760, 298);
+            this.panel3.Size = new System.Drawing.Size(744, 298);
             this.panel3.TabIndex = 3;
             // 
             // button3
@@ -493,6 +474,7 @@ namespace ProjectKopezkzky.src.view
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.Info;
             this.label7.Location = new System.Drawing.Point(42, 174);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 15);
@@ -503,6 +485,7 @@ namespace ProjectKopezkzky.src.view
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.Info;
             this.label6.Location = new System.Drawing.Point(30, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 15);
@@ -521,26 +504,46 @@ namespace ProjectKopezkzky.src.view
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.Info;
             this.label3.Location = new System.Drawing.Point(13, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(255, 30);
             this.label3.TabIndex = 3;
             this.label3.Text = "Selecionar Quarto e Datas";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(768, 42);
+            this.panel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(316, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Consultar Reserva";
+            // 
             // FrmNovaReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 587);
+            this.ClientSize = new System.Drawing.Size(768, 567);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNovaReserva";
             this.Text = "FrmNovaReserva";
             this.Load += new System.EventHandler(this.FrmNovaReserva_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -555,6 +558,8 @@ namespace ProjectKopezkzky.src.view
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -562,8 +567,6 @@ namespace ProjectKopezkzky.src.view
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dateTimePickerEntrada;
         private System.Windows.Forms.Panel panel3;
@@ -603,5 +606,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.ColumnHeader columnHeaderNome;
         private System.Windows.Forms.ColumnHeader columnHeaderEndereco;
         private System.Windows.Forms.TextBox txtBoxCPF;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

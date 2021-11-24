@@ -12,11 +12,11 @@ using ProjectKopezkzky.src.model;
 
 namespace ProjectKopezkzky.src.view
 {
-    public partial class FormCadCliente : Form
+    public partial class FrmCadastroCliente : Form
     {
         ClienteController ClienteController = new ClienteController();
         Cliente cliente = new Cliente();
-        public FormCadCliente()
+        public FrmCadastroCliente()
         {
             InitializeComponent();
             btnSalvar.Enabled = false;

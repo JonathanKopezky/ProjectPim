@@ -1,7 +1,7 @@
 ﻿
 namespace ProjectKopezkzky.src.view
 {
-    partial class FormCadCliente
+    partial class FrmCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -391,7 +391,7 @@ namespace ProjectKopezkzky.src.view
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // FormCadCliente
+            // FrmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,7 +431,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.labelDatanasc);
             this.Controls.Add(this.labelNome);
-            this.Name = "FormCadCliente";
+            this.Name = "FrmCadastroCliente";
             this.Text = "FormCadCliente";
             this.Load += new System.EventHandler(this.FormCadCliente_Load);
             this.panel1.ResumeLayout(false);

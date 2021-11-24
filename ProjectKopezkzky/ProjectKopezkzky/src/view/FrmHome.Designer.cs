@@ -33,31 +33,34 @@ namespace ProjectKopezkzky.src.view
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarReservaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CadastralClienteMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CadastralClienteMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarFuncionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cadastrarFuncBTN = new System.Windows.Forms.Button();
             this.labelCargo = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.LblNome = new System.Windows.Forms.Label();
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
-            this.cadastrarFuncBTN = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.menuStrip1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.reservaToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.funcionáriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -74,18 +77,11 @@ namespace ProjectKopezkzky.src.view
             // reservaToolStripMenuItem
             // 
             this.reservaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarReservaToolStripMenuItem,
-            this.consultarReservaToolStripMenuItem1});
+            this.consultarReservaToolStripMenuItem1,
+            this.consultarReservaToolStripMenuItem});
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reservaToolStripMenuItem.Text = "Reserva";
-            // 
-            // consultarReservaToolStripMenuItem
-            // 
-            this.consultarReservaToolStripMenuItem.Name = "consultarReservaToolStripMenuItem";
-            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultarReservaToolStripMenuItem.Text = "Nova Reserva";
-            this.consultarReservaToolStripMenuItem.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem_Click_1);
             // 
             // consultarReservaToolStripMenuItem1
             // 
@@ -94,22 +90,22 @@ namespace ProjectKopezkzky.src.view
             this.consultarReservaToolStripMenuItem1.Text = "Consultar Reserva ";
             this.consultarReservaToolStripMenuItem1.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem1_Click);
             // 
+            // consultarReservaToolStripMenuItem
+            // 
+            this.consultarReservaToolStripMenuItem.Name = "consultarReservaToolStripMenuItem";
+            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarReservaToolStripMenuItem.Text = "Nova Reserva";
+            this.consultarReservaToolStripMenuItem.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem_Click_1);
+            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CadastralClienteMenu,
-            this.consultarClienteToolStripMenuItem});
+            this.consultarClienteToolStripMenuItem,
+            this.CadastralClienteMenu});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // CadastralClienteMenu
-            // 
-            this.CadastralClienteMenu.Name = "CadastralClienteMenu";
-            this.CadastralClienteMenu.Size = new System.Drawing.Size(170, 22);
-            this.CadastralClienteMenu.Text = "Cadastrar Cliente ";
-            this.CadastralClienteMenu.Click += new System.EventHandler(this.CadastralClienteMenu_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
@@ -118,9 +114,40 @@ namespace ProjectKopezkzky.src.view
             this.consultarClienteToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
+            // CadastralClienteMenu
+            // 
+            this.CadastralClienteMenu.Name = "CadastralClienteMenu";
+            this.CadastralClienteMenu.Size = new System.Drawing.Size(170, 22);
+            this.CadastralClienteMenu.Text = "Cadastrar Cliente ";
+            this.CadastralClienteMenu.Click += new System.EventHandler(this.CadastralClienteMenu_Click);
+            // 
+            // funcionáriosToolStripMenuItem
+            // 
+            this.funcionáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarFuncionáriosToolStripMenuItem,
+            this.cadastrarFuncionárioToolStripMenuItem});
+            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
+            // 
+            // cadastrarFuncionáriosToolStripMenuItem
+            // 
+            this.cadastrarFuncionáriosToolStripMenuItem.Name = "cadastrarFuncionáriosToolStripMenuItem";
+            this.cadastrarFuncionáriosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.cadastrarFuncionáriosToolStripMenuItem.Text = "Consultar Funcionários";
+            this.cadastrarFuncionáriosToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionáriosToolStripMenuItem_Click);
+            // 
+            // cadastrarFuncionárioToolStripMenuItem
+            // 
+            this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
+            this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
+            this.cadastrarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionárioToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.cadastrarFuncBTN);
             this.panel1.Controls.Add(this.labelCargo);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.lblCargo);
@@ -131,6 +158,16 @@ namespace ProjectKopezkzky.src.view
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 587);
             this.panel1.TabIndex = 3;
+            // 
+            // cadastrarFuncBTN
+            // 
+            this.cadastrarFuncBTN.Location = new System.Drawing.Point(26, 450);
+            this.cadastrarFuncBTN.Name = "cadastrarFuncBTN";
+            this.cadastrarFuncBTN.Size = new System.Drawing.Size(145, 23);
+            this.cadastrarFuncBTN.TabIndex = 0;
+            this.cadastrarFuncBTN.Text = "Cadastrar Funcionário";
+            this.cadastrarFuncBTN.UseVisualStyleBackColor = true;
+            this.cadastrarFuncBTN.Click += new System.EventHandler(this.cadastrarFuncBTN_Click);
             // 
             // labelCargo
             // 
@@ -188,22 +225,11 @@ namespace ProjectKopezkzky.src.view
             // 
             // panelHome
             // 
-            this.panelHome.Controls.Add(this.cadastrarFuncBTN);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHome.Location = new System.Drawing.Point(0, 24);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(784, 587);
             this.panelHome.TabIndex = 4;
-            // 
-            // cadastrarFuncBTN
-            // 
-            this.cadastrarFuncBTN.Location = new System.Drawing.Point(613, 498);
-            this.cadastrarFuncBTN.Name = "cadastrarFuncBTN";
-            this.cadastrarFuncBTN.Size = new System.Drawing.Size(145, 23);
-            this.cadastrarFuncBTN.TabIndex = 0;
-            this.cadastrarFuncBTN.Text = "Cadastrar Funcionário";
-            this.cadastrarFuncBTN.UseVisualStyleBackColor = true;
-            this.cadastrarFuncBTN.Click += new System.EventHandler(this.cadastrarFuncBTN_Click);
             // 
             // FrmHome
             // 
@@ -222,7 +248,6 @@ namespace ProjectKopezkzky.src.view
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelHome.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +271,8 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.Button cadastrarFuncBTN;
+        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;
     }
 }

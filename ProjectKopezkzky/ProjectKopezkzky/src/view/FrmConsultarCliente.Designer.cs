@@ -34,6 +34,9 @@ namespace ProjectKopezkzky.src.view
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCancelarReserva = new System.Windows.Forms.Button();
+            this.btnEditarReserva = new System.Windows.Forms.Button();
+            this.btnNovaReserva = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,21 +83,53 @@ namespace ProjectKopezkzky.src.view
             this.dataGridView1.Location = new System.Drawing.Point(32, 128);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(720, 350);
             this.dataGridView1.TabIndex = 5;
             // 
-            // FrmBuscarCliente
+            // btnCancelarReserva
+            // 
+            this.btnCancelarReserva.Location = new System.Drawing.Point(600, 544);
+            this.btnCancelarReserva.Name = "btnCancelarReserva";
+            this.btnCancelarReserva.Size = new System.Drawing.Size(125, 31);
+            this.btnCancelarReserva.TabIndex = 26;
+            this.btnCancelarReserva.Text = "Apagar Cliente";
+            this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarReserva
+            // 
+            this.btnEditarReserva.Location = new System.Drawing.Point(331, 544);
+            this.btnEditarReserva.Name = "btnEditarReserva";
+            this.btnEditarReserva.Size = new System.Drawing.Size(125, 31);
+            this.btnEditarReserva.TabIndex = 27;
+            this.btnEditarReserva.Text = "Editar Cliente";
+            this.btnEditarReserva.UseVisualStyleBackColor = true;
+            this.btnEditarReserva.Click += new System.EventHandler(this.btnEditarReserva_Click);
+            // 
+            // btnNovaReserva
+            // 
+            this.btnNovaReserva.Location = new System.Drawing.Point(62, 544);
+            this.btnNovaReserva.Name = "btnNovaReserva";
+            this.btnNovaReserva.Size = new System.Drawing.Size(125, 31);
+            this.btnNovaReserva.TabIndex = 28;
+            this.btnNovaReserva.Text = "Novo Cliente";
+            this.btnNovaReserva.UseVisualStyleBackColor = true;
+            this.btnNovaReserva.Click += new System.EventHandler(this.btnNovaReserva_Click);
+            // 
+            // FrmConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 587);
+            this.Controls.Add(this.btnCancelarReserva);
+            this.Controls.Add(this.btnEditarReserva);
+            this.Controls.Add(this.btnNovaReserva);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmBuscarCliente";
+            this.Name = "FrmConsultarCliente";
             this.Text = "FrmBuscarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -109,5 +144,8 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCancelarReserva;
+        private System.Windows.Forms.Button btnEditarReserva;
+        private System.Windows.Forms.Button btnNovaReserva;
     }
 }
