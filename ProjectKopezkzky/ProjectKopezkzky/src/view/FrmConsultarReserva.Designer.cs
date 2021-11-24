@@ -35,6 +35,7 @@ namespace ProjectKopezkzky.src.view
             this.btnBuscarReserva = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtBoxStatus = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtBoxEndereco = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@ namespace ProjectKopezkzky.src.view
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBoxIDReserva = new System.Windows.Forms.TextBox();
-            this.txtBoxStatus = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -131,9 +131,6 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.txtBoxNome);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txtBoxCPF);
-            this.panel2.Controls.Add(this.btnNovaReserva);
-            this.panel2.Controls.Add(this.btnEditarReserva);
-            this.panel2.Controls.Add(this.btnCancelarReserva);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txtBoxQuartIndDuplo);
             this.panel2.Controls.Add(this.label10);
@@ -151,8 +148,16 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.txtBoxIDReserva);
             this.panel2.Location = new System.Drawing.Point(12, 115);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(744, 421);
+            this.panel2.Size = new System.Drawing.Size(744, 336);
             this.panel2.TabIndex = 6;
+            // 
+            // txtBoxStatus
+            // 
+            this.txtBoxStatus.Location = new System.Drawing.Point(552, 142);
+            this.txtBoxStatus.Name = "txtBoxStatus";
+            this.txtBoxStatus.ReadOnly = true;
+            this.txtBoxStatus.Size = new System.Drawing.Size(68, 23);
+            this.txtBoxStatus.TabIndex = 36;
             // 
             // label16
             // 
@@ -242,7 +247,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnNovaReserva
             // 
-            this.btnNovaReserva.Location = new System.Drawing.Point(43, 360);
+            this.btnNovaReserva.Location = new System.Drawing.Point(47, 480);
             this.btnNovaReserva.Name = "btnNovaReserva";
             this.btnNovaReserva.Size = new System.Drawing.Size(125, 31);
             this.btnNovaReserva.TabIndex = 25;
@@ -251,7 +256,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnEditarReserva
             // 
-            this.btnEditarReserva.Location = new System.Drawing.Point(312, 360);
+            this.btnEditarReserva.Location = new System.Drawing.Point(316, 480);
             this.btnEditarReserva.Name = "btnEditarReserva";
             this.btnEditarReserva.Size = new System.Drawing.Size(125, 31);
             this.btnEditarReserva.TabIndex = 24;
@@ -260,7 +265,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnCancelarReserva
             // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(581, 360);
+            this.btnCancelarReserva.Location = new System.Drawing.Point(585, 480);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
             this.btnCancelarReserva.Size = new System.Drawing.Size(125, 31);
             this.btnCancelarReserva.TabIndex = 23;
@@ -402,14 +407,6 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxIDReserva.Size = new System.Drawing.Size(130, 23);
             this.txtBoxIDReserva.TabIndex = 7;
             // 
-            // txtBoxStatus
-            // 
-            this.txtBoxStatus.Location = new System.Drawing.Point(552, 142);
-            this.txtBoxStatus.Name = "txtBoxStatus";
-            this.txtBoxStatus.ReadOnly = true;
-            this.txtBoxStatus.Size = new System.Drawing.Size(68, 23);
-            this.txtBoxStatus.TabIndex = 36;
-            // 
             // FrmConsultarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -420,6 +417,9 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.btnBuscarReserva);
             this.Controls.Add(this.txtBoxBuscarReserva);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCancelarReserva);
+            this.Controls.Add(this.btnEditarReserva);
+            this.Controls.Add(this.btnNovaReserva);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConsultarReserva";
             this.Text = "FrmConsultarReserva";
