@@ -31,34 +31,39 @@ namespace ProjectKopezkzky.src.view
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxBuscarReserva = new System.Windows.Forms.TextBox();
             this.btnBuscarReserva = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeaderCPF = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderNome = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderEndereco = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderEmail = new System.Windows.Forms.ColumnHeader();
-            this.btnCancelarReserva = new System.Windows.Forms.Button();
-            this.btnEditarReserva = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtBoxEndereco = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtBoxDataNasc = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBoxNome = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.btnNovaReserva = new System.Windows.Forms.Button();
+            this.btnEditarReserva = new System.Windows.Forms.Button();
+            this.btnCancelarReserva = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBoxQuartIndDuplo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBoxNoites = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtBoxDataSaida = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxNumQuartInd = new System.Windows.Forms.TextBox();
+            this.txtBoxDataEntrada = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxIDReserva = new System.Windows.Forms.TextBox();
+            this.txtBoxStatus = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -84,13 +89,13 @@ namespace ProjectKopezkzky.src.view
             this.label2.TabIndex = 0;
             this.label2.Text = "Consultar Reserva";
             // 
-            // textBox1
+            // txtBoxBuscarReserva
             // 
-            this.textBox1.Location = new System.Drawing.Point(510, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 23);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtBoxBuscarReserva.Location = new System.Drawing.Point(510, 69);
+            this.txtBoxBuscarReserva.Name = "txtBoxBuscarReserva";
+            this.txtBoxBuscarReserva.Size = new System.Drawing.Size(130, 23);
+            this.txtBoxBuscarReserva.TabIndex = 3;
+            this.txtBoxBuscarReserva.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnBuscarReserva
             // 
@@ -115,160 +120,152 @@ namespace ProjectKopezkzky.src.view
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.txtBoxStatus);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.txtBoxEndereco);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.txtBoxDataNasc);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.txtBoxEmail);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.txtBoxNome);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.txtBoxCPF);
             this.panel2.Controls.Add(this.btnNovaReserva);
             this.panel2.Controls.Add(this.btnEditarReserva);
             this.panel2.Controls.Add(this.btnCancelarReserva);
-            this.panel2.Controls.Add(this.listView1);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.txtBoxQuartIndDuplo);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.txtBoxNoites);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtBoxDataSaida);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtBoxNumQuartInd);
+            this.panel2.Controls.Add(this.txtBoxDataEntrada);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtBoxIDReserva);
             this.panel2.Location = new System.Drawing.Point(12, 115);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(744, 421);
             this.panel2.TabIndex = 6;
             // 
-            // label3
+            // label16
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(16, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 30);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Reserva:";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(43, 280);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 15);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "Endereço:";
             // 
-            // label4
+            // txtBoxEndereco
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ID reserva:";
+            this.txtBoxEndereco.Location = new System.Drawing.Point(108, 276);
+            this.txtBoxEndereco.Name = "txtBoxEndereco";
+            this.txtBoxEndereco.ReadOnly = true;
+            this.txtBoxEndereco.Size = new System.Drawing.Size(287, 23);
+            this.txtBoxEndereco.TabIndex = 34;
             // 
-            // textBox2
+            // label15
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 23);
-            this.textBox2.TabIndex = 7;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(548, 238);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(74, 15);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "Nascimento:";
             // 
-            // label5
+            // txtBoxDataNasc
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 15);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Data Entrada:";
+            this.txtBoxDataNasc.Location = new System.Drawing.Point(624, 235);
+            this.txtBoxDataNasc.Name = "txtBoxDataNasc";
+            this.txtBoxDataNasc.ReadOnly = true;
+            this.txtBoxDataNasc.Size = new System.Drawing.Size(82, 23);
+            this.txtBoxDataNasc.TabIndex = 32;
             // 
-            // textBox3
+            // label14
             // 
-            this.textBox3.Location = new System.Drawing.Point(375, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(96, 23);
-            this.textBox3.TabIndex = 9;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(431, 280);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 15);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Email:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
-            // label6
+            // txtBoxEmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(481, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Data Saída:";
+            this.txtBoxEmail.Location = new System.Drawing.Point(482, 276);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.ReadOnly = true;
+            this.txtBoxEmail.Size = new System.Drawing.Size(224, 23);
+            this.txtBoxEmail.TabIndex = 30;
             // 
-            // textBox4
+            // label13
             // 
-            this.textBox4.Location = new System.Drawing.Point(552, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(96, 23);
-            this.textBox4.TabIndex = 11;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(242, 238);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 15);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Nome:";
             // 
-            // label7
+            // txtBoxNome
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(250, 107);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 15);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "N° Quarto Individual:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.txtBoxNome.Location = new System.Drawing.Point(291, 235);
+            this.txtBoxNome.Name = "txtBoxNome";
+            this.txtBoxNome.ReadOnly = true;
+            this.txtBoxNome.Size = new System.Drawing.Size(239, 23);
+            this.txtBoxNome.TabIndex = 28;
             // 
-            // textBox5
+            // label12
             // 
-            this.textBox5.Location = new System.Drawing.Point(375, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(72, 23);
-            this.textBox5.TabIndex = 13;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(42, 238);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 15);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "CPF:";
             // 
-            // label8
+            // txtBoxCPF
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(215, 147);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 15);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "N° Quarto Individual Duplo:";
+            this.txtBoxCPF.Location = new System.Drawing.Point(79, 235);
+            this.txtBoxCPF.Name = "txtBoxCPF";
+            this.txtBoxCPF.ReadOnly = true;
+            this.txtBoxCPF.Size = new System.Drawing.Size(130, 23);
+            this.txtBoxCPF.TabIndex = 26;
             // 
-            // label9
+            // btnNovaReserva
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(504, 147);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 15);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Status:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.btnNovaReserva.Location = new System.Drawing.Point(43, 360);
+            this.btnNovaReserva.Name = "btnNovaReserva";
+            this.btnNovaReserva.Size = new System.Drawing.Size(125, 31);
+            this.btnNovaReserva.TabIndex = 25;
+            this.btnNovaReserva.Text = "Nova Reserva";
+            this.btnNovaReserva.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // btnEditarReserva
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(502, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 15);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Noites:";
+            this.btnEditarReserva.Location = new System.Drawing.Point(312, 360);
+            this.btnEditarReserva.Name = "btnEditarReserva";
+            this.btnEditarReserva.Size = new System.Drawing.Size(125, 31);
+            this.btnEditarReserva.TabIndex = 24;
+            this.btnEditarReserva.Text = "Editar Reserva";
+            this.btnEditarReserva.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // btnCancelarReserva
             // 
-            this.textBox8.Location = new System.Drawing.Point(552, 103);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(68, 23);
-            this.textBox8.TabIndex = 19;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Aberta",
-            "Fechada"});
-            this.comboBox1.Location = new System.Drawing.Point(552, 143);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(68, 23);
-            this.comboBox1.TabIndex = 21;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(375, 142);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(72, 23);
-            this.textBox6.TabIndex = 22;
+            this.btnCancelarReserva.Location = new System.Drawing.Point(581, 360);
+            this.btnCancelarReserva.Name = "btnCancelarReserva";
+            this.btnCancelarReserva.Size = new System.Drawing.Size(125, 31);
+            this.btnCancelarReserva.TabIndex = 23;
+            this.btnCancelarReserva.Text = "Cancelar Reserva";
+            this.btnCancelarReserva.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -281,68 +278,137 @@ namespace ProjectKopezkzky.src.view
             this.label11.Text = "Cliente:";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // listView1
+            // txtBoxQuartIndDuplo
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderCPF,
-            this.columnHeaderNome,
-            this.columnHeaderEndereco,
-            this.columnHeaderEmail});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(16, 235);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(713, 85);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.txtBoxQuartIndDuplo.Location = new System.Drawing.Point(375, 142);
+            this.txtBoxQuartIndDuplo.Name = "txtBoxQuartIndDuplo";
+            this.txtBoxQuartIndDuplo.ReadOnly = true;
+            this.txtBoxQuartIndDuplo.Size = new System.Drawing.Size(72, 23);
+            this.txtBoxQuartIndDuplo.TabIndex = 22;
             // 
-            // columnHeaderCPF
+            // label10
             // 
-            this.columnHeaderCPF.Text = "CPF";
-            this.columnHeaderCPF.Width = 111;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(502, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 15);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Noites:";
             // 
-            // columnHeaderNome
+            // label8
             // 
-            this.columnHeaderNome.Text = "Nome";
-            this.columnHeaderNome.Width = 210;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(215, 147);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 15);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "N° Quarto Individual Duplo:";
             // 
-            // columnHeaderEndereco
+            // txtBoxNoites
             // 
-            this.columnHeaderEndereco.Text = "Endereço";
-            this.columnHeaderEndereco.Width = 235;
+            this.txtBoxNoites.Location = new System.Drawing.Point(552, 103);
+            this.txtBoxNoites.Name = "txtBoxNoites";
+            this.txtBoxNoites.ReadOnly = true;
+            this.txtBoxNoites.Size = new System.Drawing.Size(68, 23);
+            this.txtBoxNoites.TabIndex = 19;
             // 
-            // columnHeaderEmail
+            // label9
             // 
-            this.columnHeaderEmail.Text = "Email";
-            this.columnHeaderEmail.Width = 153;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(504, 147);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 15);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Status:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // btnCancelarReserva
+            // label6
             // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(581, 360);
-            this.btnCancelarReserva.Name = "btnCancelarReserva";
-            this.btnCancelarReserva.Size = new System.Drawing.Size(125, 31);
-            this.btnCancelarReserva.TabIndex = 23;
-            this.btnCancelarReserva.Text = "Cancelar Reserva";
-            this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(481, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 15);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Data Saída:";
             // 
-            // btnEditarReserva
+            // label7
             // 
-            this.btnEditarReserva.Location = new System.Drawing.Point(322, 360);
-            this.btnEditarReserva.Name = "btnEditarReserva";
-            this.btnEditarReserva.Size = new System.Drawing.Size(125, 31);
-            this.btnEditarReserva.TabIndex = 24;
-            this.btnEditarReserva.Text = "Editar Reserva";
-            this.btnEditarReserva.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(250, 107);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 15);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "N° Quarto Individual:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // btnNovaReserva
+            // txtBoxDataSaida
             // 
-            this.btnNovaReserva.Location = new System.Drawing.Point(43, 360);
-            this.btnNovaReserva.Name = "btnNovaReserva";
-            this.btnNovaReserva.Size = new System.Drawing.Size(125, 31);
-            this.btnNovaReserva.TabIndex = 25;
-            this.btnNovaReserva.Text = "Nova Reserva";
-            this.btnNovaReserva.UseVisualStyleBackColor = true;
+            this.txtBoxDataSaida.Location = new System.Drawing.Point(552, 64);
+            this.txtBoxDataSaida.Name = "txtBoxDataSaida";
+            this.txtBoxDataSaida.ReadOnly = true;
+            this.txtBoxDataSaida.Size = new System.Drawing.Size(96, 23);
+            this.txtBoxDataSaida.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(292, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 15);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Data Entrada:";
+            // 
+            // txtBoxNumQuartInd
+            // 
+            this.txtBoxNumQuartInd.Location = new System.Drawing.Point(375, 103);
+            this.txtBoxNumQuartInd.Name = "txtBoxNumQuartInd";
+            this.txtBoxNumQuartInd.ReadOnly = true;
+            this.txtBoxNumQuartInd.Size = new System.Drawing.Size(72, 23);
+            this.txtBoxNumQuartInd.TabIndex = 13;
+            this.txtBoxNumQuartInd.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // txtBoxDataEntrada
+            // 
+            this.txtBoxDataEntrada.Location = new System.Drawing.Point(375, 64);
+            this.txtBoxDataEntrada.Name = "txtBoxDataEntrada";
+            this.txtBoxDataEntrada.ReadOnly = true;
+            this.txtBoxDataEntrada.Size = new System.Drawing.Size(96, 23);
+            this.txtBoxDataEntrada.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "ID reserva:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(16, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 30);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Reserva:";
+            // 
+            // txtBoxIDReserva
+            // 
+            this.txtBoxIDReserva.Location = new System.Drawing.Point(95, 64);
+            this.txtBoxIDReserva.Name = "txtBoxIDReserva";
+            this.txtBoxIDReserva.ReadOnly = true;
+            this.txtBoxIDReserva.Size = new System.Drawing.Size(130, 23);
+            this.txtBoxIDReserva.TabIndex = 7;
+            // 
+            // txtBoxStatus
+            // 
+            this.txtBoxStatus.Location = new System.Drawing.Point(552, 142);
+            this.txtBoxStatus.Name = "txtBoxStatus";
+            this.txtBoxStatus.ReadOnly = true;
+            this.txtBoxStatus.Size = new System.Drawing.Size(68, 23);
+            this.txtBoxStatus.TabIndex = 36;
             // 
             // FrmConsultarReserva
             // 
@@ -352,7 +418,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarReserva);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxBuscarReserva);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConsultarReserva";
@@ -371,33 +437,38 @@ namespace ProjectKopezkzky.src.view
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxBuscarReserva;
         private System.Windows.Forms.Button btnBuscarReserva;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBoxDataSaida;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBoxDataEntrada;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxIDReserva;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtBoxNumQuartInd;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtBoxNoites;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeaderCPF;
-        private System.Windows.Forms.ColumnHeader columnHeaderNome;
-        private System.Windows.Forms.ColumnHeader columnHeaderEndereco;
+        private System.Windows.Forms.TextBox txtBoxQuartIndDuplo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnEditarReserva;
         private System.Windows.Forms.Button btnCancelarReserva;
-        private System.Windows.Forms.ColumnHeader columnHeaderEmail;
         private System.Windows.Forms.Button btnNovaReserva;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBoxCPF;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtBoxEmail;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtBoxNome;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtBoxDataNasc;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtBoxEndereco;
+        private System.Windows.Forms.TextBox txtBoxStatus;
     }
 }

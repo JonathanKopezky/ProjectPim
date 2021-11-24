@@ -107,14 +107,14 @@ namespace ProjectKopezkzky.src.view
             // CadastralClienteMenu
             // 
             this.CadastralClienteMenu.Name = "CadastralClienteMenu";
-            this.CadastralClienteMenu.Size = new System.Drawing.Size(180, 22);
+            this.CadastralClienteMenu.Size = new System.Drawing.Size(170, 22);
             this.CadastralClienteMenu.Text = "Cadastrar Cliente ";
             this.CadastralClienteMenu.Click += new System.EventHandler(this.CadastralClienteMenu_Click);
             // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
