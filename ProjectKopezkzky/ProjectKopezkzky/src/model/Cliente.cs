@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ProjectKopezkzky.src.model
 {
    public class Cliente : Pessoa
-    {
+    { 
+        
     }
 }

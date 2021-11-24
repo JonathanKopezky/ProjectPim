@@ -19,6 +19,7 @@ namespace ProjectKopezkzky.src.repository
         SqlDataReader dr;
         SqlCommand Comando = new SqlCommand();
         Connection conn = new Connection();
+        Cliente cliente = new Cliente();
 
         //VERICAR 
         public bool VerificaCad(Cliente cliente)
@@ -48,6 +49,57 @@ namespace ProjectKopezkzky.src.repository
             {
                 conn.disconnect();
             }
+        }
+
+
+        public Cliente AlteraCliente(Cliente cliente)
+        { //Procurar no banco se existe  
+            Comando = new SqlCommand();
+            Comando.CommandText = "SELECT * FROM Cliente WHERE CPF = @cpf";
+
+            //PARAMETROS
+            Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
+
+            Comando.Connection = conn.connect();
+            dr = Comando.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                MessageBox.Show("entrando na condizao IF -1");
+                // verificando se tem linhas com os parametro 
+                using (dr)
+                {
+                    MessageBox.Show("entrando na condizao IF 2");
+                    while (dr.Read())
+                    {
+                        cliente.nome = dr[0].ToString();
+                        cliente.sobrenome = dr[1].ToString();
+                        cliente.RG = dr[2].ToString();
+                        cliente.CPF = dr[3].ToString();
+                        cliente.email = dr[4].ToString();
+                        cliente.telefone = dr[5].ToString();
+                        cliente.endereco = dr[6].ToString();
+                        cliente.CEP = dr[7].ToString();
+                        cliente.numero = dr.GetInt32(8);
+                        cliente.complemento = dr[9].ToString();
+                        cliente.cidade = dr[10].ToString();
+                        cliente.estado = dr[11].ToString();
+                        cliente.genero = dr[12].ToString();
+                        cliente.pais = dr[13].ToString();
+                        cliente.dataNascimento = dr[14].ToString();
+                        cliente.senha = dr[16].ToString();
+                    }
+                    return cliente;
+                }
+            }
+            else
+            {
+                MessageBox.Show("SAI");
+                conn.disconnect();
+                cliente.LimpaCliente();
+                return cliente;
+            }
+          
         }
         public bool CriarCadCliente(Cliente cliente)
         {
@@ -92,6 +144,7 @@ namespace ProjectKopezkzky.src.repository
 
                 conn.disconnect();
             }
+            cliente.LimpaCliente();
             return true;
         }
 
@@ -128,7 +181,7 @@ namespace ProjectKopezkzky.src.repository
             {
                 conn.disconnect();
             }
-
+            cliente.LimpaCliente();
             return true;
         }
 
@@ -158,6 +211,7 @@ namespace ProjectKopezkzky.src.repository
 
                 conn.disconnect();
             }
+            cliente.LimpaCliente();
             return true;
         }
 

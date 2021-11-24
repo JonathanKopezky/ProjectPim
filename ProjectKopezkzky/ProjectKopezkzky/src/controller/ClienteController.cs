@@ -36,8 +36,17 @@ namespace ProjectKopezkzky.src.controller
         }
 
 
-        public bool AtualizaCad(Cliente cliente)
-        {
+        public Cliente getCadCliente(Cliente cliente)
+        {   //funcao pega o cliente da consulta do banco
+             Cliente result = clienteRepository.AlteraCliente(cliente);
+            return result;
+
+           
+        }
+
+
+        public bool setCadCliente(Cliente cliente)
+        {   //funcao altera o cliente
             if (clienteRepository.AtualizarCadCliente(cliente))
             {
                 return true;
