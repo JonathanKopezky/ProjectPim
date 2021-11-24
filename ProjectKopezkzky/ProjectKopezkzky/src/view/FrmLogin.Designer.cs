@@ -111,7 +111,7 @@ namespace ProjectKopezkzky.src.view
             this.signinBTN.Text = "Sign In";
             this.signinBTN.UseVisualStyleBackColor = true;
             this.signinBTN.Click += new System.EventHandler(this.button1_Click);
-            this.signinBTN.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.signinBTN_PreviewKeyDown);
+            this.signinBTN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.signinBTN_KeyPress);
             // 
             // btnSignIn
             // 

@@ -101,9 +101,9 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.lblCPF);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 57);
+            this.panel2.Location = new System.Drawing.Point(12, 75);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(744, 196);
+            this.panel2.Size = new System.Drawing.Size(760, 196);
             this.panel2.TabIndex = 2;
             // 
             // txtBoxCPF
@@ -195,9 +195,9 @@ namespace ProjectKopezkzky.src.view
             this.panel3.Controls.Add(this.dateTimePickerSaida);
             this.panel3.Controls.Add(this.dateTimePickerEntrada);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(12, 259);
+            this.panel3.Location = new System.Drawing.Point(12, 277);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(744, 298);
+            this.panel3.Size = new System.Drawing.Size(760, 298);
             this.panel3.TabIndex = 3;
             // 
             // button3
@@ -518,7 +518,7 @@ namespace ProjectKopezkzky.src.view
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 42);
+            this.panel1.Size = new System.Drawing.Size(784, 42);
             this.panel1.TabIndex = 4;
             // 
             // label2
@@ -536,11 +536,11 @@ namespace ProjectKopezkzky.src.view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 567);
+            this.ClientSize = new System.Drawing.Size(784, 587);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmNovaReserva";
             this.Text = "FrmNovaReserva";
             this.Load += new System.EventHandler(this.FrmNovaReserva_Load);
