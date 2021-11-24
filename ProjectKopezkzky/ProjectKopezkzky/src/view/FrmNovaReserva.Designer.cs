@@ -33,7 +33,7 @@ namespace ProjectKopezkzky.src.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnInserirTeste = new System.Windows.Forms.Button();
+            this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.listViewCliente = new System.Windows.Forms.ListView();
             this.columnHeaderCPF = new System.Windows.Forms.ColumnHeader();
             this.columnHeaderNome = new System.Windows.Forms.ColumnHeader();
@@ -71,7 +71,6 @@ namespace ProjectKopezkzky.src.view
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePickerSaida = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxCPF = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,7 +116,6 @@ namespace ProjectKopezkzky.src.view
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.txtBoxCPF);
-            this.panel2.Controls.Add(this.btnInserirTeste);
             this.panel2.Controls.Add(this.listViewCliente);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.button1);
@@ -128,18 +126,12 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Size = new System.Drawing.Size(760, 196);
             this.panel2.TabIndex = 2;
             // 
-            // btnInserirTeste
+            // txtBoxCPF
             // 
-            this.btnInserirTeste.BackColor = System.Drawing.Color.IndianRed;
-            this.btnInserirTeste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInserirTeste.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInserirTeste.Location = new System.Drawing.Point(629, 118);
-            this.btnInserirTeste.Name = "btnInserirTeste";
-            this.btnInserirTeste.Size = new System.Drawing.Size(79, 36);
-            this.btnInserirTeste.TabIndex = 7;
-            this.btnInserirTeste.Text = "Inserir";
-            this.btnInserirTeste.UseVisualStyleBackColor = false;
-            this.btnInserirTeste.Click += new System.EventHandler(this.btnInserirTeste_Click);
+            this.txtBoxCPF.Location = new System.Drawing.Point(461, 35);
+            this.txtBoxCPF.Name = "txtBoxCPF";
+            this.txtBoxCPF.Size = new System.Drawing.Size(126, 23);
+            this.txtBoxCPF.TabIndex = 9;
             // 
             // listViewCliente
             // 
@@ -535,13 +527,6 @@ namespace ProjectKopezkzky.src.view
             this.label3.TabIndex = 3;
             this.label3.Text = "Selecionar Quarto e Datas";
             // 
-            // txtBoxCPF
-            // 
-            this.txtBoxCPF.Location = new System.Drawing.Point(461, 35);
-            this.txtBoxCPF.Name = "txtBoxCPF";
-            this.txtBoxCPF.Size = new System.Drawing.Size(126, 23);
-            this.txtBoxCPF.TabIndex = 9;
-            // 
             // FrmNovaReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -617,7 +602,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.ColumnHeader columnHeaderCPF;
         private System.Windows.Forms.ColumnHeader columnHeaderNome;
         private System.Windows.Forms.ColumnHeader columnHeaderEndereco;
-        private System.Windows.Forms.Button btnInserirTeste;
         private System.Windows.Forms.TextBox txtBoxCPF;
     }
 }
