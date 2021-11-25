@@ -115,5 +115,19 @@ namespace ProjectKopezkzky.src.view
 
             frmCadastroFuncionario.ShowDialog();
         }
+
+        private void quartosTesteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmQuartosTeste frmQuartosTeste = new FrmQuartosTeste();
+
+            frmQuartosTeste.ShowDialog();
+        }
+
+        private void tiposDeQuartosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTiposDeQuartos frmTiposDeQuartos = new FrmTiposDeQuartos();
+
+            frmTiposDeQuartos.ShowDialog();
+        }
     }
 }

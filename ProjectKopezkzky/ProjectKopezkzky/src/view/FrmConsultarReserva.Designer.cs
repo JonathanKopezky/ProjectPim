@@ -63,7 +63,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxIDReserva = new System.Windows.Forms.TextBox();
             this.btnEditarReserva = new System.Windows.Forms.Button();
             this.btnCancelarReserva = new System.Windows.Forms.Button();
-            this.btnNovaReserva = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -156,7 +156,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxStatus.Location = new System.Drawing.Point(552, 142);
             this.txtBoxStatus.Name = "txtBoxStatus";
             this.txtBoxStatus.ReadOnly = true;
-            this.txtBoxStatus.Size = new System.Drawing.Size(68, 23);
+            this.txtBoxStatus.Size = new System.Drawing.Size(96, 23);
             this.txtBoxStatus.TabIndex = 36;
             // 
             // label16
@@ -284,11 +284,11 @@ namespace ProjectKopezkzky.src.view
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.Info;
-            this.label8.Location = new System.Drawing.Point(215, 147);
+            this.label8.Location = new System.Drawing.Point(270, 145);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 15);
+            this.label8.Size = new System.Drawing.Size(99, 15);
             this.label8.TabIndex = 16;
-            this.label8.Text = "N° Quarto Individual Duplo:";
+            this.label8.Text = "N° Quarto Duplo:";
             // 
             // txtBoxNoites
             // 
@@ -396,7 +396,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnEditarReserva
             // 
-            this.btnEditarReserva.Location = new System.Drawing.Point(318, 480);
+            this.btnEditarReserva.Location = new System.Drawing.Point(28, 480);
             this.btnEditarReserva.Name = "btnEditarReserva";
             this.btnEditarReserva.Size = new System.Drawing.Size(125, 31);
             this.btnEditarReserva.TabIndex = 24;
@@ -406,29 +406,28 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnCancelarReserva
             // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(582, 480);
+            this.btnCancelarReserva.Location = new System.Drawing.Point(172, 480);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
             this.btnCancelarReserva.Size = new System.Drawing.Size(125, 31);
             this.btnCancelarReserva.TabIndex = 23;
             this.btnCancelarReserva.Text = "Cancelar Reserva";
             this.btnCancelarReserva.UseVisualStyleBackColor = true;
             // 
-            // btnNovaReserva
+            // button1
             // 
-            this.btnNovaReserva.Location = new System.Drawing.Point(54, 480);
-            this.btnNovaReserva.Name = "btnNovaReserva";
-            this.btnNovaReserva.Size = new System.Drawing.Size(125, 31);
-            this.btnNovaReserva.TabIndex = 25;
-            this.btnNovaReserva.Text = "Nova Reserva";
-            this.btnNovaReserva.UseVisualStyleBackColor = true;
-            this.btnNovaReserva.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Location = new System.Drawing.Point(494, 480);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 31);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Fazer checkout";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmConsultarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 548);
-            this.Controls.Add(this.btnNovaReserva);
+            this.ClientSize = new System.Drawing.Size(768, 781);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarReserva);
@@ -485,6 +484,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBoxEndereco;
         private System.Windows.Forms.TextBox txtBoxStatus;
-        private System.Windows.Forms.Button btnNovaReserva;
+        private System.Windows.Forms.Button button1;
     }
 }

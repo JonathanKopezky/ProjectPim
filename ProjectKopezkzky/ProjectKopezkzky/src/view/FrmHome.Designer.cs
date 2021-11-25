@@ -49,6 +49,9 @@ namespace ProjectKopezkzky.src.view
             this.LblNome = new System.Windows.Forms.Label();
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
+            this.quartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDeQuartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quartosTesteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +63,8 @@ namespace ProjectKopezkzky.src.view
             this.homeToolStripMenuItem,
             this.reservaToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.funcionáriosToolStripMenuItem});
+            this.funcionáriosToolStripMenuItem,
+            this.quartosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -86,14 +90,14 @@ namespace ProjectKopezkzky.src.view
             // consultarReservaToolStripMenuItem1
             // 
             this.consultarReservaToolStripMenuItem1.Name = "consultarReservaToolStripMenuItem1";
-            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
             this.consultarReservaToolStripMenuItem1.Text = "Consultar Reserva ";
             this.consultarReservaToolStripMenuItem1.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem1_Click);
             // 
             // consultarReservaToolStripMenuItem
             // 
             this.consultarReservaToolStripMenuItem.Name = "consultarReservaToolStripMenuItem";
-            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.consultarReservaToolStripMenuItem.Text = "Nova Reserva";
             this.consultarReservaToolStripMenuItem.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem_Click_1);
             // 
@@ -231,6 +235,29 @@ namespace ProjectKopezkzky.src.view
             this.panelHome.Size = new System.Drawing.Size(784, 587);
             this.panelHome.TabIndex = 4;
             // 
+            // quartosToolStripMenuItem
+            // 
+            this.quartosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDeQuartosToolStripMenuItem,
+            this.quartosTesteToolStripMenuItem});
+            this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.quartosToolStripMenuItem.Text = "Quartos";
+            // 
+            // tiposDeQuartosToolStripMenuItem
+            // 
+            this.tiposDeQuartosToolStripMenuItem.Name = "tiposDeQuartosToolStripMenuItem";
+            this.tiposDeQuartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiposDeQuartosToolStripMenuItem.Text = "Tipos de Quartos";
+            this.tiposDeQuartosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeQuartosToolStripMenuItem_Click);
+            // 
+            // quartosTesteToolStripMenuItem
+            // 
+            this.quartosTesteToolStripMenuItem.Name = "quartosTesteToolStripMenuItem";
+            this.quartosTesteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quartosTesteToolStripMenuItem.Text = "Quartos Teste";
+            this.quartosTesteToolStripMenuItem.Click += new System.EventHandler(this.quartosTesteToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -274,5 +301,8 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quartosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDeQuartosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quartosTesteToolStripMenuItem;
     }
 }

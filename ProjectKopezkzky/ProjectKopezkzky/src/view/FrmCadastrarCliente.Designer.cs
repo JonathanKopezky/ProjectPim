@@ -65,7 +65,9 @@ namespace ProjectKopezkzky.src.view
             this.txbSenha = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +83,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbPais
             // 
-            this.txbPais.Location = new System.Drawing.Point(590, 261);
+            this.txbPais.Location = new System.Drawing.Point(584, 217);
             this.txbPais.Name = "txbPais";
             this.txbPais.Size = new System.Drawing.Size(160, 23);
             this.txbPais.TabIndex = 14;
@@ -89,7 +91,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbNascimento
             // 
-            this.txbNascimento.Location = new System.Drawing.Point(145, 142);
+            this.txbNascimento.Location = new System.Drawing.Point(139, 98);
             this.txbNascimento.Name = "txbNascimento";
             this.txbNascimento.Size = new System.Drawing.Size(141, 23);
             this.txbNascimento.TabIndex = 5;
@@ -97,7 +99,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(23, 200);
+            this.txbEmail.Location = new System.Drawing.Point(17, 156);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(263, 23);
             this.txbEmail.TabIndex = 8;
@@ -105,7 +107,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbEndereco
             // 
-            this.txbEndereco.Location = new System.Drawing.Point(308, 200);
+            this.txbEndereco.Location = new System.Drawing.Point(302, 156);
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(263, 23);
             this.txbEndereco.TabIndex = 9;
@@ -113,7 +115,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbnumero
             // 
-            this.txbnumero.Location = new System.Drawing.Point(23, 261);
+            this.txbnumero.Location = new System.Drawing.Point(17, 217);
             this.txbnumero.Name = "txbnumero";
             this.txbnumero.Size = new System.Drawing.Size(100, 23);
             this.txbnumero.TabIndex = 11;
@@ -121,7 +123,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbCep
             // 
-            this.txbCep.Location = new System.Drawing.Point(590, 200);
+            this.txbCep.Location = new System.Drawing.Point(584, 156);
             this.txbCep.Name = "txbCep";
             this.txbCep.Size = new System.Drawing.Size(160, 23);
             this.txbCep.TabIndex = 10;
@@ -129,7 +131,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbEstado
             // 
-            this.txbEstado.Location = new System.Drawing.Point(145, 261);
+            this.txbEstado.Location = new System.Drawing.Point(139, 217);
             this.txbEstado.Name = "txbEstado";
             this.txbEstado.Size = new System.Drawing.Size(33, 23);
             this.txbEstado.TabIndex = 12;
@@ -137,7 +139,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbCpf
             // 
-            this.txbCpf.Location = new System.Drawing.Point(590, 85);
+            this.txbCpf.Location = new System.Drawing.Point(584, 41);
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(160, 23);
             this.txbCpf.TabIndex = 3;
@@ -145,7 +147,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbComplemento
             // 
-            this.txbComplemento.Location = new System.Drawing.Point(23, 318);
+            this.txbComplemento.Location = new System.Drawing.Point(17, 274);
             this.txbComplemento.Name = "txbComplemento";
             this.txbComplemento.Size = new System.Drawing.Size(263, 23);
             this.txbComplemento.TabIndex = 15;
@@ -153,7 +155,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbCidade
             // 
-            this.txbCidade.Location = new System.Drawing.Point(308, 261);
+            this.txbCidade.Location = new System.Drawing.Point(302, 217);
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(263, 23);
             this.txbCidade.TabIndex = 13;
@@ -161,7 +163,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbNome
             // 
-            this.txbNome.Location = new System.Drawing.Point(23, 85);
+            this.txbNome.Location = new System.Drawing.Point(17, 41);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(263, 23);
             this.txbNome.TabIndex = 1;
@@ -170,7 +172,8 @@ namespace ProjectKopezkzky.src.view
             // lblPais
             // 
             this.lblPais.AutoSize = true;
-            this.lblPais.Location = new System.Drawing.Point(590, 243);
+            this.lblPais.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblPais.Location = new System.Drawing.Point(584, 199);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(34, 15);
             this.lblPais.TabIndex = 42;
@@ -179,7 +182,8 @@ namespace ProjectKopezkzky.src.view
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(308, 243);
+            this.lblCidade.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblCidade.Location = new System.Drawing.Point(302, 199);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(50, 15);
             this.lblCidade.TabIndex = 41;
@@ -188,7 +192,8 @@ namespace ProjectKopezkzky.src.view
             // lblComplemento
             // 
             this.lblComplemento.AutoSize = true;
-            this.lblComplemento.Location = new System.Drawing.Point(23, 300);
+            this.lblComplemento.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblComplemento.Location = new System.Drawing.Point(17, 256);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(90, 15);
             this.lblComplemento.TabIndex = 39;
@@ -197,7 +202,8 @@ namespace ProjectKopezkzky.src.view
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
-            this.lblCpf.Location = new System.Drawing.Point(590, 64);
+            this.lblCpf.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblCpf.Location = new System.Drawing.Point(584, 20);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(32, 15);
             this.lblCpf.TabIndex = 35;
@@ -207,7 +213,8 @@ namespace ProjectKopezkzky.src.view
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(145, 243);
+            this.lblEstado.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblEstado.Location = new System.Drawing.Point(139, 199);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(48, 15);
             this.lblEstado.TabIndex = 34;
@@ -216,7 +223,8 @@ namespace ProjectKopezkzky.src.view
             // lblCep
             // 
             this.lblCep.AutoSize = true;
-            this.lblCep.Location = new System.Drawing.Point(590, 182);
+            this.lblCep.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblCep.Location = new System.Drawing.Point(584, 138);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(34, 15);
             this.lblCep.TabIndex = 33;
@@ -226,7 +234,8 @@ namespace ProjectKopezkzky.src.view
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 243);
+            this.label5.ForeColor = System.Drawing.SystemColors.Info;
+            this.label5.Location = new System.Drawing.Point(17, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 32;
@@ -236,7 +245,8 @@ namespace ProjectKopezkzky.src.view
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(308, 182);
+            this.lbl.ForeColor = System.Drawing.SystemColors.Info;
+            this.lbl.Location = new System.Drawing.Point(302, 138);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(62, 15);
             this.lbl.TabIndex = 30;
@@ -246,7 +256,8 @@ namespace ProjectKopezkzky.src.view
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(23, 182);
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblEmail.Location = new System.Drawing.Point(17, 138);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(47, 15);
             this.lblEmail.TabIndex = 27;
@@ -255,7 +266,8 @@ namespace ProjectKopezkzky.src.view
             // labelDatanasc
             // 
             this.labelDatanasc.AutoSize = true;
-            this.labelDatanasc.Location = new System.Drawing.Point(145, 124);
+            this.labelDatanasc.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelDatanasc.Location = new System.Drawing.Point(139, 80);
             this.labelDatanasc.Name = "labelDatanasc";
             this.labelDatanasc.Size = new System.Drawing.Size(120, 15);
             this.labelDatanasc.TabIndex = 25;
@@ -264,7 +276,8 @@ namespace ProjectKopezkzky.src.view
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(23, 64);
+            this.labelNome.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelNome.Location = new System.Drawing.Point(17, 20);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(46, 15);
             this.labelNome.TabIndex = 24;
@@ -283,7 +296,8 @@ namespace ProjectKopezkzky.src.view
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 64);
+            this.label3.ForeColor = System.Drawing.SystemColors.Info;
+            this.label3.Location = new System.Drawing.Point(302, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 15);
             this.label3.TabIndex = 51;
@@ -292,7 +306,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbSobrenome
             // 
-            this.txbSobrenome.Location = new System.Drawing.Point(308, 85);
+            this.txbSobrenome.Location = new System.Drawing.Point(302, 41);
             this.txbSobrenome.Name = "txbSobrenome";
             this.txbSobrenome.Size = new System.Drawing.Size(263, 23);
             this.txbSobrenome.TabIndex = 2;
@@ -300,7 +314,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbRg
             // 
-            this.txbRg.Location = new System.Drawing.Point(23, 142);
+            this.txbRg.Location = new System.Drawing.Point(17, 98);
             this.txbRg.Name = "txbRg";
             this.txbRg.Size = new System.Drawing.Size(100, 23);
             this.txbRg.TabIndex = 4;
@@ -309,7 +323,8 @@ namespace ProjectKopezkzky.src.view
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 124);
+            this.label4.ForeColor = System.Drawing.SystemColors.Info;
+            this.label4.Location = new System.Drawing.Point(17, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 15);
             this.label4.TabIndex = 54;
@@ -319,7 +334,8 @@ namespace ProjectKopezkzky.src.view
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(308, 124);
+            this.label6.ForeColor = System.Drawing.SystemColors.Info;
+            this.label6.Location = new System.Drawing.Point(302, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 15);
             this.label6.TabIndex = 55;
@@ -327,7 +343,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(308, 142);
+            this.txtGenero.Location = new System.Drawing.Point(302, 98);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(263, 23);
             this.txtGenero.TabIndex = 6;
@@ -336,7 +352,8 @@ namespace ProjectKopezkzky.src.view
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(590, 124);
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.Location = new System.Drawing.Point(584, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 57;
@@ -344,7 +361,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbTelefone
             // 
-            this.txbTelefone.Location = new System.Drawing.Point(590, 142);
+            this.txbTelefone.Location = new System.Drawing.Point(584, 98);
             this.txbTelefone.Name = "txbTelefone";
             this.txbTelefone.Size = new System.Drawing.Size(160, 23);
             this.txbTelefone.TabIndex = 7;
@@ -353,7 +370,8 @@ namespace ProjectKopezkzky.src.view
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(308, 300);
+            this.label7.ForeColor = System.Drawing.SystemColors.Info;
+            this.label7.Location = new System.Drawing.Point(302, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 59;
@@ -361,7 +379,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txbSenha
             // 
-            this.txbSenha.Location = new System.Drawing.Point(308, 318);
+            this.txbSenha.Location = new System.Drawing.Point(302, 274);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(117, 23);
             this.txbSenha.TabIndex = 16;
@@ -391,53 +409,63 @@ namespace ProjectKopezkzky.src.view
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel2.Controls.Add(this.txbSenha);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txbTelefone);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtGenero);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txbRg);
+            this.panel2.Controls.Add(this.txbSobrenome);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txbPais);
+            this.panel2.Controls.Add(this.txbNascimento);
+            this.panel2.Controls.Add(this.txbEmail);
+            this.panel2.Controls.Add(this.txbEndereco);
+            this.panel2.Controls.Add(this.txbnumero);
+            this.panel2.Controls.Add(this.txbCep);
+            this.panel2.Controls.Add(this.txbEstado);
+            this.panel2.Controls.Add(this.txbCpf);
+            this.panel2.Controls.Add(this.txbComplemento);
+            this.panel2.Controls.Add(this.txbCidade);
+            this.panel2.Controls.Add(this.txbNome);
+            this.panel2.Controls.Add(this.lblPais);
+            this.panel2.Controls.Add(this.lblCidade);
+            this.panel2.Controls.Add(this.lblComplemento);
+            this.panel2.Controls.Add(this.lblCpf);
+            this.panel2.Controls.Add(this.lblEstado);
+            this.panel2.Controls.Add(this.lblCep);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lbl);
+            this.panel2.Controls.Add(this.lblEmail);
+            this.panel2.Controls.Add(this.labelDatanasc);
+            this.panel2.Controls.Add(this.labelNome);
+            this.panel2.Location = new System.Drawing.Point(12, 58);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 328);
+            this.panel2.TabIndex = 65;
+            // 
             // FrmCadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txbSenha);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txbTelefone);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtGenero);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txbRg);
-            this.Controls.Add(this.txbSobrenome);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txbPais);
-            this.Controls.Add(this.txbNascimento);
-            this.Controls.Add(this.txbEmail);
-            this.Controls.Add(this.txbEndereco);
-            this.Controls.Add(this.txbnumero);
-            this.Controls.Add(this.txbCep);
-            this.Controls.Add(this.txbEstado);
-            this.Controls.Add(this.txbCpf);
-            this.Controls.Add(this.txbComplemento);
-            this.Controls.Add(this.txbCidade);
-            this.Controls.Add(this.txbNome);
-            this.Controls.Add(this.lblPais);
-            this.Controls.Add(this.lblCidade);
-            this.Controls.Add(this.lblComplemento);
-            this.Controls.Add(this.lblCpf);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lblCep);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lbl);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.labelDatanasc);
-            this.Controls.Add(this.labelNome);
             this.Name = "FrmCadastrarCliente";
             this.Text = "Cadastrar Cliente";
             this.Load += new System.EventHandler(this.FormCadCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -479,5 +507,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
     }
 }
