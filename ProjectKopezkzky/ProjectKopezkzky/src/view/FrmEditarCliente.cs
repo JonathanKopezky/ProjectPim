@@ -16,5 +16,10 @@ namespace ProjectKopezkzky.src.view
         {
             InitializeComponent();
         }
+
+        private void FrmEditarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
