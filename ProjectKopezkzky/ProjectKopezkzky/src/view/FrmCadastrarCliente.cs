@@ -85,7 +85,7 @@ namespace ProjectKopezkzky.src.view
             this.cliente.cidade = txbCidade.Text;
             this.cliente.pais = txbPais.Text;
             this.cliente.complemento = txbComplemento.Text;
-            this.cliente.senha = txbSenha.Text;
+            this.cliente.senha = txtBoxSenha1.Text;
             if (!ClienteController.VerificaCad(cliente))
             {
                 MessageBox.Show("Cadastro existe");
@@ -118,7 +118,7 @@ namespace ProjectKopezkzky.src.view
             txbCidade.Clear();
             txbPais.Clear();
             txbComplemento.Clear();
-            txbSenha.Clear();
+            txtBoxSenha1.Clear();
             txbEmail.Clear();
         }
 
@@ -152,7 +152,7 @@ namespace ProjectKopezkzky.src.view
                    && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(txbCep.Text)
                     && !string.IsNullOrWhiteSpace(txbnumero.Text) && !string.IsNullOrWhiteSpace(txbEstado.Text)
                      && !string.IsNullOrWhiteSpace(txbCidade.Text) && !string.IsNullOrWhiteSpace(txbPais.Text)
-                     && !string.IsNullOrWhiteSpace(txbComplemento.Text) && !string.IsNullOrWhiteSpace(txbSenha.Text))
+                     && !string.IsNullOrWhiteSpace(txbComplemento.Text) && !string.IsNullOrWhiteSpace(txtBoxSenha1.Text))
             {
                 btnSalvar.Enabled = true;
             }
