@@ -52,22 +52,22 @@ namespace ProjectKopezkzky.src.view
             }
             else
             {
-                funcionario.nome = textBox1.Text;
-                funcionario.sobrenome = textBox2.Text;
+                funcionario.nome = txtBoxNome.Text;
+                funcionario.sobrenome = txtBoxSobrenome.Text;
                 funcionario.dataNascimento = maskedTextBox2.Text;
-                funcionario.formacaoAcademica = textBox11.Text;
+                funcionario.formacaoAcademica = txtBoxFormacaoAcademica.Text;
                 funcionario.RG = maskedTextBox4.Text;
                 funcionario.CPF = maskedTextBox5.Text;
-                funcionario.tituloEleitor = textBox6.Text;
-                funcionario.reservista = textBox7.Text;
-                funcionario.nomeMae = textBox4.Text;
-                funcionario.nomePai = textBox5.Text;
-                funcionario.dependentes = Int32.Parse(textBox3.Text);
-                funcionario.CNH = textBox10.Text;
+                funcionario.tituloEleitor = txtBoxEleitor.Text;
+                funcionario.reservista = txtBoxReservista.Text;
+                funcionario.nomeMae = txtBoxNomeMae.Text;
+                funcionario.nomePai = txtBoxNomePai.Text;
+                funcionario.dependentes = Int32.Parse(txtBoxDependentes.Text);
+                funcionario.CNH = txtBoxCNH.Text;
                 funcionario.telefone = maskedTextBox1.Text;
                 funcionario.email = maskedTextBox3.Text;
-                funcionario.genero = textBox8.Text;
-                funcionario.estadoCivil = textBox9.Text;
+                funcionario.genero = txtBoxGenero.Text;
+                funcionario.estadoCivil = txtBoxEstadoCivil.Text;
                 funcionario.CEP = maskedTextBox16.Text;
                 funcionario.pais = maskedTextBox12.Text;
                 funcionario.estado = maskedTextBox7.Text;
@@ -215,22 +215,22 @@ namespace ProjectKopezkzky.src.view
         private bool verificaCampos()
         {
             if (
-                    !string.IsNullOrWhiteSpace(textBox1.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox2.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxNome.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxSobrenome.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox2.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox11.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxFormacaoAcademica.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox4.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox5.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox6.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox7.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox4.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox5.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox3.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox10.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxEleitor.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxReservista.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxNomeMae.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxNomePai.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxDependentes.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxCNH.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox1.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox3.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox8.Text) ||
-                    !string.IsNullOrWhiteSpace(textBox9.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxGenero.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxEstadoCivil.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox16.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox12.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox7.Text) ||
@@ -249,6 +249,11 @@ namespace ProjectKopezkzky.src.view
             {
                 return false;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
