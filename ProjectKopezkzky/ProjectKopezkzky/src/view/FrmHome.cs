@@ -111,7 +111,7 @@ namespace ProjectKopezkzky.src.view
 
         private void cadastrarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCadastroFuncionario frmCadastroFuncionario = new FrmCadastroFuncionario();
+            FrmCadastrarFuncionario frmCadastroFuncionario = new FrmCadastrarFuncionario();
 
             frmCadastroFuncionario.ShowDialog();
         }

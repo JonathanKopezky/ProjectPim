@@ -13,10 +13,10 @@ using ProjectKopezkzky.src.controller;
 
 namespace ProjectKopezkzky.src.view
 {
-    public partial class FrmCadastroFuncionario : Form
+    public partial class FrmCadastrarFuncionario : Form
     {
 
-        public FrmCadastroFuncionario()
+        public FrmCadastrarFuncionario()
         {
             InitializeComponent();
         }

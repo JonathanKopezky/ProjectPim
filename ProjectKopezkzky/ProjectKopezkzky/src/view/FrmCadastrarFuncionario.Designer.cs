@@ -1,7 +1,7 @@
 ﻿
 namespace ProjectKopezkzky.src.view
 {
-    partial class FrmCadastroFuncionario
+    partial class FrmCadastrarFuncionario
     {
         /// <summary>
         /// Required designer variable.
