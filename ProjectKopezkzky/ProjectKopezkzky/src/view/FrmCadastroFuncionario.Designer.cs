@@ -76,17 +76,17 @@ namespace ProjectKopezkzky.src.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txtBoxCidade = new System.Windows.Forms.TextBox();
-            this.txtBoxNumero = new System.Windows.Forms.TextBox();
-            this.txtBoxEstado = new System.Windows.Forms.TextBox();
-            this.txtBoxPais = new System.Windows.Forms.TextBox();
-            this.txtBoxEndereco = new System.Windows.Forms.TextBox();
-            this.txtBoxComplemento = new System.Windows.Forms.TextBox();
-            this.txtBoxObservacoes = new System.Windows.Forms.TextBox();
-            this.txtBoxSenha2 = new System.Windows.Forms.TextBox();
             this.txtBoxSenha1 = new System.Windows.Forms.TextBox();
+            this.txtBoxSenha2 = new System.Windows.Forms.TextBox();
+            this.txtBoxObservacoes = new System.Windows.Forms.TextBox();
+            this.txtBoxComplemento = new System.Windows.Forms.TextBox();
+            this.txtBoxEndereco = new System.Windows.Forms.TextBox();
+            this.txtBoxPais = new System.Windows.Forms.TextBox();
+            this.txtBoxEstado = new System.Windows.Forms.TextBox();
+            this.txtBoxNumero = new System.Windows.Forms.TextBox();
+            this.txtBoxCidade = new System.Windows.Forms.TextBox();
+            this.txtBoxNomePai = new System.Windows.Forms.TextBox();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -542,7 +542,7 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.txtBoxEstado);
             this.panel2.Controls.Add(this.txtBoxNumero);
             this.panel2.Controls.Add(this.txtBoxCidade);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtBoxNomePai);
             this.panel2.Controls.Add(this.txtBoxEmail);
             this.panel2.Controls.Add(this.maskedTextBox16);
             this.panel2.Controls.Add(this.label28);
@@ -592,68 +592,12 @@ namespace ProjectKopezkzky.src.view
             this.panel2.TabIndex = 72;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // txtBoxEmail
+            // txtBoxSenha1
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(214, 234);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(191, 23);
-            this.txtBoxEmail.TabIndex = 71;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(255, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 23);
-            this.textBox2.TabIndex = 72;
-            // 
-            // txtBoxCidade
-            // 
-            this.txtBoxCidade.Location = new System.Drawing.Point(479, 293);
-            this.txtBoxCidade.Name = "txtBoxCidade";
-            this.txtBoxCidade.Size = new System.Drawing.Size(147, 23);
-            this.txtBoxCidade.TabIndex = 73;
-            // 
-            // txtBoxNumero
-            // 
-            this.txtBoxNumero.Location = new System.Drawing.Point(677, 293);
-            this.txtBoxNumero.Name = "txtBoxNumero";
-            this.txtBoxNumero.Size = new System.Drawing.Size(67, 23);
-            this.txtBoxNumero.TabIndex = 74;
-            // 
-            // txtBoxEstado
-            // 
-            this.txtBoxEstado.Location = new System.Drawing.Point(325, 293);
-            this.txtBoxEstado.Name = "txtBoxEstado";
-            this.txtBoxEstado.Size = new System.Drawing.Size(122, 23);
-            this.txtBoxEstado.TabIndex = 75;
-            // 
-            // txtBoxPais
-            // 
-            this.txtBoxPais.Location = new System.Drawing.Point(176, 293);
-            this.txtBoxPais.Name = "txtBoxPais";
-            this.txtBoxPais.Size = new System.Drawing.Size(122, 23);
-            this.txtBoxPais.TabIndex = 76;
-            // 
-            // txtBoxEndereco
-            // 
-            this.txtBoxEndereco.Location = new System.Drawing.Point(31, 357);
-            this.txtBoxEndereco.Name = "txtBoxEndereco";
-            this.txtBoxEndereco.Size = new System.Drawing.Size(354, 23);
-            this.txtBoxEndereco.TabIndex = 77;
-            // 
-            // txtBoxComplemento
-            // 
-            this.txtBoxComplemento.Location = new System.Drawing.Point(412, 357);
-            this.txtBoxComplemento.Name = "txtBoxComplemento";
-            this.txtBoxComplemento.Size = new System.Drawing.Size(397, 23);
-            this.txtBoxComplemento.TabIndex = 78;
-            // 
-            // txtBoxObservacoes
-            // 
-            this.txtBoxObservacoes.Location = new System.Drawing.Point(31, 420);
-            this.txtBoxObservacoes.Name = "txtBoxObservacoes";
-            this.txtBoxObservacoes.Size = new System.Drawing.Size(559, 23);
-            this.txtBoxObservacoes.TabIndex = 79;
+            this.txtBoxSenha1.Location = new System.Drawing.Point(31, 487);
+            this.txtBoxSenha1.Name = "txtBoxSenha1";
+            this.txtBoxSenha1.Size = new System.Drawing.Size(192, 23);
+            this.txtBoxSenha1.TabIndex = 81;
             // 
             // txtBoxSenha2
             // 
@@ -662,12 +606,68 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxSenha2.Size = new System.Drawing.Size(192, 23);
             this.txtBoxSenha2.TabIndex = 80;
             // 
-            // txtBoxSenha1
+            // txtBoxObservacoes
             // 
-            this.txtBoxSenha1.Location = new System.Drawing.Point(31, 487);
-            this.txtBoxSenha1.Name = "txtBoxSenha1";
-            this.txtBoxSenha1.Size = new System.Drawing.Size(192, 23);
-            this.txtBoxSenha1.TabIndex = 81;
+            this.txtBoxObservacoes.Location = new System.Drawing.Point(31, 420);
+            this.txtBoxObservacoes.Name = "txtBoxObservacoes";
+            this.txtBoxObservacoes.Size = new System.Drawing.Size(559, 23);
+            this.txtBoxObservacoes.TabIndex = 79;
+            // 
+            // txtBoxComplemento
+            // 
+            this.txtBoxComplemento.Location = new System.Drawing.Point(412, 357);
+            this.txtBoxComplemento.Name = "txtBoxComplemento";
+            this.txtBoxComplemento.Size = new System.Drawing.Size(397, 23);
+            this.txtBoxComplemento.TabIndex = 78;
+            // 
+            // txtBoxEndereco
+            // 
+            this.txtBoxEndereco.Location = new System.Drawing.Point(31, 357);
+            this.txtBoxEndereco.Name = "txtBoxEndereco";
+            this.txtBoxEndereco.Size = new System.Drawing.Size(354, 23);
+            this.txtBoxEndereco.TabIndex = 77;
+            // 
+            // txtBoxPais
+            // 
+            this.txtBoxPais.Location = new System.Drawing.Point(176, 293);
+            this.txtBoxPais.Name = "txtBoxPais";
+            this.txtBoxPais.Size = new System.Drawing.Size(122, 23);
+            this.txtBoxPais.TabIndex = 76;
+            // 
+            // txtBoxEstado
+            // 
+            this.txtBoxEstado.Location = new System.Drawing.Point(325, 293);
+            this.txtBoxEstado.Name = "txtBoxEstado";
+            this.txtBoxEstado.Size = new System.Drawing.Size(122, 23);
+            this.txtBoxEstado.TabIndex = 75;
+            // 
+            // txtBoxNumero
+            // 
+            this.txtBoxNumero.Location = new System.Drawing.Point(677, 293);
+            this.txtBoxNumero.Name = "txtBoxNumero";
+            this.txtBoxNumero.Size = new System.Drawing.Size(67, 23);
+            this.txtBoxNumero.TabIndex = 74;
+            // 
+            // txtBoxCidade
+            // 
+            this.txtBoxCidade.Location = new System.Drawing.Point(479, 293);
+            this.txtBoxCidade.Name = "txtBoxCidade";
+            this.txtBoxCidade.Size = new System.Drawing.Size(147, 23);
+            this.txtBoxCidade.TabIndex = 73;
+            // 
+            // txtBoxNomePai
+            // 
+            this.txtBoxNomePai.Location = new System.Drawing.Point(255, 174);
+            this.txtBoxNomePai.Name = "txtBoxNomePai";
+            this.txtBoxNomePai.Size = new System.Drawing.Size(191, 23);
+            this.txtBoxNomePai.TabIndex = 72;
+            // 
+            // txtBoxEmail
+            // 
+            this.txtBoxEmail.Location = new System.Drawing.Point(214, 234);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(191, 23);
+            this.txtBoxEmail.TabIndex = 71;
             // 
             // FrmCadastroFuncionario
             // 
@@ -738,7 +738,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxNomePai;
         private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.TextBox txtBoxSenha1;
         private System.Windows.Forms.TextBox txtBoxSenha2;

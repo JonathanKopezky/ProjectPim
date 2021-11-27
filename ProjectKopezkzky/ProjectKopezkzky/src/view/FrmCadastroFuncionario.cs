@@ -42,7 +42,7 @@ namespace ProjectKopezkzky.src.view
             Funcionario funcionario = new Funcionario();
 
 
-            if(maskedTextBox13.Text != maskedTextBox14.Text)
+            if(txtBoxSenha1.Text != txtBoxSenha2.Text)
             {
                 MessageBox.Show("As senhas precisam ser iguais");
             }
@@ -65,18 +65,18 @@ namespace ProjectKopezkzky.src.view
                 funcionario.dependentes = Int32.Parse(txtBoxDependentes.Text);
                 funcionario.CNH = txtBoxCNH.Text;
                 funcionario.telefone = maskedTextBox1.Text;
-                funcionario.email = maskedTextBox3.Text;
+                funcionario.email = txtBoxEmail.Text;
                 funcionario.genero = txtBoxGenero.Text;
                 funcionario.estadoCivil = txtBoxEstadoCivil.Text;
                 funcionario.CEP = maskedTextBox16.Text;
-                funcionario.pais = maskedTextBox12.Text;
-                funcionario.estado = maskedTextBox7.Text;
-                funcionario.cidade = maskedTextBox8.Text;
-                funcionario.endereco = maskedTextBox6.Text;
-                funcionario.numero = Int32.Parse(maskedTextBox10.Text);
-                funcionario.complemento = maskedTextBox11.Text;
+                funcionario.pais = txtBoxPais.Text;
+                funcionario.estado = txtBoxEstado.Text;
+                funcionario.cidade = txtBoxCidade.Text;
+                funcionario.endereco = txtBoxEndereco.Text;
+                funcionario.numero = Int32.Parse(txtBoxNumero.Text);
+                funcionario.complemento = txtBoxComplemento.Text;
                 funcionario.observacoes = maskedTextBox16.Text;
-                funcionario.senha = maskedTextBox14.Text;
+                funcionario.senha = txtBoxSenha1.Text;
 
                 funcionarioController.createFuncionario(funcionario);
             }
@@ -228,19 +228,19 @@ namespace ProjectKopezkzky.src.view
                     !string.IsNullOrWhiteSpace(txtBoxDependentes.Text) ||
                     !string.IsNullOrWhiteSpace(txtBoxCNH.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox1.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox3.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxEmail.Text) ||
                     !string.IsNullOrWhiteSpace(txtBoxGenero.Text) ||
                     !string.IsNullOrWhiteSpace(txtBoxEstadoCivil.Text) ||
                     !string.IsNullOrWhiteSpace(maskedTextBox16.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox12.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox7.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox8.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox6.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox10.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox11.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox15.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox13.Text) ||
-                    !string.IsNullOrWhiteSpace(maskedTextBox14.Text)
+                    !string.IsNullOrWhiteSpace(txtBoxPais.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxEstado.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxCidade.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxNumero.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxEndereco.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxComplemento.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxObservacoes.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxSenha1.Text) ||
+                    !string.IsNullOrWhiteSpace(txtBoxSenha2.Text)
              )
             {
                 return true;

@@ -70,21 +70,21 @@ namespace ProjectKopezkzky.src.view
         private void BtnSalvar(object sender, EventArgs e)
         {   // pasando parametros para cliente 
 
-            this.cliente.nome = txbNome.Text;
-            this.cliente.sobrenome = txbSobrenome.Text;
-            this.cliente.CPF = txbCpf.Text;
-            this.cliente.RG = txbRg.Text;
-            this.cliente.dataNascimento = txbNascimento.Text;
-            this.cliente.genero = txtGenero.Text;
-            this.cliente.telefone = txbTelefone.Text;
-            this.cliente.email = txbEmail.Text;
-            this.cliente.endereco = txbEndereco.Text;
-            this.cliente.CEP = txbCep.Text;
-            this.cliente.numero = Int32.Parse(txbnumero.Text);
-            this.cliente.estado = txbEstado.Text;
-            this.cliente.cidade = txbCidade.Text;
-            this.cliente.pais = txbPais.Text;
-            this.cliente.complemento = txbComplemento.Text;
+            this.cliente.nome = txtBoxNome.Text;
+            this.cliente.sobrenome = txtBoxSobrenome.Text;
+            this.cliente.CPF = txtBoxCPF.Text;
+            this.cliente.RG = txtBoxRG.Text;
+            this.cliente.dataNascimento = txtBoxNasc.Text;
+            this.cliente.genero = txtBoxGenero.Text;
+            this.cliente.telefone = txtBoxTelefone.Text;
+            this.cliente.email = txtBoxEmail.Text;
+            this.cliente.endereco = txtBoxEndereco.Text;
+            this.cliente.CEP = txtBoxCEP.Text;
+            this.cliente.numero = Int32.Parse(txtBoxNumero.Text);
+            this.cliente.estado = txtBoxEstado.Text;
+            this.cliente.cidade = txtBoxCidade.Text;
+            this.cliente.pais = txtBoxPais.Text;
+            this.cliente.complemento = txtBoxComplemento.Text;
             this.cliente.senha = txtBoxSenha1.Text;
             if (!ClienteController.VerificaCad(cliente))
             {
@@ -104,22 +104,23 @@ namespace ProjectKopezkzky.src.view
 
         private void limpar()
         { // vai limpar todos textbox
-            txbNome.Clear();
-            txbSobrenome.Clear();
-            txbCpf.Clear();
-            txbRg.Clear();
-            txbNascimento.Clear();
-            txtGenero.Clear();
-            txbTelefone.Clear();
-            txbEndereco.Clear();
-            txbCep.Clear();
-            txbnumero.Clear();
-            txbEstado.Clear();
-            txbCidade.Clear();
-            txbPais.Clear();
-            txbComplemento.Clear();
+            txtBoxNome.Clear();
+            txtBoxSobrenome.Clear();
+            txtBoxCPF.Clear();
+            txtBoxRG.Clear();
+            txtBoxNasc.Clear();
+            txtBoxGenero.Clear();
+            txtBoxTelefone.Clear();
+            txtBoxEndereco.Clear();
+            txtBoxCEP.Clear();
+            txtBoxNumero.Clear();
+            txtBoxEstado.Clear();
+            txtBoxCidade.Clear();
+            txtBoxPais.Clear();
+            txtBoxComplemento.Clear();
             txtBoxSenha1.Clear();
-            txbEmail.Clear();
+            txtBoxSenha2.Clear();
+            txtBoxEmail.Clear();
         }
 
         private void txbSobrenome_TextChanged(object sender, EventArgs e)
@@ -145,14 +146,14 @@ namespace ProjectKopezkzky.src.view
         private void blockButton()
         {// funcao desativa o botao enquanto texbox for vazio 
 
-            if (!string.IsNullOrWhiteSpace(txbNome.Text) && !string.IsNullOrWhiteSpace(txbSobrenome.Text)
-                && !string.IsNullOrWhiteSpace(txbCpf.Text) && !string.IsNullOrWhiteSpace(txbRg.Text)
-                 && !string.IsNullOrWhiteSpace(txbNascimento.Text) && !string.IsNullOrWhiteSpace(txtGenero.Text)
-                  && !string.IsNullOrWhiteSpace(txbTelefone.Text) && !string.IsNullOrWhiteSpace(txbEmail.Text)
-                   && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(txbCep.Text)
-                    && !string.IsNullOrWhiteSpace(txbnumero.Text) && !string.IsNullOrWhiteSpace(txbEstado.Text)
-                     && !string.IsNullOrWhiteSpace(txbCidade.Text) && !string.IsNullOrWhiteSpace(txbPais.Text)
-                     && !string.IsNullOrWhiteSpace(txbComplemento.Text) && !string.IsNullOrWhiteSpace(txtBoxSenha1.Text))
+            if (!string.IsNullOrWhiteSpace(txtBoxNome.Text) && !string.IsNullOrWhiteSpace(txtBoxSobrenome.Text)
+                && !string.IsNullOrWhiteSpace(txtBoxCPF.Text) && !string.IsNullOrWhiteSpace(txtBoxRG.Text)
+                 && !string.IsNullOrWhiteSpace(txtBoxNasc.Text) && !string.IsNullOrWhiteSpace(txtBoxGenero.Text)
+                  && !string.IsNullOrWhiteSpace(txtBoxTelefone.Text) && !string.IsNullOrWhiteSpace(txtBoxEmail.Text)
+                   && !string.IsNullOrWhiteSpace(txtBoxEndereco.Text) && !string.IsNullOrWhiteSpace(txtBoxCEP.Text)
+                    && !string.IsNullOrWhiteSpace(txtBoxNumero.Text) && !string.IsNullOrWhiteSpace(txtBoxEstado.Text)
+                     && !string.IsNullOrWhiteSpace(txtBoxCidade.Text) && !string.IsNullOrWhiteSpace(txtBoxPais.Text)
+                     && !string.IsNullOrWhiteSpace(txtBoxComplemento.Text) && !string.IsNullOrWhiteSpace(txtBoxSenha1.Text))
             {
                 btnSalvar.Enabled = true;
             }
