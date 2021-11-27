@@ -87,7 +87,6 @@ namespace ProjectKopezkzky.src.view
             this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProjectKopezkzky.Properties.Resources.QuartoIndividual;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(264, 201);
@@ -100,7 +99,6 @@ namespace ProjectKopezkzky.src.view
             this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::ProjectKopezkzky.Properties.Resources.QuartoDuplo;
             this.pictureBox2.Location = new System.Drawing.Point(3, 210);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(264, 202);
