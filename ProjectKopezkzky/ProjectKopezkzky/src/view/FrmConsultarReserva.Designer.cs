@@ -76,7 +76,7 @@ namespace ProjectKopezkzky.src.view
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 42);
+            this.panel1.Size = new System.Drawing.Size(784, 42);
             this.panel1.TabIndex = 2;
             // 
             // label2
@@ -149,7 +149,7 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.txtBoxIDReserva);
             this.panel2.Location = new System.Drawing.Point(12, 115);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(744, 336);
+            this.panel2.Size = new System.Drawing.Size(760, 336);
             this.panel2.TabIndex = 6;
             // 
             // txtBoxStatus
@@ -182,7 +182,7 @@ namespace ProjectKopezkzky.src.view
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.Info;
-            this.label15.Location = new System.Drawing.Point(548, 238);
+            this.label15.Location = new System.Drawing.Point(586, 241);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 15);
             this.label15.TabIndex = 33;
@@ -190,7 +190,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txtBoxDataNasc
             // 
-            this.txtBoxDataNasc.Location = new System.Drawing.Point(624, 235);
+            this.txtBoxDataNasc.Location = new System.Drawing.Point(662, 238);
             this.txtBoxDataNasc.Name = "txtBoxDataNasc";
             this.txtBoxDataNasc.ReadOnly = true;
             this.txtBoxDataNasc.Size = new System.Drawing.Size(82, 23);
@@ -200,7 +200,7 @@ namespace ProjectKopezkzky.src.view
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.Info;
-            this.label14.Location = new System.Drawing.Point(431, 280);
+            this.label14.Location = new System.Drawing.Point(469, 283);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 15);
             this.label14.TabIndex = 31;
@@ -209,7 +209,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(482, 276);
+            this.txtBoxEmail.Location = new System.Drawing.Point(520, 279);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.ReadOnly = true;
             this.txtBoxEmail.Size = new System.Drawing.Size(224, 23);
@@ -416,7 +416,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(560, 527);
+            this.button1.Location = new System.Drawing.Point(611, 527);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 31);
             this.button1.TabIndex = 25;
@@ -425,7 +425,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(560, 480);
+            this.button2.Location = new System.Drawing.Point(611, 480);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 31);
             this.button2.TabIndex = 26;
@@ -436,7 +436,7 @@ namespace ProjectKopezkzky.src.view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 781);
+            this.ClientSize = new System.Drawing.Size(784, 587);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
