@@ -183,7 +183,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxEleitor.Location = new System.Drawing.Point(398, 108);
             this.txtBoxEleitor.Name = "txtBoxEleitor";
             this.txtBoxEleitor.Size = new System.Drawing.Size(192, 23);
-            this.txtBoxEleitor.TabIndex = 14;
+            this.txtBoxEleitor.TabIndex = 7;
             this.txtBoxEleitor.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label13
@@ -201,7 +201,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxReservista.Location = new System.Drawing.Point(617, 108);
             this.txtBoxReservista.Name = "txtBoxReservista";
             this.txtBoxReservista.Size = new System.Drawing.Size(192, 23);
-            this.txtBoxReservista.TabIndex = 17;
+            this.txtBoxReservista.TabIndex = 8;
             this.txtBoxReservista.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label15
@@ -239,7 +239,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxCNH.Location = new System.Drawing.Point(618, 174);
             this.txtBoxCNH.Name = "txtBoxCNH";
             this.txtBoxCNH.Size = new System.Drawing.Size(146, 23);
-            this.txtBoxCNH.TabIndex = 26;
+            this.txtBoxCNH.TabIndex = 12;
             this.txtBoxCNH.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label21
@@ -258,7 +258,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox1.Mask = "(99) 00000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox1.TabIndex = 32;
+            this.maskedTextBox1.TabIndex = 13;
             this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // maskedTextBox2
@@ -267,7 +267,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox2.Mask = "00/00/0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(81, 23);
-            this.maskedTextBox2.TabIndex = 33;
+            this.maskedTextBox2.TabIndex = 3;
             this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
             this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
@@ -278,7 +278,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox4.Mask = "99.999.999-0";
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox4.TabIndex = 35;
+            this.maskedTextBox4.TabIndex = 5;
             this.maskedTextBox4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
             // 
             // maskedTextBox5
@@ -287,7 +287,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox5.Mask = "999.999.999-99";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox5.TabIndex = 36;
+            this.maskedTextBox5.TabIndex = 6;
             this.maskedTextBox5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox5_MaskInputRejected);
             // 
             // txtBoxDependentes
@@ -295,7 +295,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxDependentes.Location = new System.Drawing.Point(487, 174);
             this.txtBoxDependentes.Name = "txtBoxDependentes";
             this.txtBoxDependentes.Size = new System.Drawing.Size(82, 23);
-            this.txtBoxDependentes.TabIndex = 37;
+            this.txtBoxDependentes.TabIndex = 11;
             this.txtBoxDependentes.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // txtBoxNomeMae
@@ -303,7 +303,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxNomeMae.Location = new System.Drawing.Point(28, 174);
             this.txtBoxNomeMae.Name = "txtBoxNomeMae";
             this.txtBoxNomeMae.Size = new System.Drawing.Size(191, 23);
-            this.txtBoxNomeMae.TabIndex = 39;
+            this.txtBoxNomeMae.TabIndex = 9;
             this.txtBoxNomeMae.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
@@ -331,7 +331,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxGenero.Location = new System.Drawing.Point(439, 234);
             this.txtBoxGenero.Name = "txtBoxGenero";
             this.txtBoxGenero.Size = new System.Drawing.Size(128, 23);
-            this.txtBoxGenero.TabIndex = 43;
+            this.txtBoxGenero.TabIndex = 15;
             this.txtBoxGenero.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label10
@@ -419,7 +419,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxEstadoCivil.Location = new System.Drawing.Point(607, 234);
             this.txtBoxEstadoCivil.Name = "txtBoxEstadoCivil";
             this.txtBoxEstadoCivil.Size = new System.Drawing.Size(128, 23);
-            this.txtBoxEstadoCivil.TabIndex = 59;
+            this.txtBoxEstadoCivil.TabIndex = 16;
             this.txtBoxEstadoCivil.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label24
@@ -447,7 +447,7 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxFormacaoAcademica.Location = new System.Drawing.Point(618, 34);
             this.txtBoxFormacaoAcademica.Name = "txtBoxFormacaoAcademica";
             this.txtBoxFormacaoAcademica.Size = new System.Drawing.Size(200, 23);
-            this.txtBoxFormacaoAcademica.TabIndex = 60;
+            this.txtBoxFormacaoAcademica.TabIndex = 4;
             this.txtBoxFormacaoAcademica.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label26
@@ -475,7 +475,7 @@ namespace ProjectKopezkzky.src.view
             this.btnSalvar.Location = new System.Drawing.Point(735, 612);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(110, 26);
-            this.btnSalvar.TabIndex = 66;
+            this.btnSalvar.TabIndex = 27;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.button1_Click);
@@ -485,7 +485,7 @@ namespace ProjectKopezkzky.src.view
             this.btnCancelar.Location = new System.Drawing.Point(29, 612);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(110, 26);
-            this.btnCancelar.TabIndex = 67;
+            this.btnCancelar.TabIndex = 28;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
@@ -506,7 +506,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox16.Mask = "00000-000";
             this.maskedTextBox16.Name = "maskedTextBox16";
             this.maskedTextBox16.Size = new System.Drawing.Size(120, 23);
-            this.maskedTextBox16.TabIndex = 70;
+            this.maskedTextBox16.TabIndex = 17;
             this.maskedTextBox16.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox16_MaskInputRejected);
             // 
             // panel1
@@ -597,79 +597,79 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxSenha1.Location = new System.Drawing.Point(31, 487);
             this.txtBoxSenha1.Name = "txtBoxSenha1";
             this.txtBoxSenha1.Size = new System.Drawing.Size(192, 23);
-            this.txtBoxSenha1.TabIndex = 81;
+            this.txtBoxSenha1.TabIndex = 25;
             // 
             // txtBoxSenha2
             // 
             this.txtBoxSenha2.Location = new System.Drawing.Point(254, 487);
             this.txtBoxSenha2.Name = "txtBoxSenha2";
             this.txtBoxSenha2.Size = new System.Drawing.Size(192, 23);
-            this.txtBoxSenha2.TabIndex = 80;
+            this.txtBoxSenha2.TabIndex = 26;
             // 
             // txtBoxObservacoes
             // 
             this.txtBoxObservacoes.Location = new System.Drawing.Point(31, 420);
             this.txtBoxObservacoes.Name = "txtBoxObservacoes";
             this.txtBoxObservacoes.Size = new System.Drawing.Size(559, 23);
-            this.txtBoxObservacoes.TabIndex = 79;
+            this.txtBoxObservacoes.TabIndex = 24;
             // 
             // txtBoxComplemento
             // 
             this.txtBoxComplemento.Location = new System.Drawing.Point(412, 357);
             this.txtBoxComplemento.Name = "txtBoxComplemento";
             this.txtBoxComplemento.Size = new System.Drawing.Size(397, 23);
-            this.txtBoxComplemento.TabIndex = 78;
+            this.txtBoxComplemento.TabIndex = 23;
             // 
             // txtBoxEndereco
             // 
             this.txtBoxEndereco.Location = new System.Drawing.Point(31, 357);
             this.txtBoxEndereco.Name = "txtBoxEndereco";
             this.txtBoxEndereco.Size = new System.Drawing.Size(354, 23);
-            this.txtBoxEndereco.TabIndex = 77;
+            this.txtBoxEndereco.TabIndex = 22;
             // 
             // txtBoxPais
             // 
             this.txtBoxPais.Location = new System.Drawing.Point(176, 293);
             this.txtBoxPais.Name = "txtBoxPais";
             this.txtBoxPais.Size = new System.Drawing.Size(122, 23);
-            this.txtBoxPais.TabIndex = 76;
+            this.txtBoxPais.TabIndex = 18;
             // 
             // txtBoxEstado
             // 
             this.txtBoxEstado.Location = new System.Drawing.Point(325, 293);
             this.txtBoxEstado.Name = "txtBoxEstado";
             this.txtBoxEstado.Size = new System.Drawing.Size(122, 23);
-            this.txtBoxEstado.TabIndex = 75;
+            this.txtBoxEstado.TabIndex = 19;
             // 
             // txtBoxNumero
             // 
             this.txtBoxNumero.Location = new System.Drawing.Point(677, 293);
             this.txtBoxNumero.Name = "txtBoxNumero";
             this.txtBoxNumero.Size = new System.Drawing.Size(67, 23);
-            this.txtBoxNumero.TabIndex = 74;
+            this.txtBoxNumero.TabIndex = 21;
             // 
             // txtBoxCidade
             // 
             this.txtBoxCidade.Location = new System.Drawing.Point(479, 293);
             this.txtBoxCidade.Name = "txtBoxCidade";
             this.txtBoxCidade.Size = new System.Drawing.Size(147, 23);
-            this.txtBoxCidade.TabIndex = 73;
+            this.txtBoxCidade.TabIndex = 20;
             // 
             // txtBoxNomePai
             // 
             this.txtBoxNomePai.Location = new System.Drawing.Point(255, 174);
             this.txtBoxNomePai.Name = "txtBoxNomePai";
             this.txtBoxNomePai.Size = new System.Drawing.Size(191, 23);
-            this.txtBoxNomePai.TabIndex = 72;
+            this.txtBoxNomePai.TabIndex = 10;
             // 
             // txtBoxEmail
             // 
             this.txtBoxEmail.Location = new System.Drawing.Point(214, 234);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(191, 23);
-            this.txtBoxEmail.TabIndex = 71;
+            this.txtBoxEmail.TabIndex = 14;
             // 
-            // FrmCadastroFuncionario
+            // FrmCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -678,7 +678,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
-            this.Name = "FrmCadastroFuncionario";
+            this.Name = "FrmCadastrarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCadastroFuncionario";
             this.Load += new System.EventHandler(this.FrmCadastroFuncionario_Load);
