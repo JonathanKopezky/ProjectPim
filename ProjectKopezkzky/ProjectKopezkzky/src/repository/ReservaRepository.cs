@@ -32,11 +32,11 @@ namespace ProjectKopezkzky.src.repository
             dr = Comando.ExecuteReader();
 
             if (dr.HasRows)
-            {             
+            {
                 // verificando se tem linhas com os parametro 
                 using (dr)
                 {
-                    while(dr.Read())
+                    while (dr.Read())
                     {
                         reserva.quartoId = int.Parse(dr[1].ToString());
                         reserva.pagamentoId = int.Parse(dr[2].ToString());
@@ -46,9 +46,9 @@ namespace ProjectKopezkzky.src.repository
                         reserva.dataCheckOut = DateTime.Parse(dr[6].ToString());
                         reserva.totalAcompanhante = int.Parse(dr[7].ToString());
                         reserva.dataReserva = DateTime.Parse(dr[8].ToString());
-                        reserva.status = dr[9].ToString();                   
+                        reserva.status = dr[9].ToString();
                     }
-                    return reserva;                 
+                    return reserva;
                 }
             }
             else
@@ -56,7 +56,7 @@ namespace ProjectKopezkzky.src.repository
                 conn.disconnect();
                 reserva.LimparReserva();
                 return reserva;
-            }           
+            }
         }
 
         public bool AdicionarReserva(Reserva reserva)
