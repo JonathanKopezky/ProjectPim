@@ -19,7 +19,6 @@ namespace ProjectKopezkzky.src.view
         public FrmCadastrarCliente()
         {
             InitializeComponent();
-            btnSalvar.Enabled = false;
         }
 
         private void lbl_Click(object sender, EventArgs e)
@@ -221,6 +220,11 @@ namespace ProjectKopezkzky.src.view
         private void txbSenha_TextChanged(object sender, EventArgs e)
         {
             blockButton();
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

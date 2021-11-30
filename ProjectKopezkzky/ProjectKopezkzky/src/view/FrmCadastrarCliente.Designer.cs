@@ -95,11 +95,11 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSalvar.Location = new System.Drawing.Point(713, 415);
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSalvar.Location = new System.Drawing.Point(716, 415);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(72, 23);
             this.btnSalvar.TabIndex = 61;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -107,15 +107,15 @@ namespace ProjectKopezkzky.src.view
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSair.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSair.Location = new System.Drawing.Point(23, 415);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 64;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.button2_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // panel2
             // 
