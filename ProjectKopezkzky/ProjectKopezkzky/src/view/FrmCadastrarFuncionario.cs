@@ -77,6 +77,9 @@ namespace ProjectKopezkzky.src.view
                 funcionario.complemento = txtBoxComplemento.Text;
                 funcionario.observacoes = maskedTextBox16.Text;
                 funcionario.senha = txtBoxSenha1.Text;
+                
+                //definido em cod
+                funcionario.status = "ativo";
 
                 funcionarioController.createFuncionario(funcionario);
             }

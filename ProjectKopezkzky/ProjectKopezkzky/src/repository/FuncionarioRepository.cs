@@ -32,7 +32,7 @@ namespace ProjectKopezkzky.src.repository
         {
 
             cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Funcionarios WHERE CPF = @cpf";
+            cmd.CommandText = "SELECT * FROM Funcionario WHERE CPF = @cpf";
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
 
             try
@@ -65,7 +65,7 @@ namespace ProjectKopezkzky.src.repository
             cmd.Connection = conn.connect();
 
             cmd.CommandText =
-                "INSERT INTO Funcionarios VALUES(@nome, @sobrenome, @rg, @cpf, @tituloEleitor, @reservista, @cnh, @telefone, " +
+                "INSERT INTO Funcionario VALUES(@nome, @sobrenome, @rg, @cpf, @tituloEleitor, @reservista, @cnh, @telefone, " +
                 "@endereco, @cep, @numero, @complemento, @cidade, @estado, @pais, @email, @genero, " +
                 "@estadiCivil, @observacoes, @nomePai, @nomeMae, @dependentes, @formacaoAcademica, @dataNascimento," +
                 "@status, @senha)";
