@@ -78,6 +78,9 @@ namespace ProjectKopezkzky.src.view
                 funcionario.observacoes = maskedTextBox16.Text;
                 funcionario.senha = txtBoxSenha1.Text;
 
+                //precisa definir em código já que não há txtBox pra isso
+                funcionario.status = "Ativo";
+
                 funcionarioController.createFuncionario(funcionario);
             }
         }

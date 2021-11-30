@@ -66,10 +66,10 @@ namespace ProjectKopezkzky.src.view
             this.labelDatanasc = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -215,11 +215,11 @@ namespace ProjectKopezkzky.src.view
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(346, 7);
+            this.label7.Location = new System.Drawing.Point(328, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 21);
+            this.label7.Size = new System.Drawing.Size(129, 21);
             this.label7.TabIndex = 48;
-            this.label7.Text = "Cadastrar Clientes";
+            this.label7.Text = "Consultar Cliente";
             // 
             // txbPais
             // 
@@ -441,24 +441,6 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Size = new System.Drawing.Size(760, 382);
             this.panel2.TabIndex = 87;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(11, 287);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
-            this.label1.TabIndex = 88;
-            this.label1.Text = "Status :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(11, 305);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 89;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(296, 305);
@@ -476,6 +458,24 @@ namespace ProjectKopezkzky.src.view
             this.label9.Size = new System.Drawing.Size(90, 15);
             this.label9.TabIndex = 91;
             this.label9.Text = "Complemento :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(11, 305);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 89;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(11, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Status :";
             // 
             // FrmConsultarCliente
             // 
