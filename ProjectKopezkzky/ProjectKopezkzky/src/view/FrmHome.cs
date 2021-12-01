@@ -53,9 +53,9 @@ namespace ProjectKopezkzky.src.view
 
         private void CadastralClienteMenu_Click(object sender, EventArgs e)
         {
-            FrmCadastroFuncionario frmCadastroFuncionario = new FrmCadastroFuncionario();
+            FormCadCliente FormCadCliente = new FormCadCliente();
 
-            frmCadastroFuncionario.ShowDialog();
+            FormCadCliente.ShowDialog();
         }
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)

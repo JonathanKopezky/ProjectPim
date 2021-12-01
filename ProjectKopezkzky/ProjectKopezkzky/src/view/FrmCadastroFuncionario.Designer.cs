@@ -51,7 +51,7 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxRg = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -288,14 +288,14 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBox3.TabIndex = 34;
             this.maskedTextBox3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             // 
-            // maskedTextBox4
+            // maskedTextBoxRg
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(26, 166);
-            this.maskedTextBox4.Mask = "99.999.999-0";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox4.TabIndex = 35;
-            this.maskedTextBox4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
+            this.maskedTextBoxRg.Location = new System.Drawing.Point(26, 166);
+            this.maskedTextBoxRg.Mask = "99.999.999-0";
+            this.maskedTextBoxRg.Name = "maskedTextBoxRg";
+            this.maskedTextBoxRg.Size = new System.Drawing.Size(146, 23);
+            this.maskedTextBoxRg.TabIndex = 35;
+            this.maskedTextBoxRg.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
             // 
             // maskedTextBox5
             // 
@@ -629,7 +629,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.maskedTextBox5);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.maskedTextBoxRg);
             this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
@@ -686,7 +686,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxRg;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
