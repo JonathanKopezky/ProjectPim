@@ -22,5 +22,9 @@ D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-window
 D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ref\ProjectKopezkzky.dll
 D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.pdb
 D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.genruntimeconfig.cache
-D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.LoginForm.resources
-D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.HomeForm.resources
+D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.CadastroFuncionarioForm.resources
+D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.FormCadCliente.resources
+D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.FrmCadastroFuncionario.resources
+D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.FrmConsultarCliente.resources
+D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.FrmHome.resources
+D:\UNIP\PIM\ProjectPim\ProjectKopezkzky\ProjectKopezkzky\obj\Debug\net5.0-windows\ProjectKopezkzky.src.view.FrmLogin.resources

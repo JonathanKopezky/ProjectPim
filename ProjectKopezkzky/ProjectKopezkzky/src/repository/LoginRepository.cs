@@ -21,7 +21,7 @@ namespace ProjectKopezkzky.src.repository
 
         public bool getOneLogin(Funcionario funcionario)
         {
-            cmd.CommandText = "SELECT * FROM Funcionarios WHERE CPF = @cpf and senha = @senha ";
+            cmd.CommandText = "SELECT * FROM Funcionario WHERE CPF = @cpf and senha = @senha ";
 
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
             cmd.Parameters.AddWithValue("@senha", funcionario.senha);
