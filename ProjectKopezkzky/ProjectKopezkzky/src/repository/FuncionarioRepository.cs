@@ -11,6 +11,7 @@ using ProjectKopezkzky.src.controller;
 using System.Data.SqlClient;
 
 using ProjectKopezkzky.src.config;
+using System.Data;
 
 namespace ProjectKopezkzky.src.repository
 {
@@ -32,7 +33,7 @@ namespace ProjectKopezkzky.src.repository
         {
 
             cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Funcionarios WHERE CPF = @cpf";
+            cmd.CommandText = "SELECT CPF FROM Funcionario WHERE CPF = @cpf";
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
 
             try
@@ -43,10 +44,12 @@ namespace ProjectKopezkzky.src.repository
 
                 if (dr.HasRows)
                 {
+                    MessageBox.Show("tem" + funcionario.CPF);
                     return true;
                 }
                 else
                 {
+                    MessageBox.Show("nao tem" + funcionario.CPF);
                     return false;
                 }
                 
@@ -65,10 +68,10 @@ namespace ProjectKopezkzky.src.repository
             cmd.Connection = conn.connect();
 
             cmd.CommandText =
-                "INSERT INTO Funcionarios VALUES(@nome, @sobrenome, @rg, @cpf, @tituloEleitor, @reservista, @cnh, @telefone, " +
+                "INSERT INTO Funcionario VALUES(@nome, @sobrenome, @rg, @cpf, @tituloEleitor, @reservista, @cnh, @telefone, " +
                 "@endereco, @cep, @numero, @complemento, @cidade, @estado, @pais, @email, @genero, " +
                 "@estadiCivil, @observacoes, @nomePai, @nomeMae, @dependentes, @formacaoAcademica, @dataNascimento," +
-                "@ativo, @senha)";
+                "@status, @senha)";
 
 
 
@@ -96,7 +99,7 @@ namespace ProjectKopezkzky.src.repository
              cmd.Parameters.AddWithValue("@dependentes", funcionario.dependentes);
              cmd.Parameters.AddWithValue("@formacaoAcademica", funcionario.formacaoAcademica);
              cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
-             cmd.Parameters.AddWithValue("@ativo", funcionario.ativo);
+             cmd.Parameters.AddWithValue("@status", funcionario.status);
              cmd.Parameters.AddWithValue("@senha", funcionario.senha);
 
 
@@ -111,27 +114,52 @@ namespace ProjectKopezkzky.src.repository
 
         public bool deleteFuncionario(Funcionario funcionario)
         {
-            return true;
+            cmd = new SqlCommand();
+           
+
+           
+            cmd.CommandText = "UPDATE Funcionario  SET Status = @Status  WHERE  CPF = @cpf";
+            cmd.Parameters.AddWithValue("@Status", funcionario.status);
+            cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
+
+            try
+            {
+
+                cmd.Connection = conn.connect();
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
+            finally 
+            {
+                conn.disconnect();
+                
+            }
+            
+
+             return true;
         }
      
         public bool updateFuncionario(Funcionario funcionario)
         {
-            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand();
 
             cmd.Connection = conn.connect();
 
             cmd.CommandText =
-                "UPDATE Funcionarios SET Nome=@nome, Sobrenome=@sobrenome, Titulo_eleitor=@tituloEleitor, Reservista=@reservista, CNH=@cnh, Telefone=@telefone, " +
+                "UPDATE Funcionario SET Nome=@nome, Sobrenome=@sobrenome, Titulo_eleitor=@tituloEleitor, Reservista=@reservista, CNH=@cnh, Telefone=@telefone, " +
                 "Endereco=@endereco, CEP=@cep, Numero=@numero, Complemento=@complemento, Cidade=@cidade, Estado=@estado, Pais=@pais, Email=@email, Genero=@genero, " +
                 "Estado_civil=@estadiCivil, Observacoes=@observacoes, Nome_pai=@nomePai, Nome_mae=@nomeMae, Dependentes=@dependentes, FormacaoAcademica=@formacaoAcademica, Data_nascimento@dataNascimento," +
-                "Status=@status, Senha=@senha WHERE CPF =@cpf";
+                " Senha=@senha WHERE CPF =@cpf";
 
 
 
             cmd.Parameters.AddWithValue("@nome", funcionario.nome);
             cmd.Parameters.AddWithValue("@sobrenome", funcionario.sobrenome);
             cmd.Parameters.AddWithValue("@rg", funcionario.RG);
-            cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
             cmd.Parameters.AddWithValue("@tituloEleitor", funcionario.tituloEleitor);
             cmd.Parameters.AddWithValue("@reservista", funcionario.reservista);
             cmd.Parameters.AddWithValue("@cnh", funcionario.CNH);
@@ -152,15 +180,73 @@ namespace ProjectKopezkzky.src.repository
             cmd.Parameters.AddWithValue("@dependentes", funcionario.dependentes);
             cmd.Parameters.AddWithValue("@formacaoAcademica", funcionario.formacaoAcademica);
             cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
-            cmd.Parameters.AddWithValue("@status", funcionario.ativo);
             cmd.Parameters.AddWithValue("@senha", funcionario.senha);
-
+            cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
+           
+            cmd.ExecuteNonQuery();
+            MessageBox.Show(funcionario.CPF);
             return true;
         }
-            
 
+        public Funcionario getFuncionario(Funcionario funcionario)
+        { //Procurar no banco se existe  
+            cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Funcionario WHERE CPF = @cpf";
 
+            //PARAMETROS
+            cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
+          
+            cmd.Connection = conn.connect();
+            dr = cmd.ExecuteReader();
 
+            if (dr.HasRows)
+            {
+
+                // verificando se tem linhas com os parametro 
+                using (dr)
+                {
+
+                    while (dr.Read())
+                    {
+
+                        funcionario.nome = dr[0].ToString();
+                        funcionario.sobrenome = dr[1].ToString();
+                        funcionario.RG = dr[2].ToString();
+                        funcionario.CPF = dr[3].ToString();
+                        funcionario.tituloEleitor = dr[4].ToString();
+                        funcionario.reservista = dr[5].ToString();
+                        funcionario.CNH = dr[6].ToString();
+                        funcionario.telefone = dr[7].ToString();
+                        funcionario.endereco = dr[8].ToString();
+                        funcionario.CEP = dr[9].ToString();
+                        funcionario.numero = Convert.ToInt32(dr[10]);
+                        funcionario.complemento = dr[11].ToString();
+                        funcionario.cidade = dr[12].ToString();
+                        funcionario.estado = dr[13].ToString();
+                        funcionario.pais = dr[14].ToString();
+                        funcionario.email = dr[15].ToString();
+                        funcionario.genero = dr[16].ToString();
+                        funcionario.estadoCivil = dr[17].ToString();
+                        funcionario.observacoes = dr[18].ToString();
+                        funcionario.nomePai = dr[19].ToString();
+                        funcionario.nomeMae = dr[20].ToString();
+                        funcionario.dependentes = dr.GetInt32(21);
+                        funcionario.formacaoAcademica = dr[22].ToString();
+                        funcionario.dataNascimento = dr[23].ToString();
+                        funcionario.senha = dr[25].ToString();
+                    }
+
+                    return funcionario;
+                }
+            }
+            else
+            {
+                conn.disconnect();
+                
+                return funcionario;
+            }
+
+        }
 
 
     }

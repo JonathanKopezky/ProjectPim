@@ -46,6 +46,8 @@ namespace ProjectKopezkzky.src.view
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
             this.cadastrarFuncBTN = new System.Windows.Forms.Button();
+            this.consultarReservaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelHome.SuspendLayout();
@@ -75,7 +77,8 @@ namespace ProjectKopezkzky.src.view
             // 
             this.reservaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarReservaToolStripMenuItem,
-            this.consultarReservaToolStripMenuItem1});
+            this.consultarReservaToolStripMenuItem1,
+            this.consultarReservaToolStripMenuItem2});
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reservaToolStripMenuItem.Text = "Reserva";
@@ -83,13 +86,13 @@ namespace ProjectKopezkzky.src.view
             // consultarReservaToolStripMenuItem
             // 
             this.consultarReservaToolStripMenuItem.Name = "consultarReservaToolStripMenuItem";
-            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.consultarReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarReservaToolStripMenuItem.Text = "Nova Reserva";
             // 
             // consultarReservaToolStripMenuItem1
             // 
             this.consultarReservaToolStripMenuItem1.Name = "consultarReservaToolStripMenuItem1";
-            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
+            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.consultarReservaToolStripMenuItem1.Text = "Consultar Reserva ";
             // 
             // clientesToolStripMenuItem
@@ -185,6 +188,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // panelHome
             // 
+            this.panelHome.Controls.Add(this.button1);
             this.panelHome.Controls.Add(this.cadastrarFuncBTN);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHome.Location = new System.Drawing.Point(0, 24);
@@ -201,6 +205,22 @@ namespace ProjectKopezkzky.src.view
             this.cadastrarFuncBTN.Text = "Cadastrar Funcionário";
             this.cadastrarFuncBTN.UseVisualStyleBackColor = true;
             this.cadastrarFuncBTN.Click += new System.EventHandler(this.cadastrarFuncBTN_Click);
+            // 
+            // consultarReservaToolStripMenuItem2
+            // 
+            this.consultarReservaToolStripMenuItem2.Name = "consultarReservaToolStripMenuItem2";
+            this.consultarReservaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.consultarReservaToolStripMenuItem2.Text = "Consultar Reserva ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(441, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmHome
             // 
@@ -243,5 +263,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.Button cadastrarFuncBTN;
+        private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -18,26 +18,66 @@ namespace ProjectKopezkzky.src.controller
         {
 
         }
-        public bool createFuncionario(Funcionario funcionario)
-        {
-
-            if (!funcionarioRepository.consultaFuncionarioCadastro(funcionario))
+        public bool verifica(Funcionario funcionario)
+        {   // verifica se tem o cadastro 
+           
+            if (funcionarioRepository.consultaFuncionarioCadastro(funcionario))
             {
-                return funcionarioRepository.createFuncionario(funcionario);
+              
+                return true;
             }
             else
             {
-                MessageBox.Show("User already exists");
+              
+                return false;
+            }
+
+        }
+        public bool createFuncionario(Funcionario funcionario)
+        {
+
+            if (funcionarioRepository.createFuncionario(funcionario))
+            {
+                return true;
+            }
+            else
+            {
+
                 return false;
             }
         }
         public bool updateFuncionario(Funcionario funcionario)
         {
-            return true;
+            MessageBox.Show(funcionario.CPF);
+            if (funcionarioRepository.updateFuncionario(funcionario))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+
         }
         public bool deleteFuncionario(Funcionario funcionario)
         {
-            return true;
+            if (funcionarioRepository.deleteFuncionario(funcionario))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+        }
+
+        public Funcionario getFuncionario(Funcionario funcionario)
+
+        {// pega o funcionario no banco 
+            Funcionario result = funcionarioRepository.getFuncionario(funcionario);
+            return result;
         }
 
     }

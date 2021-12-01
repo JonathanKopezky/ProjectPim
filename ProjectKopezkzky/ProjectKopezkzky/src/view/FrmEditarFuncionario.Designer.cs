@@ -41,15 +41,14 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxEstado = new System.Windows.Forms.TextBox();
             this.txtBoxNumero = new System.Windows.Forms.TextBox();
             this.txtBoxCidade = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbNomePai = new System.Windows.Forms.TextBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.maskedTextBox16 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.txtBoxFormacaoAcademica = new System.Windows.Forms.TextBox();
-            this.txtBoxEstadoCivil = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -58,16 +57,15 @@ namespace ProjectKopezkzky.src.view
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtBoxGenero = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtBoxNomeMae = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxDependentes = new System.Windows.Forms.TextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxRg = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxNasc = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxTel = new System.Windows.Forms.MaskedTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtBoxCNH = new System.Windows.Forms.TextBox();
@@ -87,6 +85,8 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
+            this.comboBoxEstadociv = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,8 @@ namespace ProjectKopezkzky.src.view
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.panel2.Controls.Add(this.comboBoxEstadociv);
+            this.panel2.Controls.Add(this.comboBoxGenero);
             this.panel2.Controls.Add(this.txtBoxSenha1);
             this.panel2.Controls.Add(this.txtBoxSenha2);
             this.panel2.Controls.Add(this.txtBoxObservacoes);
@@ -124,15 +126,14 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.txtBoxEstado);
             this.panel2.Controls.Add(this.txtBoxNumero);
             this.panel2.Controls.Add(this.txtBoxCidade);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txbNomePai);
             this.panel2.Controls.Add(this.txtBoxEmail);
-            this.panel2.Controls.Add(this.maskedTextBox16);
+            this.panel2.Controls.Add(this.maskedTextBoxCep);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.txtBoxFormacaoAcademica);
-            this.panel2.Controls.Add(this.txtBoxEstadoCivil);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label22);
@@ -141,16 +142,15 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.txtBoxGenero);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtBoxNomeMae);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtBoxDependentes);
-            this.panel2.Controls.Add(this.maskedTextBox5);
-            this.panel2.Controls.Add(this.maskedTextBox4);
-            this.panel2.Controls.Add(this.maskedTextBox2);
-            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.maskedTextBoxCpf);
+            this.panel2.Controls.Add(this.maskedTextBoxRg);
+            this.panel2.Controls.Add(this.maskedTextBoxNasc);
+            this.panel2.Controls.Add(this.maskedTextBoxTel);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.txtBoxCNH);
@@ -236,12 +236,13 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxCidade.Size = new System.Drawing.Size(147, 23);
             this.txtBoxCidade.TabIndex = 73;
             // 
-            // textBox2
+            // txbNomePai
             // 
-            this.textBox2.Location = new System.Drawing.Point(255, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 23);
-            this.textBox2.TabIndex = 72;
+            this.txbNomePai.Location = new System.Drawing.Point(255, 174);
+            this.txbNomePai.Name = "txbNomePai";
+            this.txbNomePai.Size = new System.Drawing.Size(191, 23);
+            this.txbNomePai.TabIndex = 72;
+            this.txbNomePai.Text = " ";
             // 
             // txtBoxEmail
             // 
@@ -250,13 +251,13 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxEmail.Size = new System.Drawing.Size(191, 23);
             this.txtBoxEmail.TabIndex = 71;
             // 
-            // maskedTextBox16
+            // maskedTextBoxCep
             // 
-            this.maskedTextBox16.Location = new System.Drawing.Point(30, 293);
-            this.maskedTextBox16.Mask = "00000-000";
-            this.maskedTextBox16.Name = "maskedTextBox16";
-            this.maskedTextBox16.Size = new System.Drawing.Size(120, 23);
-            this.maskedTextBox16.TabIndex = 70;
+            this.maskedTextBoxCep.Location = new System.Drawing.Point(30, 293);
+            this.maskedTextBoxCep.Mask = "00000-000";
+            this.maskedTextBoxCep.Name = "maskedTextBoxCep";
+            this.maskedTextBoxCep.Size = new System.Drawing.Size(120, 23);
+            this.maskedTextBoxCep.TabIndex = 70;
             // 
             // label28
             // 
@@ -304,13 +305,6 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxFormacaoAcademica.Name = "txtBoxFormacaoAcademica";
             this.txtBoxFormacaoAcademica.Size = new System.Drawing.Size(200, 23);
             this.txtBoxFormacaoAcademica.TabIndex = 60;
-            // 
-            // txtBoxEstadoCivil
-            // 
-            this.txtBoxEstadoCivil.Location = new System.Drawing.Point(607, 234);
-            this.txtBoxEstadoCivil.Name = "txtBoxEstadoCivil";
-            this.txtBoxEstadoCivil.Size = new System.Drawing.Size(128, 23);
-            this.txtBoxEstadoCivil.TabIndex = 59;
             // 
             // label24
             // 
@@ -392,13 +386,6 @@ namespace ProjectKopezkzky.src.view
             this.label12.TabIndex = 44;
             this.label12.Text = "Endereço:";
             // 
-            // txtBoxGenero
-            // 
-            this.txtBoxGenero.Location = new System.Drawing.Point(439, 234);
-            this.txtBoxGenero.Name = "txtBoxGenero";
-            this.txtBoxGenero.Size = new System.Drawing.Size(128, 23);
-            this.txtBoxGenero.TabIndex = 43;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -443,39 +430,39 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxDependentes.Size = new System.Drawing.Size(82, 23);
             this.txtBoxDependentes.TabIndex = 37;
             // 
-            // maskedTextBox5
+            // maskedTextBoxCpf
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(213, 108);
-            this.maskedTextBox5.Mask = "999.999.999-99";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox5.TabIndex = 36;
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(213, 108);
+            this.maskedTextBoxCpf.Mask = "999.999.999-99";
+            this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(146, 23);
+            this.maskedTextBoxCpf.TabIndex = 36;
             // 
-            // maskedTextBox4
+            // maskedTextBoxRg
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(28, 108);
-            this.maskedTextBox4.Mask = "99.999.999-0";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox4.TabIndex = 35;
+            this.maskedTextBoxRg.Location = new System.Drawing.Point(28, 108);
+            this.maskedTextBoxRg.Mask = "99.999.999-0";
+            this.maskedTextBoxRg.Name = "maskedTextBoxRg";
+            this.maskedTextBoxRg.Size = new System.Drawing.Size(146, 23);
+            this.maskedTextBoxRg.TabIndex = 35;
             // 
-            // maskedTextBox2
+            // maskedTextBoxNasc
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(479, 34);
-            this.maskedTextBox2.Mask = "00/00/0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(81, 23);
-            this.maskedTextBox2.TabIndex = 33;
-            this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxNasc.Location = new System.Drawing.Point(479, 34);
+            this.maskedTextBoxNasc.Mask = "00/00/0000";
+            this.maskedTextBoxNasc.Name = "maskedTextBoxNasc";
+            this.maskedTextBoxNasc.Size = new System.Drawing.Size(81, 23);
+            this.maskedTextBoxNasc.TabIndex = 33;
+            this.maskedTextBoxNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedTextBoxNasc.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // maskedTextBoxTel
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(28, 234);
-            this.maskedTextBox1.Mask = "(99) 00000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(146, 23);
-            this.maskedTextBox1.TabIndex = 32;
+            this.maskedTextBoxTel.Location = new System.Drawing.Point(28, 234);
+            this.maskedTextBoxTel.Mask = "(99) 00000-0000";
+            this.maskedTextBoxTel.Name = "maskedTextBoxTel";
+            this.maskedTextBoxTel.Size = new System.Drawing.Size(146, 23);
+            this.maskedTextBoxTel.TabIndex = 32;
             // 
             // label21
             // 
@@ -650,6 +637,32 @@ namespace ProjectKopezkzky.src.view
             this.btnSalvar.TabIndex = 74;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // comboBoxGenero
+            // 
+            this.comboBoxGenero.FormattingEnabled = true;
+            this.comboBoxGenero.Items.AddRange(new object[] {
+            "Feminino",
+            "Masculino"});
+            this.comboBoxGenero.Location = new System.Drawing.Point(440, 234);
+            this.comboBoxGenero.Name = "comboBoxGenero";
+            this.comboBoxGenero.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxGenero.TabIndex = 82;
+            // 
+            // comboBoxEstadociv
+            // 
+            this.comboBoxEstadociv.FormattingEnabled = true;
+            this.comboBoxEstadociv.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado(a)",
+            "Separado(a)",
+            "Divorciado(a)",
+            "viúvo(a)"});
+            this.comboBoxEstadociv.Location = new System.Drawing.Point(608, 234);
+            this.comboBoxEstadociv.Name = "comboBoxEstadociv";
+            this.comboBoxEstadociv.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxEstadociv.TabIndex = 83;
             // 
             // FrmEditarFuncionario
             // 
@@ -662,6 +675,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.panel1);
             this.Name = "FrmEditarFuncionario";
             this.Text = "Editar cadastro de Funcionario";
+            this.Load += new System.EventHandler(this.FrmEditarFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -684,15 +698,14 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox txtBoxEstado;
         private System.Windows.Forms.TextBox txtBoxNumero;
         private System.Windows.Forms.TextBox txtBoxCidade;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbNomePai;
         private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox16;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtBoxFormacaoAcademica;
-        private System.Windows.Forms.TextBox txtBoxEstadoCivil;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
@@ -701,16 +714,15 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtBoxGenero;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtBoxNomeMae;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBoxDependentes;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpf;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxRg;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxNasc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxTel;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtBoxCNH;
@@ -730,5 +742,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.TextBox txtBoxNome;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.ComboBox comboBoxGenero;
+        private System.Windows.Forms.ComboBox comboBoxEstadociv;
     }
 }

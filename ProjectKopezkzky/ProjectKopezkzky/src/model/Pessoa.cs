@@ -24,7 +24,7 @@ namespace ProjectKopezkzky.src.model
         public string pais { get; set; }
         public string genero { get; set; }
         public string dataNascimento { get; set; }
-        public bool ativo { get; set; }
+        public String status { get; set; }
         public string senha { get; set; }
     }
 }
