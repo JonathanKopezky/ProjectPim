@@ -37,10 +37,10 @@ namespace ProjectKopezkzky.src.view
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            funcionario.CPF = textBoxcpf.Text;
+            funcionario.CPF = maskedTextBoxCpf.Text;
             if (funcionarioController.verifica(funcionario))
             {
-                MessageBox.Show(" JA CADASTRADO");
+                MessageBox.Show(" Funcionario Encontrado " );
                 btnDeletaFuncionario.Enabled = true;
                 btnAlterar.Enabled = true;
             }
@@ -53,16 +53,16 @@ namespace ProjectKopezkzky.src.view
 
         private void btnDeletaFuncionario_Click(object sender, EventArgs e)
         {
-            funcionario.CPF = textBoxcpf.Text;
+            funcionario.CPF = maskedTextBoxCpf.Text;
             funcionario.status = "INATIVO";
             if (funcionarioController.deleteFuncionario(funcionario)) 
             {
 
                 MessageBox.Show("Excluido Com Sucesso");
-                }
+            }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("ERRO TENTE NOVAMENTE ", "Atencão", MessageBoxButtons.OK, MessageBoxIcon.Error)
             }
         }
 
@@ -78,7 +78,7 @@ namespace ProjectKopezkzky.src.view
 
         public void blockBtn()
         {   //desativa e ativa o  bnt buscar caso txt for vazio
-            if (!string.IsNullOrWhiteSpace(textBoxcpf.Text))
+            if (!string.IsNullOrWhiteSpace(maskedTextBoxCpf.Text))
             {
                 btnBuscar.Enabled = true;
             }
@@ -97,6 +97,13 @@ namespace ProjectKopezkzky.src.view
         private void textBoxcpf_TextChanged(object sender, EventArgs e)
         {
             blockBtn();
+        }
+
+        private void btnCadFuncionario_Click(object sender, EventArgs e)
+        {
+            FrmCadastroFuncionario frmCadFuncionario = new FrmCadastroFuncionario();
+            frmCadFuncionario.preencheTxt(funcionario);
+            frmCadFuncionario.ShowDialog(); 
         }
     }
 }

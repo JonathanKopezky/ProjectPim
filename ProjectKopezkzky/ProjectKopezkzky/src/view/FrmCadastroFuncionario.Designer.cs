@@ -58,7 +58,6 @@ namespace ProjectKopezkzky.src.view
             this.label6 = new System.Windows.Forms.Label();
             this.txbNomePai = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txbGenero = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txbEndereco = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@ namespace ProjectKopezkzky.src.view
             this.txbNumero = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxPais = new System.Windows.Forms.MaskedTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txbEstadoCivil = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.txbFormacao = new System.Windows.Forms.TextBox();
@@ -86,6 +84,8 @@ namespace ProjectKopezkzky.src.view
             this.txbObservacao = new System.Windows.Forms.MaskedTextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
+            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
+            this.comboBoxEstadoCivil = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,12 +272,11 @@ namespace ProjectKopezkzky.src.view
             // maskedTextBoxDateNasc
             // 
             this.maskedTextBoxDateNasc.Location = new System.Drawing.Point(477, 92);
-            this.maskedTextBoxDateNasc.Mask = "00/00/0000";
+            this.maskedTextBoxDateNasc.Mask = "00/00/000";
             this.maskedTextBoxDateNasc.Name = "maskedTextBoxDateNasc";
             this.maskedTextBoxDateNasc.Size = new System.Drawing.Size(81, 23);
             this.maskedTextBoxDateNasc.TabIndex = 33;
             this.maskedTextBoxDateNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBoxDateNasc.ValidatingType = typeof(System.DateTime);
             this.maskedTextBoxDateNasc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             // 
             // maskedTextBoxEmail
@@ -347,14 +346,6 @@ namespace ProjectKopezkzky.src.view
             this.label8.Size = new System.Drawing.Size(79, 15);
             this.label8.TabIndex = 40;
             this.label8.Text = "Nome do pai:";
-            // 
-            // txbGenero
-            // 
-            this.txbGenero.Location = new System.Drawing.Point(437, 292);
-            this.txbGenero.Name = "txbGenero";
-            this.txbGenero.Size = new System.Drawing.Size(128, 23);
-            this.txbGenero.TabIndex = 43;
-            this.txbGenero.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label10
             // 
@@ -476,14 +467,6 @@ namespace ProjectKopezkzky.src.view
             this.label23.TabIndex = 56;
             this.label23.Text = "Pais:";
             // 
-            // txbEstadoCivil
-            // 
-            this.txbEstadoCivil.Location = new System.Drawing.Point(605, 292);
-            this.txbEstadoCivil.Name = "txbEstadoCivil";
-            this.txbEstadoCivil.Size = new System.Drawing.Size(128, 23);
-            this.txbEstadoCivil.TabIndex = 59;
-            this.txbEstadoCivil.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -590,11 +573,36 @@ namespace ProjectKopezkzky.src.view
             this.maskedTextBoxCep.TabIndex = 70;
             this.maskedTextBoxCep.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox16_MaskInputRejected);
             // 
+            // comboBoxGenero
+            // 
+            this.comboBoxGenero.FormattingEnabled = true;
+            this.comboBoxGenero.Items.AddRange(new object[] {
+            "Feminino",
+            "Masculino"});
+            this.comboBoxGenero.Location = new System.Drawing.Point(438, 292);
+            this.comboBoxGenero.Name = "comboBoxGenero";
+            this.comboBoxGenero.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxGenero.TabIndex = 71;
+            // 
+            // comboBoxEstadoCivil
+            // 
+            this.comboBoxEstadoCivil.FormattingEnabled = true;
+            this.comboBoxEstadoCivil.Items.AddRange(new object[] {
+            "Solteiro(a)",
+            "Casado(a)",
+            "Divorciado(a)"});
+            this.comboBoxEstadoCivil.Location = new System.Drawing.Point(606, 292);
+            this.comboBoxEstadoCivil.Name = "comboBoxEstadoCivil";
+            this.comboBoxEstadoCivil.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxEstadoCivil.TabIndex = 72;
+            // 
             // FrmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 650);
+            this.Controls.Add(this.comboBoxEstadoCivil);
+            this.Controls.Add(this.comboBoxGenero);
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.txbObservacao);
             this.Controls.Add(this.label28);
@@ -606,7 +614,6 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txbFormacao);
-            this.Controls.Add(this.txbEstadoCivil);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.maskedTextBoxPais);
             this.Controls.Add(this.label23);
@@ -621,7 +628,6 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txbEndereco);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txbGenero);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txbNomePai);
             this.Controls.Add(this.label8);
@@ -693,7 +699,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txbNomePai;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbGenero;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox txbEndereco;
         private System.Windows.Forms.Label label12;
@@ -708,7 +713,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.MaskedTextBox txbNumero;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPais;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txbEstadoCivil;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txbFormacao;
@@ -721,5 +725,7 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.MaskedTextBox txbObservacao;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
+        private System.Windows.Forms.ComboBox comboBoxGenero;
+        private System.Windows.Forms.ComboBox comboBoxEstadoCivil;
     }
 }

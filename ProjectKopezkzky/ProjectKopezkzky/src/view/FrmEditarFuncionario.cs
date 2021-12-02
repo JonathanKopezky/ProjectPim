@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace ProjectKopezkzky.src.view
 {
     public partial class FrmEditarFuncionario : Form
-    {  Funcionario  funcionario =new Funcionario();
+    {  Funcionario  funcionario = new Funcionario();
         FuncionarioController funcionarioController = new FuncionarioController();
         public FrmEditarFuncionario()
         {
@@ -31,7 +31,7 @@ namespace ProjectKopezkzky.src.view
             funcionario.formacaoAcademica = txtBoxFormacaoAcademica.Text;
             funcionario.RG = maskedTextBoxRg.Text;
             funcionario.CPF = maskedTextBoxCpf.Text;
-            funcionario.tituloEleitor = txtBoxEleitor.Text;
+            funcionario.tituloEleitor = txtBoxEleitor.Text; 
             funcionario.reservista = txtBoxReservista.Text;
             funcionario.nomeMae = txtBoxNomeMae.Text;
             funcionario.nomePai = txbNomePai.Text;
@@ -55,10 +55,13 @@ namespace ProjectKopezkzky.src.view
             {
                 if (funcionarioController.updateFuncionario(funcionario)) 
                 {
-                    MessageBox.Show("Cadastrado Com Sucesso! "); 
-                }else
+                    MessageBox.Show("Cadastrado Com Sucesso! ");
+                    this.Close();
+                    ClearTxt();
+                }
+                else
                 {
-                    MessageBox.Show("Erro Ao Cadastrar");
+                    MessageBox.Show("ERRO TENTE NOVAMENTE ","Atencão",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -93,12 +96,48 @@ namespace ProjectKopezkzky.src.view
             txtBoxSenha1.Text = funcionario.senha;
             txtBoxSenha2.Text = funcionario.senha;
 
-
+           
+             
 
 
         }
 
+        public void ClearTxt() 
+        {   //Limpa a text box
+            txtBoxNome.Text = "";
+            txtBoxSobrenome.Text = "";
+            maskedTextBoxNasc.Text = "";
+            txtBoxFormacaoAcademica.Text = "";
+            maskedTextBoxRg.Text ="";
+            maskedTextBoxCpf.Text = "";
+            txtBoxEleitor.Text = "";
+            txtBoxReservista.Text="";
+            txtBoxNomeMae.Text = "";
+            txbNomePai.Text = "";
+            txtBoxDependentes.Text= "";
+            txtBoxCNH.Text = "";
+            maskedTextBoxTel.Text = "";
+            txtBoxEmail.Text = "";
+            comboBoxGenero.Text = "";
+            comboBoxEstadociv.Text = "";
+            maskedTextBoxCep.Text = "";
+            txtBoxPais.Text = "";
+            txtBoxEstado.Text = "";
+            txtBoxCidade.Text = "";
+            txtBoxNumero.Text = "";
+            txtBoxEndereco.Text = "";
+            txtBoxComplemento.Text = "";
+            txtBoxObservacoes.Text = "";
+            txtBoxSenha1.Text = "";
+            txtBoxSenha2.Text = "";
+        }
+
         private void FrmEditarFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

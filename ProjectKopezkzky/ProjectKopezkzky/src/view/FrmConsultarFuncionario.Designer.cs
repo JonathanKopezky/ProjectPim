@@ -36,7 +36,7 @@ namespace ProjectKopezkzky.src.view
             this.btnCadFuncionario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxcpf = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,7 @@ namespace ProjectKopezkzky.src.view
             this.btnCadFuncionario.TabIndex = 6;
             this.btnCadFuncionario.Text = "Cadastrar";
             this.btnCadFuncionario.UseVisualStyleBackColor = true;
+            this.btnCadFuncionario.Click += new System.EventHandler(this.btnCadFuncionario_Click);
             // 
             // panel1
             // 
@@ -106,20 +107,20 @@ namespace ProjectKopezkzky.src.view
             this.label2.TabIndex = 0;
             this.label2.Text = "Consultar Funcionario";
             // 
-            // textBoxcpf
+            // maskedTextBoxCpf
             // 
-            this.textBoxcpf.Location = new System.Drawing.Point(228, 170);
-            this.textBoxcpf.Name = "textBoxcpf";
-            this.textBoxcpf.Size = new System.Drawing.Size(100, 23);
-            this.textBoxcpf.TabIndex = 8;
-            this.textBoxcpf.TextChanged += new System.EventHandler(this.textBoxcpf_TextChanged);
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(228, 170);
+            this.maskedTextBoxCpf.Mask = "000.000.000-00";
+            this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(100, 23);
+            this.maskedTextBoxCpf.TabIndex = 9;
             // 
             // FrmConsultarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 339);
-            this.Controls.Add(this.textBoxcpf);
+            this.Controls.Add(this.maskedTextBoxCpf);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCadFuncionario);
             this.Controls.Add(this.btnDeletaFuncionario);
@@ -145,6 +146,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Button btnCadFuncionario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxcpf;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCpf;
     }
 }

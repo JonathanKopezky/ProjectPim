@@ -32,6 +32,8 @@ namespace ProjectKopezkzky.src.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxEstadociv = new System.Windows.Forms.ComboBox();
+            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
             this.txtBoxSenha1 = new System.Windows.Forms.TextBox();
             this.txtBoxSenha2 = new System.Windows.Forms.TextBox();
             this.txtBoxObservacoes = new System.Windows.Forms.TextBox();
@@ -85,8 +87,6 @@ namespace ProjectKopezkzky.src.view
             this.txtBoxNome = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.comboBoxGenero = new System.Windows.Forms.ComboBox();
-            this.comboBoxEstadociv = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -172,6 +172,32 @@ namespace ProjectKopezkzky.src.view
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(833, 538);
             this.panel2.TabIndex = 73;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // comboBoxEstadociv
+            // 
+            this.comboBoxEstadociv.FormattingEnabled = true;
+            this.comboBoxEstadociv.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado(a)",
+            "Separado(a)",
+            "Divorciado(a)",
+            "viúvo(a)"});
+            this.comboBoxEstadociv.Location = new System.Drawing.Point(608, 234);
+            this.comboBoxEstadociv.Name = "comboBoxEstadociv";
+            this.comboBoxEstadociv.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxEstadociv.TabIndex = 83;
+            // 
+            // comboBoxGenero
+            // 
+            this.comboBoxGenero.FormattingEnabled = true;
+            this.comboBoxGenero.Items.AddRange(new object[] {
+            "Feminino",
+            "Masculino"});
+            this.comboBoxGenero.Location = new System.Drawing.Point(440, 234);
+            this.comboBoxGenero.Name = "comboBoxGenero";
+            this.comboBoxGenero.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxGenero.TabIndex = 82;
             // 
             // txtBoxSenha1
             // 
@@ -433,7 +459,7 @@ namespace ProjectKopezkzky.src.view
             // maskedTextBoxCpf
             // 
             this.maskedTextBoxCpf.Location = new System.Drawing.Point(213, 108);
-            this.maskedTextBoxCpf.Mask = "999.999.999-99";
+            this.maskedTextBoxCpf.Mask = "000.000.000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
             this.maskedTextBoxCpf.Size = new System.Drawing.Size(146, 23);
             this.maskedTextBoxCpf.TabIndex = 36;
@@ -638,31 +664,6 @@ namespace ProjectKopezkzky.src.view
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // comboBoxGenero
-            // 
-            this.comboBoxGenero.FormattingEnabled = true;
-            this.comboBoxGenero.Items.AddRange(new object[] {
-            "Feminino",
-            "Masculino"});
-            this.comboBoxGenero.Location = new System.Drawing.Point(440, 234);
-            this.comboBoxGenero.Name = "comboBoxGenero";
-            this.comboBoxGenero.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxGenero.TabIndex = 82;
-            // 
-            // comboBoxEstadociv
-            // 
-            this.comboBoxEstadociv.FormattingEnabled = true;
-            this.comboBoxEstadociv.Items.AddRange(new object[] {
-            "Solteiro",
-            "Casado(a)",
-            "Separado(a)",
-            "Divorciado(a)",
-            "viúvo(a)"});
-            this.comboBoxEstadociv.Location = new System.Drawing.Point(608, 234);
-            this.comboBoxEstadociv.Name = "comboBoxEstadociv";
-            this.comboBoxEstadociv.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxEstadociv.TabIndex = 83;
             // 
             // FrmEditarFuncionario
             // 

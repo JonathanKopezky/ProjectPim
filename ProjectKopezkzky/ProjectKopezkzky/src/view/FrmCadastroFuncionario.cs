@@ -44,7 +44,7 @@ namespace ProjectKopezkzky.src.view
                                  && !string.IsNullOrWhiteSpace(txbNomeMae.Text) && !string.IsNullOrWhiteSpace(txbNomePai.Text)
                                     && !string.IsNullOrWhiteSpace(txbDependente.Text) && !string.IsNullOrWhiteSpace(txbCnh.Text)
                                       && !string.IsNullOrWhiteSpace(maskedTextBoxTelefone.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxEmail.Text)
-                                        && !string.IsNullOrWhiteSpace(txbGenero.Text) && !string.IsNullOrWhiteSpace(txbEstadoCivil.Text)
+                                        && !string.IsNullOrWhiteSpace(comboBoxGenero.Text) && !string.IsNullOrWhiteSpace(comboBoxEstadoCivil.Text)
                                        && !string.IsNullOrWhiteSpace(txbObservacao.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxPais.Text)
                                        && !string.IsNullOrWhiteSpace(maskedTextBoxEstado.Text) && !string.IsNullOrWhiteSpace(maskedTextBoxCidade.Text)
                                        && !string.IsNullOrWhiteSpace(txbEndereco.Text) && !string.IsNullOrWhiteSpace(txbNumero.Text)
@@ -57,6 +57,11 @@ namespace ProjectKopezkzky.src.view
             {
                 btnSalvar.Enabled = false;
             }
+        }
+
+        public void preencheTxt(Funcionario funcionario) 
+        {
+            maskedTextBoxCpf.Text = funcionario.CPF;
         }
 
 
@@ -83,24 +88,65 @@ namespace ProjectKopezkzky.src.view
                 funcionario.reservista = txbReservista.Text;
                 funcionario.nomeMae = txbNomeMae.Text;
                 funcionario.nomePai = txbNomePai.Text;
-                funcionario.dependentes = Int32.Parse(txbDependente.Text);
+                funcionario.dependentes = Convert.ToInt32(txbDependente.Text);
                 funcionario.CNH = txbCnh.Text;
                 funcionario.telefone = maskedTextBoxTelefone.Text;
                 funcionario.email = maskedTextBoxEmail.Text;
-                funcionario.genero = txbGenero.Text;
-                funcionario.estadoCivil = txbEstadoCivil.Text;
+                funcionario.genero = comboBoxGenero.Text;
+                funcionario.estadoCivil = comboBoxEstadoCivil.Text;
                 funcionario.CEP = maskedTextBoxCep.Text;
                 funcionario.pais = maskedTextBoxPais.Text;
                 funcionario.estado = maskedTextBoxEstado.Text;
                 funcionario.cidade = maskedTextBoxCidade.Text;
                 funcionario.endereco = txbEndereco.Text;
-                funcionario.numero = Int32.Parse(txbNumero.Text);
+                funcionario.numero = Convert.ToInt32(txbNumero.Text);
                 funcionario.complemento = txbComplemento.Text;
                 funcionario.observacoes = maskedTextBoxCep.Text;
                 funcionario.senha = txbConfirmaSenha.Text;
                 funcionario.status = "Ativo";
-                funcionarioController.createFuncionario(funcionario);
+                if (funcionarioController.createFuncionario(funcionario))
+                {
+                    MessageBox.Show("Cadastrado Com Sucesso !");
+                    this.Close();
+                    ClearTxb();
+                }
+                else
+                {
+                    MessageBox.Show("ERRO TENTE NOVAMENTE ", "Atencão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } 
             }
+        }
+
+        public void ClearTxb() 
+        {
+            txtNome.Text ="";
+            txbSobrenome.Text = "";
+            maskedTextBoxDateNasc.Text = "";
+            txbFormacao.Text = "";
+            txbFormacao.Text = "";
+            maskedTextBoxRg.Text = "";
+            maskedTextBoxCpf.Text = "";
+            txbTitulo.Text = "";
+            txbReservista.Text = "";
+            txbNomeMae.Text = "";
+            txbNomePai.Text = "";
+            txbDependente.Text = "";
+            txbCnh.Text = "";
+            maskedTextBoxTelefone.Text = "";
+            maskedTextBoxTelefone.Text = "";
+            maskedTextBoxEmail.Text = "";
+            comboBoxGenero.Text = "";
+            comboBoxEstadoCivil.Text = "";
+            maskedTextBoxCep.Text = "";
+            maskedTextBoxPais.Text = "";
+            maskedTextBoxEstado.Text = "";
+            maskedTextBoxCidade.Text = "";
+            txbEndereco.Text = "";
+            txbNumero.Text = "";
+            txbComplemento.Text = "";
+            maskedTextBoxCep.Text = "";
+            txbConfirmaSenha.Text = "";
+            txbSenha.Text = "";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

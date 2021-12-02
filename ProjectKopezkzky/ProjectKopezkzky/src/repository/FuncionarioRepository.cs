@@ -26,7 +26,7 @@ namespace ProjectKopezkzky.src.repository
 
         public FuncionarioRepository()
         {
-            
+
         }
 
         public bool consultaFuncionarioCadastro(Funcionario funcionario)
@@ -52,7 +52,7 @@ namespace ProjectKopezkzky.src.repository
                     MessageBox.Show("nao tem" + funcionario.CPF);
                     return false;
                 }
-                
+
             }
             finally
             {
@@ -78,34 +78,34 @@ namespace ProjectKopezkzky.src.repository
             cmd.Parameters.AddWithValue("@nome", funcionario.nome);
             cmd.Parameters.AddWithValue("@sobrenome", funcionario.sobrenome);
             cmd.Parameters.AddWithValue("@rg", funcionario.RG);
-             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
-             cmd.Parameters.AddWithValue("@tituloEleitor", funcionario.tituloEleitor);
-             cmd.Parameters.AddWithValue("@reservista", funcionario.reservista);
-             cmd.Parameters.AddWithValue("@cnh", funcionario.CNH);
-             cmd.Parameters.AddWithValue("@telefone", funcionario.telefone);
-             cmd.Parameters.AddWithValue("@endereco", funcionario.endereco);
-             cmd.Parameters.AddWithValue("@cep", funcionario.CEP);
-             cmd.Parameters.AddWithValue("@numero", funcionario.numero);
-             cmd.Parameters.AddWithValue("@complemento", funcionario.complemento);
-             cmd.Parameters.AddWithValue("@cidade", funcionario.cidade);
-             cmd.Parameters.AddWithValue("@estado", funcionario.estado);
-             cmd.Parameters.AddWithValue("@pais", funcionario.pais);
-             cmd.Parameters.AddWithValue("@email", funcionario.email);
-             cmd.Parameters.AddWithValue("@genero", funcionario.genero);
-             cmd.Parameters.AddWithValue("@estadiCivil", funcionario.estadoCivil);
-             cmd.Parameters.AddWithValue("@observacoes", funcionario.observacoes);
-             cmd.Parameters.AddWithValue("@nomePai", funcionario.nomePai);
-             cmd.Parameters.AddWithValue("@nomeMae", funcionario.nomeMae);
-             cmd.Parameters.AddWithValue("@dependentes", funcionario.dependentes);
-             cmd.Parameters.AddWithValue("@formacaoAcademica", funcionario.formacaoAcademica);
-             cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
-             cmd.Parameters.AddWithValue("@status", funcionario.status);
-             cmd.Parameters.AddWithValue("@senha", funcionario.senha);
+            cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
+            cmd.Parameters.AddWithValue("@tituloEleitor", funcionario.tituloEleitor);
+            cmd.Parameters.AddWithValue("@reservista", funcionario.reservista);
+            cmd.Parameters.AddWithValue("@cnh", funcionario.CNH);
+            cmd.Parameters.AddWithValue("@telefone", funcionario.telefone);
+            cmd.Parameters.AddWithValue("@endereco", funcionario.endereco);
+            cmd.Parameters.AddWithValue("@cep", funcionario.CEP);
+            cmd.Parameters.AddWithValue("@numero", funcionario.numero.ToString());
+            cmd.Parameters.AddWithValue("@complemento", funcionario.complemento);
+            cmd.Parameters.AddWithValue("@cidade", funcionario.cidade);
+            cmd.Parameters.AddWithValue("@estado", funcionario.estado);
+            cmd.Parameters.AddWithValue("@pais", funcionario.pais);
+            cmd.Parameters.AddWithValue("@email", funcionario.email);
+            cmd.Parameters.AddWithValue("@genero", funcionario.genero);
+            cmd.Parameters.AddWithValue("@estadiCivil", funcionario.estadoCivil);
+            cmd.Parameters.AddWithValue("@observacoes", funcionario.observacoes);
+            cmd.Parameters.AddWithValue("@nomePai", funcionario.nomePai);
+            cmd.Parameters.AddWithValue("@nomeMae", funcionario.nomeMae);
+            cmd.Parameters.AddWithValue("@dependentes", funcionario.dependentes);
+            cmd.Parameters.AddWithValue("@formacaoAcademica", funcionario.formacaoAcademica);
+            cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
+            cmd.Parameters.AddWithValue("@status", funcionario.status);
+            cmd.Parameters.AddWithValue("@senha", funcionario.senha);
 
 
             MessageBox.Show(cmd.CommandText.ToString());
 
-            
+
             int rows = cmd.ExecuteNonQuery();
             MessageBox.Show(rows.ToString());
             conn.disconnect();
@@ -115,9 +115,9 @@ namespace ProjectKopezkzky.src.repository
         public bool deleteFuncionario(Funcionario funcionario)
         {
             cmd = new SqlCommand();
-           
 
-           
+
+
             cmd.CommandText = "UPDATE Funcionario  SET Status = @Status  WHERE  CPF = @cpf";
             cmd.Parameters.AddWithValue("@Status", funcionario.status);
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
@@ -133,27 +133,27 @@ namespace ProjectKopezkzky.src.repository
             {
                 return false;
             }
-            finally 
+            finally
             {
                 conn.disconnect();
-                
-            }
-            
 
-             return true;
+            }
+
+
+            return true;
         }
-     
+
         public bool updateFuncionario(Funcionario funcionario)
         {
             cmd = new SqlCommand();
+          
 
-            cmd.Connection = conn.connect();
 
             cmd.CommandText =
-                "UPDATE Funcionario SET Nome=@nome, Sobrenome=@sobrenome, Titulo_eleitor=@tituloEleitor, Reservista=@reservista, CNH=@cnh, Telefone=@telefone, " +
-                "Endereco=@endereco, CEP=@cep, Numero=@numero, Complemento=@complemento, Cidade=@cidade, Estado=@estado, Pais=@pais, Email=@email, Genero=@genero, " +
-                "Estado_civil=@estadiCivil, Observacoes=@observacoes, Nome_pai=@nomePai, Nome_mae=@nomeMae, Dependentes=@dependentes, FormacaoAcademica=@formacaoAcademica, Data_nascimento@dataNascimento," +
-                " Senha=@senha WHERE CPF =@cpf";
+                "UPDATE Funcionario SET Nome = @nome, Sobrenome = @sobrenome, Titulo_eleitor = @tituloEleitor, Reservista = @reservista, CNH = @cnh, Telefone = @telefone, " +
+                "Endereço = @endereco, CEP = @cep, Numero = @numero, Complemento = @complemento, Cidade = @cidade, Estado = @estado, Pais = @pais, Email = @email, Genero = @genero, " +
+                "Estado_civil = @estadocivil, Observacoes = @observacoes, Nome_pai = @nomePai, Nome_mae = @nomeMae, Dependentes = @dependentes, Formacao_academica = @formacaoAcademica, Data_nascimento = @dataNascimento," +
+                "Senha = @senha WHERE CPF = @cpf";
 
 
 
@@ -166,25 +166,37 @@ namespace ProjectKopezkzky.src.repository
             cmd.Parameters.AddWithValue("@telefone", funcionario.telefone);
             cmd.Parameters.AddWithValue("@endereco", funcionario.endereco);
             cmd.Parameters.AddWithValue("@cep", funcionario.CEP);
-            cmd.Parameters.AddWithValue("@numero", funcionario.numero);
+            cmd.Parameters.AddWithValue("@numero", Convert.ToString( funcionario.numero));
             cmd.Parameters.AddWithValue("@complemento", funcionario.complemento);
             cmd.Parameters.AddWithValue("@cidade", funcionario.cidade);
             cmd.Parameters.AddWithValue("@estado", funcionario.estado);
             cmd.Parameters.AddWithValue("@pais", funcionario.pais);
             cmd.Parameters.AddWithValue("@email", funcionario.email);
             cmd.Parameters.AddWithValue("@genero", funcionario.genero);
-            cmd.Parameters.AddWithValue("@estadiCivil", funcionario.estadoCivil);
+            cmd.Parameters.AddWithValue("@estadocivil", funcionario.estadoCivil);
             cmd.Parameters.AddWithValue("@observacoes", funcionario.observacoes);
             cmd.Parameters.AddWithValue("@nomePai", funcionario.nomePai);
             cmd.Parameters.AddWithValue("@nomeMae", funcionario.nomeMae);
             cmd.Parameters.AddWithValue("@dependentes", funcionario.dependentes);
             cmd.Parameters.AddWithValue("@formacaoAcademica", funcionario.formacaoAcademica);
             cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
-            cmd.Parameters.AddWithValue("@senha", funcionario.senha);
+            cmd.Parameters.AddWithValue("@senha", funcionario.senha);    /// erro endereco e formacaoac
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
-           
-            cmd.ExecuteNonQuery();
-            MessageBox.Show(funcionario.CPF);
+            try
+            {
+                cmd.Connection = conn.connect();
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            finally
+            {
+                conn.disconnect();
+            }
+            MessageBox.Show(funcionario.nome + funcionario.CPF);
             return true;
         }
 
@@ -195,7 +207,7 @@ namespace ProjectKopezkzky.src.repository
 
             //PARAMETROS
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
-          
+
             cmd.Connection = conn.connect();
             dr = cmd.ExecuteReader();
 
@@ -242,7 +254,7 @@ namespace ProjectKopezkzky.src.repository
             else
             {
                 conn.disconnect();
-                
+
                 return funcionario;
             }
 
