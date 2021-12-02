@@ -64,16 +64,18 @@ namespace ProjectKopezkzky.src.repository
             Comando = new SqlCommand();
             //Essa funcao ira pegar o texto das textbox criar no banco 
             // Comando para inserir os dados no banco 
-            Comando.CommandText = "INSERT INTO Reserva VALUES(@Quarto_ID, @Pagamento_ID, @Quant_Diaria, @Responsavel_ID, @Data_CheckIn," +
-                " @Data_CheckOut, @Total_Acompanhante, @Data_Reserva, @Status)";
+            Comando.CommandText = "INSERT INTO Reserva VALUES(@ID, @Quarto_ID, @Pagamento_ID, @Quant_Diaria, @Responsavel_ID, @Data_CheckIn," +
+                " @Data_CheckOut, @Funcionario_ID, @Total_Acompanhante, @Data_Reserva, @Status)";
 
             //Preenchendo os as colunas da tabelas
-            Comando.Parameters.AddWithValue("@Quarto_ID", reserva.id);
+            Comando.Parameters.AddWithValue("@ID", reserva.id);
+            Comando.Parameters.AddWithValue("@Quarto_ID", reserva.quartoId);
             Comando.Parameters.AddWithValue("@Pagamento_ID", reserva.pagamentoId);
             Comando.Parameters.AddWithValue("@Quant_Diaria", reserva.quantDiaria);
             Comando.Parameters.AddWithValue("@Responsavel_ID", reserva.responsavelId);
             Comando.Parameters.AddWithValue("@Data_CheckIn", reserva.dataCheckIn);
             Comando.Parameters.AddWithValue("@Data_CheckOut", reserva.dataCheckOut);
+            Comando.Parameters.AddWithValue("@Funcionario_ID", reserva.funcionarioId);
             Comando.Parameters.AddWithValue("@Total_Acompanhante", reserva.totalAcompanhante);
             Comando.Parameters.AddWithValue("@Data_Reserva", reserva.dataReserva);
             Comando.Parameters.AddWithValue("@Status", reserva.status);
@@ -118,6 +120,62 @@ namespace ProjectKopezkzky.src.repository
                 conn.disconnect();
             }
             return true;
+        }
+
+        public List<Reserva> CarregarReservas()
+        {
+            Comando = new SqlCommand();
+            //Essa funcao ira pegar o texto das textbox criar no banco 
+            // Comando para inserir os dados no banco 
+
+            List<Reserva> ListaReserva = new List<Reserva>();
+            
+            String myquery = "SELECT * FROM Reserva";
+            Comando.CommandText = myquery;
+
+            try
+            {
+                Comando.Connection = conn.connect();
+                Comando.ExecuteNonQuery();
+                dr = Comando.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    ListaReserva.Add(new Reserva()
+                    {
+                        id = Convert.ToInt16(dr["ID"]),
+                        quartoId = Convert.ToInt16(dr["Quarto_ID"]),
+                        pagamentoId = Convert.ToInt16(dr["Pagamento_ID"]),
+                        quantDiaria = Convert.ToInt16(dr["Quant_Diaria"]),
+                        responsavelId = Convert.ToInt16(dr["Responsavel_ID"]),
+                        dataCheckIn = Convert.ToDateTime(dr["Data_CheckIn"]),
+                        dataCheckOut = Convert.ToDateTime(dr["Data_CheckOut"]),
+                        funcionarioId = Convert.ToInt16(dr["Funcionario_ID"]),
+                        totalAcompanhante = Convert.ToInt16(dr["Total_Acompanhante"]),
+                        dataReserva = Convert.ToDateTime(dr["Data_Reserva"]),
+                        status = Convert.ToString(dr["Status"])
+                    });
+                }
+                SqlDataAdapter da = new SqlDataAdapter(myquery, Comando.Connection);
+                SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+
+                if (ListaReserva.Count() > 0)
+                {
+                    return ListaReserva;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                conn.disconnect();
+            }
         }
 
     }

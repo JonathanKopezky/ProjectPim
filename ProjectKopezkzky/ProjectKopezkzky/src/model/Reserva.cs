@@ -13,6 +13,7 @@ namespace ProjectKopezkzky.src.model
         public int pagamentoId { get; set; }
         public int quantDiaria { get; set; }
         public int responsavelId { get; set; }
+        public int funcionarioId { get; set; }
         public DateTime dataCheckIn { get; set; }
         public DateTime dataCheckOut { get; set; }
         public int totalAcompanhante { get; set; }
