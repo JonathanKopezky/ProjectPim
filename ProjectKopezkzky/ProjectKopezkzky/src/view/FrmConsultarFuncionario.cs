@@ -62,7 +62,7 @@ namespace ProjectKopezkzky.src.view
             }
             else
             {
-                MessageBox.Show("ERRO TENTE NOVAMENTE ", "Atencão", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("ERRO TENTE NOVAMENTE ", "Atencão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
