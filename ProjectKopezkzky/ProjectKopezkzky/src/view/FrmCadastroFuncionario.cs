@@ -78,42 +78,33 @@ namespace ProjectKopezkzky.src.view
 
             else
             {
-                funcionario.nome = txtNome.Text;
-                funcionario.sobrenome = txbSobrenome.Text;
-                funcionario.dataNascimento = maskedTextBoxDateNasc.Text;
-                funcionario.formacaoAcademica = txbFormacao.Text;
+                funcionario.nome = textBox1.Text;
+                funcionario.sobrenome = textBox2.Text;
+                funcionario.dataNascimento = maskedTextBox2.Text;
+                funcionario.formacaoAcademica = textBox11.Text;
                 funcionario.RG = maskedTextBoxRg.Text;
-                funcionario.CPF = maskedTextBoxCpf.Text;
-                funcionario.tituloEleitor = txbTitulo.Text;
-                funcionario.reservista = txbReservista.Text;
-                funcionario.nomeMae = txbNomeMae.Text;
-                funcionario.nomePai = txbNomePai.Text;
-                funcionario.dependentes = Convert.ToInt32(txbDependente.Text);
-                funcionario.CNH = txbCnh.Text;
-                funcionario.telefone = maskedTextBoxTelefone.Text;
-                funcionario.email = maskedTextBoxEmail.Text;
-                funcionario.genero = comboBoxGenero.Text;
-                funcionario.estadoCivil = comboBoxEstadoCivil.Text;
-                funcionario.CEP = maskedTextBoxCep.Text;
-                funcionario.pais = maskedTextBoxPais.Text;
-                funcionario.estado = maskedTextBoxEstado.Text;
-                funcionario.cidade = maskedTextBoxCidade.Text;
-                funcionario.endereco = txbEndereco.Text;
-                funcionario.numero = Convert.ToInt32(txbNumero.Text);
-                funcionario.complemento = txbComplemento.Text;
-                funcionario.observacoes = maskedTextBoxCep.Text;
-                funcionario.senha = txbConfirmaSenha.Text;
-                funcionario.status = "Ativo";
-                if (funcionarioController.createFuncionario(funcionario))
-                {
-                    MessageBox.Show("Cadastrado Com Sucesso !");
-                    this.Close();
-                    ClearTxb();
-                }
-                else
-                {
-                    MessageBox.Show("ERRO TENTE NOVAMENTE ", "Atencão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                } 
+                funcionario.CPF = maskedTextBox5.Text;
+                funcionario.tituloEleitor = textBox6.Text;
+                funcionario.reservista = textBox7.Text;
+                funcionario.nomeMae = textBox4.Text;
+                funcionario.nomePai = textBox5.Text;
+                funcionario.dependentes = Int32.Parse(textBox3.Text);
+                funcionario.CNH = textBox10.Text;
+                funcionario.telefone = maskedTextBox1.Text;
+                funcionario.email = maskedTextBox3.Text;
+                funcionario.genero = textBox8.Text;
+                funcionario.estadoCivil = textBox9.Text;
+                funcionario.CEP = maskedTextBox16.Text;
+                funcionario.pais = maskedTextBox12.Text;
+                funcionario.estado = maskedTextBox7.Text;
+                funcionario.cidade = maskedTextBox8.Text;
+                funcionario.endereco = maskedTextBox6.Text;
+                funcionario.numero = Int32.Parse(maskedTextBox10.Text);
+                funcionario.complemento = maskedTextBox11.Text;
+                funcionario.observacoes = maskedTextBox16.Text;
+                funcionario.senha = maskedTextBox14.Text;
+
+                funcionarioController.createFuncionario(funcionario);
             }
         }
 
@@ -279,7 +270,43 @@ namespace ProjectKopezkzky.src.view
             blockButton();
         }
 
-
-
+        private bool verificaCampos()
+        {
+            if (
+                    !string.IsNullOrWhiteSpace(textBox1.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox2.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox2.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox11.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBoxRg.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox5.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox6.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox7.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox4.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox5.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox3.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox10.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox1.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox3.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox8.Text) ||
+                    !string.IsNullOrWhiteSpace(textBox9.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox16.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox12.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox7.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox8.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox6.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox10.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox11.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox15.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox13.Text) ||
+                    !string.IsNullOrWhiteSpace(maskedTextBox14.Text)
+             )
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

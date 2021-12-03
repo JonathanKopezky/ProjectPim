@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectKopezkzky.src.model
 {
@@ -26,5 +27,31 @@ namespace ProjectKopezkzky.src.model
         public string dataNascimento { get; set; }
         public string status { get; set; }
         public string senha { get; set; }
+
+        
+        public void LimpaCliente() 
+        {
+            id = 0;
+            nome = "";
+            sobrenome = "";
+            RG = "";
+            CPF = "";
+            email = "";
+            telefone = "";
+            endereco = "";
+            CEP = "";
+            numero = 0;
+            complemento = "";
+            cidade = "";
+            estado = "";
+            pais = "";
+            genero = "";
+            dataNascimento = "";
+            status = "";
+            senha = "";
+
+
+        }
     }
+
 }

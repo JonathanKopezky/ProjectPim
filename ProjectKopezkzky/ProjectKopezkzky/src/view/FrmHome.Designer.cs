@@ -37,7 +37,6 @@ namespace ProjectKopezkzky.src.view
             this.consultarReservaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarReservaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CadastralClienteMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCargo = new System.Windows.Forms.Label();
@@ -101,24 +100,16 @@ namespace ProjectKopezkzky.src.view
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CadastralClienteMenu,
             this.consultarClienteToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
-            // CadastralClienteMenu
-            // 
-            this.CadastralClienteMenu.Name = "CadastralClienteMenu";
-            this.CadastralClienteMenu.Size = new System.Drawing.Size(170, 22);
-            this.CadastralClienteMenu.Text = "Cadastrar Cliente ";
-            this.CadastralClienteMenu.Click += new System.EventHandler(this.CadastralClienteMenu_Click);
-            // 
             // consultarClienteToolStripMenuItem
             // 
             this.consultarClienteToolStripMenuItem.Name = "consultarClienteToolStripMenuItem";
-            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.consultarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarClienteToolStripMenuItem.Text = "Consultar Clientes";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
@@ -226,7 +217,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CadastralClienteMenu;
         private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnHomeSair;
