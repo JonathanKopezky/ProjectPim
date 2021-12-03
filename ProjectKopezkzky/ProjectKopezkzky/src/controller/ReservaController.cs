@@ -2,6 +2,7 @@
 using ProjectKopezkzky.src.repository;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,9 +65,14 @@ namespace ProjectKopezkzky.src.controller
 
         public List<Reserva> CarregarReservas()
         {
-            listReservas = reservaRepository.CarregarReservas();
-
+             listReservas = reservaRepository.CarregarReservas();
+           
             return listReservas;
+        }
+
+        public DataTable grid() 
+        {
+            return reservaRepository.Grid();
         }
     }
 }

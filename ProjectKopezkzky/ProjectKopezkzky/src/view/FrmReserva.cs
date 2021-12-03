@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,16 @@ namespace ProjectKopezkzky.src.view
     {
         Reserva reserva = new Reserva();
         ReservaController reservaController = new ReservaController();
+      
+
         List<Reserva> listReserva;
+        
 
         public FrmReserva()
         {
             InitializeComponent();
             listReserva = reservaController.CarregarReservas();
-            this.ReservationGridView.DataSource = listReserva;
+            ReservationGridView.DataSource = reservaController.grid();
         }
         DateTime today;
         private void FrmReserva_Load(object sender, EventArgs e)
@@ -43,7 +47,7 @@ namespace ProjectKopezkzky.src.view
             if (res < 0)
                 MessageBox.Show("DateOut errado, tente novamente");
         }
-
+        
         private void AddReservaBtn_Click(object sender, EventArgs e)
         {
             reserva.id = int.Parse(ReservationIdTb.Text);
@@ -72,10 +76,18 @@ namespace ProjectKopezkzky.src.view
 
         private void button4_Click(object sender, EventArgs e)
         {
-       
-            listReserva = reservaController.CarregarReservas();
+            // listReserva = reservaController.CarregarReservas();
 
-            ReservationGridView.DataSource = listReserva;
+
+            ReservationGridView.DataSource = reservaController.grid();
+        }
+
+        public void listagrid() 
+        {
+            
+            
+              
+            
         }
     }
 }

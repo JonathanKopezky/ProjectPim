@@ -18,6 +18,7 @@ namespace ProjectKopezkzky.src.repository
         SqlCommand Comando;
         Connection conn = new Connection();
         Reserva reserva = new Reserva();
+        SqlCommand objCommand;
 
         //VERICAR 
         public Reserva VerificaReserva(Reserva reserva)
@@ -123,6 +124,26 @@ namespace ProjectKopezkzky.src.repository
             return true;
         }
 
+
+        public DataTable Grid() 
+        {   
+            string StrSql = "SELECT* FROM Reserva";
+            //Conexao com banco 
+            
+            //comando e conecta com o banco
+            objCommand = new SqlCommand(StrSql, conn.connect());
+
+            conn.connect();
+            SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);
+
+            DataTable dtLista = new DataTable();
+
+            objAdp.Fill(dtLista);
+
+            return dtLista;
+
+
+        }
         public List<Reserva> CarregarReservas()
         {
             Comando = new SqlCommand();
@@ -156,11 +177,13 @@ namespace ProjectKopezkzky.src.repository
                         dataReserva = Convert.ToDateTime(dr["Data_Reserva"]),
                         status = Convert.ToString(dr["Status"])
                     });
-                }
-                //SqlDataAdapter da = new SqlDataAdapter(myquery, Comando.Connection);
-               // SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
-               // DataTable ba = new DataTable();
-               // da.Fill(ba);
+
+                    
+                } 
+                  SqlDataAdapter da = new SqlDataAdapter();
+                // SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+                // DataTable ba = new DataTable();
+                // da.Fill(ba);
                 //da.Dispose();
 
                 if (ListaReserva.Count() > 0)
