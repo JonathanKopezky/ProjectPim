@@ -101,9 +101,9 @@ namespace ProjectKopezkzky.src.view
 
         private void btnCadFuncionario_Click(object sender, EventArgs e)
         {
-            FrmCadastroFuncionario frmCadFuncionario = new FrmCadastroFuncionario();
-            frmCadFuncionario.preencheTxt(funcionario);
-            frmCadFuncionario.ShowDialog(); 
+            //FrmCadastroFuncionario frmCadFuncionario = new FrmCadastroFuncionario();
+            //frmCadFuncionario.preencheTxt(funcionario);
+            //frmCadFuncionario.ShowDialog(); 
         }
     }
 }

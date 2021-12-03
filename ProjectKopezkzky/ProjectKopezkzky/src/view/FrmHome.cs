@@ -75,9 +75,9 @@ namespace ProjectKopezkzky.src.view
 
         private void cadastrarFuncBTN_Click(object sender, EventArgs e)
         {
-            FrmCadastroFuncionario fmrCadastroFuncionario = new FrmCadastroFuncionario();
+            //FrmCadastroFuncionario fmrCadastroFuncionario = new FrmCadastroFuncionario();
 
-            fmrCadastroFuncionario.ShowDialog();
+            //fmrCadastroFuncionario.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
