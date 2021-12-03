@@ -88,9 +88,9 @@ namespace ProjectKopezkzky.src.view
 
         private void consultarReservaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            FrmNovaReserva frmNovaReserva = new FrmNovaReserva();
+            FrmReserva frmReserva = new FrmReserva();
 
-            FormShow(frmNovaReserva);
+            frmReserva.ShowDialog();
         }
     }
 }

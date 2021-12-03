@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 using ProjectKopezkzky.src.repository;
 using ProjectKopezkzky.src.model;
+using System.Data;
 
 namespace ProjectKopezkzky.src.controller
 {
@@ -78,6 +79,11 @@ namespace ProjectKopezkzky.src.controller
         {// pega o funcionario no banco 
             Funcionario result = funcionarioRepository.getFuncionario(funcionario);
             return result;
+        }
+
+        public DataTable grid()
+        {
+            return funcionarioRepository.Grid();
         }
 
     }

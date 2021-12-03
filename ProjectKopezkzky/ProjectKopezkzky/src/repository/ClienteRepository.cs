@@ -11,6 +11,7 @@ using ProjectKopezkzky.src.model;
 using ProjectKopezkzky.src.config;
 using System.Windows.Forms;
 using ProjectKopezkzky.src.controller;
+using System.Data;
 
 namespace ProjectKopezkzky.src.repository
 {
@@ -221,7 +222,28 @@ namespace ProjectKopezkzky.src.repository
         }
 
 
+        public DataTable Grid()
+        {
+            conn.connect();
 
+            string StrSql = "SELECT CPF FROM Cliente";
+            //Conexao com banco 
+
+            //comando e conecta com o banco
+            Comando = new SqlCommand(StrSql, conn.connect());
+
+            dr = Comando.ExecuteReader();
+            SqlDataAdapter objAdp = new SqlDataAdapter(Comando);
+
+            DataTable dtLista = new DataTable();
+
+            dtLista.Columns.Add("CPF", typeof(string));
+            dtLista.Load(dr);
+
+            //objAdp.Fill(dtLista);
+
+            return dtLista;
+        }
 
 
     }

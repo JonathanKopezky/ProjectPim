@@ -17,7 +17,9 @@ namespace ProjectKopezkzky.src.view
     {
         Reserva reserva = new Reserva();
         ReservaController reservaController = new ReservaController();
-      
+        QuartoController quartoController = new QuartoController();
+        ClienteController clienteController = new ClienteController();
+        FuncionarioController funcionarioController = new FuncionarioController();
 
         List<Reserva> listReserva;
         
@@ -31,6 +33,9 @@ namespace ProjectKopezkzky.src.view
         {
             today = Datein.Value;
             listagrid();
+            ListaQuarto();
+            ListaCliente();
+            ListaFuncionario();
         }
 
         private void Datein_ValueChanged(object sender, EventArgs e)
@@ -50,9 +55,9 @@ namespace ProjectKopezkzky.src.view
         private void AddReservaBtn_Click(object sender, EventArgs e)
         {
             reserva.id = int.Parse(ReservationIdTb.Text);
-            reserva.responsavelId = int.Parse(ClientIdTb.Text);
-            reserva.quartoId = int.Parse(RommNumberTb.Text);
-            reserva.funcionarioId = int.Parse(funcionarioTb.Text);
+            reserva.responsavelId = Convert.ToInt32(clientIdcb.SelectedValue);
+            reserva.quartoId = int.Parse(roomcb.Text);
+            reserva.funcionarioId = Convert.ToInt32(funcionarioIdcb.SelectedValue);
             reserva.totalAcompanhante = int.Parse(totalAcompTb.Text);
             reserva.dataCheckIn = Datein.Value;
             reserva.dataCheckOut = Dateout.Value;
@@ -86,6 +91,24 @@ namespace ProjectKopezkzky.src.view
         {
             listReserva = reservaController.CarregarReservas();
             ReservationGridView.DataSource = reservaController.grid();
+        }
+
+        public void ListaQuarto()
+        {         
+            roomcb.ValueMember = "ID";
+            roomcb.DataSource = quartoController.grid();
+        }
+
+        public void ListaCliente()
+        {
+            clientIdcb.ValueMember = "CPF";
+            clientIdcb.DataSource = clienteController.grid();
+        }
+
+        public void ListaFuncionario()
+        {
+            funcionarioIdcb.ValueMember = "CPF";
+            funcionarioIdcb.DataSource = funcionarioController.grid();
         }
     }
 }

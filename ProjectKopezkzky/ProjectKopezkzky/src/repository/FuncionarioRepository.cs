@@ -260,6 +260,29 @@ namespace ProjectKopezkzky.src.repository
 
         }
 
+        public DataTable Grid()
+        {
+            conn.connect();
+
+            string StrSql = "SELECT CPF FROM Funcionario";
+            //Conexao com banco 
+
+            //comando e conecta com o banco
+            cmd = new SqlCommand(StrSql, conn.connect());
+
+            dr = cmd.ExecuteReader();
+            SqlDataAdapter objAdp = new SqlDataAdapter(cmd);
+
+            DataTable dtLista = new DataTable();
+
+            dtLista.Columns.Add("CPF", typeof(string));
+            dtLista.Load(dr);
+
+            //objAdp.Fill(dtLista);
+
+            return dtLista;
+        }
+
 
     }
 }

@@ -30,10 +30,7 @@ namespace ProjectKopezkzky.src.view
         private void InitializeComponent()
         {
             this.ReservationIdTb = new System.Windows.Forms.TextBox();
-            this.ClientIdTb = new System.Windows.Forms.TextBox();
-            this.RommNumberTb = new System.Windows.Forms.TextBox();
             this.Datein = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.AddReservaBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,36 +38,26 @@ namespace ProjectKopezkzky.src.view
             this.Dateout = new System.Windows.Forms.DateTimePicker();
             this.EditReservaBtn = new System.Windows.Forms.Button();
             this.DeleteReservaBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.funcionarioTb = new System.Windows.Forms.TextBox();
             this.totalAcompTb = new System.Windows.Forms.TextBox();
             this.pagamentoIdTb = new System.Windows.Forms.TextBox();
+            this.roomcb = new System.Windows.Forms.ComboBox();
+            this.clientIdcb = new System.Windows.Forms.ComboBox();
+            this.funcionarioIdcb = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // ReservationIdTb
             // 
-            this.ReservationIdTb.Location = new System.Drawing.Point(54, 61);
+            this.ReservationIdTb.Location = new System.Drawing.Point(19, 23);
             this.ReservationIdTb.Name = "ReservationIdTb";
             this.ReservationIdTb.Size = new System.Drawing.Size(125, 27);
             this.ReservationIdTb.TabIndex = 0;
             this.ReservationIdTb.Text = "Reservation Id";
-            // 
-            // ClientIdTb
-            // 
-            this.ClientIdTb.Location = new System.Drawing.Point(54, 117);
-            this.ClientIdTb.Name = "ClientIdTb";
-            this.ClientIdTb.Size = new System.Drawing.Size(125, 27);
-            this.ClientIdTb.TabIndex = 1;
-            this.ClientIdTb.Text = "Client Id";
-            // 
-            // RommNumberTb
-            // 
-            this.RommNumberTb.Location = new System.Drawing.Point(54, 173);
-            this.RommNumberTb.Name = "RommNumberTb";
-            this.RommNumberTb.Size = new System.Drawing.Size(125, 27);
-            this.RommNumberTb.TabIndex = 2;
-            this.RommNumberTb.Text = "Romm Number";
             // 
             // Datein
             // 
@@ -82,14 +69,6 @@ namespace ProjectKopezkzky.src.view
             this.Datein.Size = new System.Drawing.Size(244, 24);
             this.Datein.TabIndex = 11;
             this.Datein.ValueChanged += new System.EventHandler(this.Datein_ValueChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(501, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 27);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Reservation Search";
             // 
             // AddReservaBtn
             // 
@@ -160,27 +139,9 @@ namespace ProjectKopezkzky.src.view
             this.DeleteReservaBtn.Text = "DELETE";
             this.DeleteReservaBtn.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(679, 37);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Seach";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // funcionarioTb
-            // 
-            this.funcionarioTb.Location = new System.Drawing.Point(54, 229);
-            this.funcionarioTb.Name = "funcionarioTb";
-            this.funcionarioTb.Size = new System.Drawing.Size(125, 27);
-            this.funcionarioTb.TabIndex = 24;
-            this.funcionarioTb.Text = "Funcionario Id";
-            // 
             // totalAcompTb
             // 
-            this.totalAcompTb.Location = new System.Drawing.Point(218, 173);
+            this.totalAcompTb.Location = new System.Drawing.Point(207, 247);
             this.totalAcompTb.Name = "totalAcompTb";
             this.totalAcompTb.Size = new System.Drawing.Size(125, 27);
             this.totalAcompTb.TabIndex = 25;
@@ -188,21 +149,95 @@ namespace ProjectKopezkzky.src.view
             // 
             // pagamentoIdTb
             // 
-            this.pagamentoIdTb.Location = new System.Drawing.Point(218, 229);
+            this.pagamentoIdTb.Location = new System.Drawing.Point(150, 210);
             this.pagamentoIdTb.Name = "pagamentoIdTb";
             this.pagamentoIdTb.Size = new System.Drawing.Size(125, 27);
             this.pagamentoIdTb.TabIndex = 26;
-            this.pagamentoIdTb.Text = "Pagagemnto Id";
+            // 
+            // roomcb
+            // 
+            this.roomcb.FormattingEnabled = true;
+            this.roomcb.Location = new System.Drawing.Point(182, 112);
+            this.roomcb.Name = "roomcb";
+            this.roomcb.Size = new System.Drawing.Size(151, 28);
+            this.roomcb.TabIndex = 27;
+            // 
+            // clientIdcb
+            // 
+            this.clientIdcb.FormattingEnabled = true;
+            this.clientIdcb.Location = new System.Drawing.Point(119, 69);
+            this.clientIdcb.Name = "clientIdcb";
+            this.clientIdcb.Size = new System.Drawing.Size(151, 28);
+            this.clientIdcb.TabIndex = 28;
+            // 
+            // funcionarioIdcb
+            // 
+            this.funcionarioIdcb.FormattingEnabled = true;
+            this.funcionarioIdcb.Location = new System.Drawing.Point(150, 161);
+            this.funcionarioIdcb.Name = "funcionarioIdcb";
+            this.funcionarioIdcb.Size = new System.Drawing.Size(151, 28);
+            this.funcionarioIdcb.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Cliente Id";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(41, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Numero do Quarto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(41, 169);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Funcionario Id";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(41, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 20);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Pagamento Id";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(41, 254);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 20);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Total Acompanhantes";
             // 
             // FrmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 425);
+            this.ClientSize = new System.Drawing.Size(922, 473);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.funcionarioIdcb);
+            this.Controls.Add(this.clientIdcb);
+            this.Controls.Add(this.roomcb);
             this.Controls.Add(this.pagamentoIdTb);
             this.Controls.Add(this.totalAcompTb);
-            this.Controls.Add(this.funcionarioTb);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.DeleteReservaBtn);
             this.Controls.Add(this.EditReservaBtn);
             this.Controls.Add(this.Dateout);
@@ -210,10 +245,7 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddReservaBtn);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Datein);
-            this.Controls.Add(this.RommNumberTb);
-            this.Controls.Add(this.ClientIdTb);
             this.Controls.Add(this.ReservationIdTb);
             this.Name = "FrmReserva";
             this.Text = "FrmReserva";
@@ -227,10 +259,7 @@ namespace ProjectKopezkzky.src.view
         #endregion
 
         private System.Windows.Forms.TextBox ReservationIdTb;
-        private System.Windows.Forms.TextBox ClientIdTb;
-        private System.Windows.Forms.TextBox RommNumberTb;
         private System.Windows.Forms.DateTimePicker Datein;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button AddReservaBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -238,9 +267,15 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.DateTimePicker Dateout;
         private System.Windows.Forms.Button EditReservaBtn;
         private System.Windows.Forms.Button DeleteReservaBtn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox funcionarioTb;
         private System.Windows.Forms.TextBox totalAcompTb;
         private System.Windows.Forms.TextBox pagamentoIdTb;
+        private System.Windows.Forms.ComboBox roomcb;
+        private System.Windows.Forms.ComboBox clientIdcb;
+        private System.Windows.Forms.ComboBox funcionarioIdcb;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
