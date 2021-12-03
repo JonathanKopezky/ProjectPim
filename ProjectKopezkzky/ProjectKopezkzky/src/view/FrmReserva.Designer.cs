@@ -121,6 +121,7 @@ namespace ProjectKopezkzky.src.view
             // 
             // ReservationGridView
             // 
+            this.ReservationGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.ReservationGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReservationGridView.Location = new System.Drawing.Point(374, 96);
             this.ReservationGridView.Name = "ReservationGridView";
@@ -128,6 +129,7 @@ namespace ProjectKopezkzky.src.view
             this.ReservationGridView.RowTemplate.Height = 29;
             this.ReservationGridView.Size = new System.Drawing.Size(480, 343);
             this.ReservationGridView.TabIndex = 18;
+            this.ReservationGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationGridView_CellContentClick);
             // 
             // Dateout
             // 
@@ -166,6 +168,7 @@ namespace ProjectKopezkzky.src.view
             this.button4.TabIndex = 23;
             this.button4.Text = "Seach";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // funcionarioTb
             // 

@@ -60,10 +60,22 @@ namespace ProjectKopezkzky.src.view
             reserva.quantDiaria = totalDias;
             //Convert.ToInt32(Dateout.Value.Day - Datein.Value.Day);
             reserva.pagamentoId = int.Parse(pagamentoIdTb.Text);
+
             reservaController.CreateReserva(reserva);
-            listReserva =reservaController.CarregarReservas();
-            this.ReservationGridView.DataSource = listReserva;
             MessageBox.Show("Reserva Adicionada com sucesso");
+        }
+
+        private void ReservationGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+       
+            listReserva = reservaController.CarregarReservas();
+
+            ReservationGridView.DataSource = listReserva;
         }
     }
 }

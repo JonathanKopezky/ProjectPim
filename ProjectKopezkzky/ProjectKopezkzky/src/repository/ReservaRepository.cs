@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using ProjectKopezkzky.src.model;
 using ProjectKopezkzky.src.view;
 using System.Windows.Forms;
+using System.Data;
 
 namespace ProjectKopezkzky.src.repository
 {
@@ -156,8 +157,11 @@ namespace ProjectKopezkzky.src.repository
                         status = Convert.ToString(dr["Status"])
                     });
                 }
-                SqlDataAdapter da = new SqlDataAdapter(myquery, Comando.Connection);
-                SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+                //SqlDataAdapter da = new SqlDataAdapter(myquery, Comando.Connection);
+               // SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
+               // DataTable ba = new DataTable();
+               // da.Fill(ba);
+                //da.Dispose();
 
                 if (ListaReserva.Count() > 0)
                 {
