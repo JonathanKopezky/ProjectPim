@@ -24,14 +24,13 @@ namespace ProjectKopezkzky.src.view
 
         public FrmReserva()
         {
-            InitializeComponent();
-            listReserva = reservaController.CarregarReservas();
-            ReservationGridView.DataSource = reservaController.grid();
+            InitializeComponent();         
         }
         DateTime today;
         private void FrmReserva_Load(object sender, EventArgs e)
         {
             today = Datein.Value;
+            listagrid();
         }
 
         private void Datein_ValueChanged(object sender, EventArgs e)
@@ -66,6 +65,7 @@ namespace ProjectKopezkzky.src.view
             reserva.pagamentoId = int.Parse(pagamentoIdTb.Text);
 
             reservaController.CreateReserva(reserva);
+            listagrid();
             MessageBox.Show("Reserva Adicionada com sucesso");
         }
 
@@ -84,10 +84,8 @@ namespace ProjectKopezkzky.src.view
 
         public void listagrid() 
         {
-            
-            
-              
-            
+            listReserva = reservaController.CarregarReservas();
+            ReservationGridView.DataSource = reservaController.grid();
         }
     }
 }

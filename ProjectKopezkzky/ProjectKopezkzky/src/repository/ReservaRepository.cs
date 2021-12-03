@@ -141,8 +141,6 @@ namespace ProjectKopezkzky.src.repository
             objAdp.Fill(dtLista);
 
             return dtLista;
-
-
         }
         public List<Reserva> CarregarReservas()
         {
