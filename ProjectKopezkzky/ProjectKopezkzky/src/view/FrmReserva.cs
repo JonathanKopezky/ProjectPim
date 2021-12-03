@@ -20,10 +20,8 @@ namespace ProjectKopezkzky.src.view
         QuartoController quartoController = new QuartoController();
         ClienteController clienteController = new ClienteController();
         FuncionarioController funcionarioController = new FuncionarioController();
-
         List<Reserva> listReserva;
         
-
         public FrmReserva()
         {
             InitializeComponent();         
@@ -37,7 +35,6 @@ namespace ProjectKopezkzky.src.view
             ListaCliente();
             ListaFuncionario();
         }
-
         private void Datein_ValueChanged(object sender, EventArgs e)
         {
             int res = DateTime.Compare(Datein.Value, today);
@@ -55,9 +52,9 @@ namespace ProjectKopezkzky.src.view
         private void AddReservaBtn_Click(object sender, EventArgs e)
         {
             reserva.id = int.Parse(ReservationIdTb.Text);
-            reserva.responsavelId = Convert.ToInt32(clientIdcb.SelectedValue);
+            reserva.responsavelId = Convert.ToString(clientIdcb.SelectedValue);
             reserva.quartoId = int.Parse(roomcb.Text);
-            reserva.funcionarioId = Convert.ToInt32(funcionarioIdcb.SelectedValue);
+            reserva.funcionarioId = Convert.ToString(funcionarioIdcb.SelectedValue);
             reserva.totalAcompanhante = int.Parse(totalAcompTb.Text);
             reserva.dataCheckIn = Datein.Value;
             reserva.dataCheckOut = Dateout.Value;
@@ -68,22 +65,18 @@ namespace ProjectKopezkzky.src.view
             reserva.quantDiaria = totalDias;
             //Convert.ToInt32(Dateout.Value.Day - Datein.Value.Day);
             reserva.pagamentoId = int.Parse(pagamentoIdTb.Text);
-
             reservaController.CreateReserva(reserva);
             listagrid();
             MessageBox.Show("Reserva Adicionada com sucesso");
         }
 
         private void ReservationGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
+        {    
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             // listReserva = reservaController.CarregarReservas();
-
-
             ReservationGridView.DataSource = reservaController.grid();
         }
 
@@ -113,12 +106,10 @@ namespace ProjectKopezkzky.src.view
 
         private void label5_Click(object sender, EventArgs e)
         {
-
         }
 
         private void funcionarioIdcb_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
