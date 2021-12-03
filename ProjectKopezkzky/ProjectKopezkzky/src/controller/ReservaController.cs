@@ -16,7 +16,6 @@ namespace ProjectKopezkzky.src.controller
         Reserva reserva = new Reserva();
         ReservaRepository reservaRepository = new ReservaRepository();
         List<Reserva> listReservas;
-
         public ReservaController() { }
 
         public bool CreateReserva(Reserva reserva)
@@ -33,46 +32,23 @@ namespace ProjectKopezkzky.src.controller
             }
         }
 
-        public bool AtualizarReserva(Reserva reserva)
-        {
-            if (reservaRepository.AtualizarReservaValida(reserva))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        //public bool DeletReserva(Reserva reserva)
-       // {
-         //   if (reservaRepository.DeletarReserva(reserva))
-          //  {
-           //     return true;
-          //  else
-           // {
-
-           //     return false;
-           // }
-       // }
-
         public Reserva ConsultarReserva(Reserva reserva)
         {   // consultar se tiver vai retornar true se não false
             Reserva result = reservaRepository.VerificaReserva(reserva);
             return result;   
         }
 
-        public List<Reserva> CarregarReservas()
-        {
-             listReservas = reservaRepository.CarregarReservas();
-           
-            return listReservas;
-        }
-
         public DataTable grid() 
         {
             return reservaRepository.Grid();
         }
+
+        public List<Reserva> CarregarReservas()
+        {
+            listReservas = reservaRepository.CarregarReservas();
+
+            return listReservas;
+        }
+
     }
 }

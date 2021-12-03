@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
-
 using ProjectKopezkzky.src.repository;
 using ProjectKopezkzky.src.model;
 using System.Data;
@@ -15,21 +13,16 @@ namespace ProjectKopezkzky.src.controller
     public class FuncionarioController
     {
         FuncionarioRepository funcionarioRepository = new FuncionarioRepository();
-        public FuncionarioController()
-        {
-
-        }
+        public FuncionarioController(){}
         public bool verifica(Funcionario funcionario)
         {   // verifica se tem o cadastro 
            
             if (funcionarioRepository.consultaFuncionarioCadastro(funcionario))
-            {
-              
+            {  
                 return true;
             }
             else
-            {
-              
+            {            
                 return false;
             }
 
@@ -43,7 +36,6 @@ namespace ProjectKopezkzky.src.controller
             }
             else
             {
-
                 return false;
             }
         }
@@ -57,7 +49,6 @@ namespace ProjectKopezkzky.src.controller
             else
             {
                 return false;
-
             }
 
         }
@@ -70,7 +61,6 @@ namespace ProjectKopezkzky.src.controller
             else
             {
                 return false;
-
             }
         }
 

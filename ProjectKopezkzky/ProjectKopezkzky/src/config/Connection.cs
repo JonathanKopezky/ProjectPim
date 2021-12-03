@@ -10,7 +10,6 @@ namespace ProjectKopezkzky.src.config
     class Connection
     {
         SqlConnection conn = new SqlConnection();
- 
         public Connection()
         {
           conn.ConnectionString = @"Data Source=kopezky-database.database.windows.net;Initial Catalog=Kopezky;Persist Security Info=True;User ID=kopezky;Password=Tico#2212123";
@@ -22,7 +21,6 @@ namespace ProjectKopezkzky.src.config
             {
                 conn.Open();
             }
-
             return conn;
         }
         public SqlConnection disconnect()
@@ -31,10 +29,7 @@ namespace ProjectKopezkzky.src.config
             {
                 conn.Close();
             }
-
             return conn;
         }
-
-
     }
 }

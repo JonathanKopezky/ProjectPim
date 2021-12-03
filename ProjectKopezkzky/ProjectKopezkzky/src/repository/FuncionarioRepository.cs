@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using System.Windows.Forms;
-
 using ProjectKopezkzky.src.model;
 using ProjectKopezkzky.src.controller;
 using System.Data.SqlClient;
-
 using ProjectKopezkzky.src.config;
 using System.Data;
 
@@ -18,20 +14,13 @@ namespace ProjectKopezkzky.src.repository
     class FuncionarioRepository
     {
         Funcionario funcionario = new Funcionario();
-
         SqlDataReader dr;
         SqlCommand cmd;
         Connection conn = new Connection();
-
-
-        public FuncionarioRepository()
-        {
-
-        }
+        public FuncionarioRepository(){}
 
         public bool consultaFuncionarioCadastro(Funcionario funcionario)
         {
-
             cmd = new SqlCommand();
             cmd.CommandText = "SELECT CPF FROM Funcionario WHERE CPF = @cpf";
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
@@ -39,20 +28,16 @@ namespace ProjectKopezkzky.src.repository
             try
             {
                 cmd.Connection = conn.connect();
-
                 dr = cmd.ExecuteReader();
 
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("tem" + funcionario.CPF);
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show("nao tem" + funcionario.CPF);
                     return false;
                 }
-
             }
             finally
             {
@@ -62,18 +47,13 @@ namespace ProjectKopezkzky.src.repository
 
         public bool createFuncionario(Funcionario funcionario)
         {
-
             SqlCommand cmd = new SqlCommand();
-
             cmd.Connection = conn.connect();
-
             cmd.CommandText =
                 "INSERT INTO Funcionario VALUES(@nome, @sobrenome, @rg, @cpf, @tituloEleitor, @reservista, @cnh, @telefone, " +
                 "@endereco, @cep, @numero, @complemento, @cidade, @estado, @pais, @email, @genero, " +
                 "@estadiCivil, @observacoes, @nomePai, @nomeMae, @dependentes, @formacaoAcademica, @dataNascimento," +
                 "@status, @senha)";
-
-
 
             cmd.Parameters.AddWithValue("@nome", funcionario.nome);
             cmd.Parameters.AddWithValue("@sobrenome", funcionario.sobrenome);
@@ -101,33 +81,24 @@ namespace ProjectKopezkzky.src.repository
             cmd.Parameters.AddWithValue("@dataNascimento", funcionario.dataNascimento);
             cmd.Parameters.AddWithValue("@status", funcionario.status);
             cmd.Parameters.AddWithValue("@senha", funcionario.senha);
-
-
-            MessageBox.Show(cmd.CommandText.ToString());
-
-
-            int rows = cmd.ExecuteNonQuery();
-            MessageBox.Show(rows.ToString());
+            cmd.ExecuteNonQuery();
             conn.disconnect();
+            funcionario.LimpaFuncionario();
             return true;
         }
 
         public bool deleteFuncionario(Funcionario funcionario)
         {
             cmd = new SqlCommand();
-
-
-
             cmd.CommandText = "UPDATE Funcionario  SET Status = @Status  WHERE  CPF = @cpf";
             cmd.Parameters.AddWithValue("@Status", funcionario.status);
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
 
             try
             {
-
                 cmd.Connection = conn.connect();
-
                 cmd.ExecuteNonQuery();
+                funcionario.LimpaFuncionario();
             }
             catch (SqlException)
             {
@@ -136,26 +107,21 @@ namespace ProjectKopezkzky.src.repository
             finally
             {
                 conn.disconnect();
-
+                funcionario.LimpaFuncionario();
             }
 
-
             return true;
+            funcionario.LimpaFuncionario();
         }
 
         public bool updateFuncionario(Funcionario funcionario)
         {
-            cmd = new SqlCommand();
-          
-
-
+            cmd = new SqlCommand();       
             cmd.CommandText =
                 "UPDATE Funcionario SET Nome = @nome, Sobrenome = @sobrenome, Titulo_eleitor = @tituloEleitor, Reservista = @reservista, CNH = @cnh, Telefone = @telefone, " +
                 "Endereço = @endereco, CEP = @cep, Numero = @numero, Complemento = @complemento, Cidade = @cidade, Estado = @estado, Pais = @pais, Email = @email, Genero = @genero, " +
                 "Estado_civil = @estadocivil, Observacoes = @observacoes, Nome_pai = @nomePai, Nome_mae = @nomeMae, Dependentes = @dependentes, Formacao_academica = @formacaoAcademica, Data_nascimento = @dataNascimento," +
                 "Senha = @senha WHERE CPF = @cpf";
-
-
 
             cmd.Parameters.AddWithValue("@nome", funcionario.nome);
             cmd.Parameters.AddWithValue("@sobrenome", funcionario.sobrenome);
@@ -186,7 +152,7 @@ namespace ProjectKopezkzky.src.repository
             {
                 cmd.Connection = conn.connect();
                 cmd.ExecuteNonQuery();
-
+                funcionario.LimpaFuncionario();
             }
             catch (Exception)
             {
@@ -195,8 +161,8 @@ namespace ProjectKopezkzky.src.repository
             finally
             {
                 conn.disconnect();
+                funcionario.LimpaFuncionario();
             }
-            MessageBox.Show(funcionario.nome + funcionario.CPF);
             return true;
         }
 
@@ -204,23 +170,18 @@ namespace ProjectKopezkzky.src.repository
         { //Procurar no banco se existe  
             cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Funcionario WHERE CPF = @cpf";
-
             //PARAMETROS
             cmd.Parameters.AddWithValue("@cpf", funcionario.CPF);
-
             cmd.Connection = conn.connect();
             dr = cmd.ExecuteReader();
 
             if (dr.HasRows)
             {
-
                 // verificando se tem linhas com os parametro 
                 using (dr)
                 {
-
                     while (dr.Read())
                     {
-
                         funcionario.nome = dr[0].ToString();
                         funcionario.sobrenome = dr[1].ToString();
                         funcionario.RG = dr[2].ToString();
@@ -248,41 +209,28 @@ namespace ProjectKopezkzky.src.repository
                         funcionario.senha = dr[25].ToString();
                     }
 
-                    return funcionario;
+                    return funcionario;                   
                 }
             }
             else
             {
                 conn.disconnect();
-
                 return funcionario;
             }
-
         }
 
         public DataTable Grid()
         {
             conn.connect();
-
             string StrSql = "SELECT CPF FROM Funcionario";
-            //Conexao com banco 
-
-            //comando e conecta com o banco
             cmd = new SqlCommand(StrSql, conn.connect());
-
             dr = cmd.ExecuteReader();
             SqlDataAdapter objAdp = new SqlDataAdapter(cmd);
-
             DataTable dtLista = new DataTable();
-
             dtLista.Columns.Add("CPF", typeof(string));
             dtLista.Load(dr);
-
             //objAdp.Fill(dtLista);
-
             return dtLista;
         }
-
-
     }
 }

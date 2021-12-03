@@ -17,5 +17,36 @@ namespace ProjectKopezkzky.src.model
         public string nomeMae { get; set; }
         public int dependentes { get; set; }
         public string formacaoAcademica { get; set; }
+
+        public void LimpaFuncionario()
+        {
+            id = 0;
+            nome = "";
+            sobrenome = "";
+            RG = "";
+            CPF = "";
+            email = "";
+            telefone = "";
+            endereco = "";
+            CEP = "";
+            numero = 0;
+            complemento = "";
+            cidade = "";
+            estado = "";
+            pais = "";
+            genero = "";
+            dataNascimento = "";
+            status = "";
+            senha = "";
+            tituloEleitor = "";
+            reservista = "";
+            CNH = "";
+            estadoCivil = "";
+            observacoes = "";
+            nomePai = "";
+            nomeMae = "";
+            dependentes = 0;
+            formacaoAcademica = "";
+        }
     }
 }

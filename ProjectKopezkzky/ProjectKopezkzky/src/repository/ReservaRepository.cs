@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using ProjectKopezkzky.src.model;
 using ProjectKopezkzky.src.view;
-using System.Windows.Forms;
 using System.Data;
 
 namespace ProjectKopezkzky.src.repository
@@ -20,7 +19,6 @@ namespace ProjectKopezkzky.src.repository
         Reserva reserva = new Reserva();
         SqlCommand objCommand;
 
-        //VERICAR 
         public Reserva VerificaReserva(Reserva reserva)
         {
             //Procurar no banco se existe  
@@ -43,12 +41,13 @@ namespace ProjectKopezkzky.src.repository
                         reserva.quartoId = int.Parse(dr[1].ToString());
                         reserva.pagamentoId = int.Parse(dr[2].ToString());
                         reserva.quantDiaria = int.Parse(dr[3].ToString());
-                        reserva.responsavelId = int.Parse(dr[4].ToString());
+                        reserva.responsavelId = dr[4].ToString();
                         reserva.dataCheckIn = DateTime.Parse(dr[5].ToString());
                         reserva.dataCheckOut = DateTime.Parse(dr[6].ToString());
-                        reserva.totalAcompanhante = int.Parse(dr[7].ToString());
-                        reserva.dataReserva = DateTime.Parse(dr[8].ToString());
-                        reserva.status = dr[9].ToString();
+                        reserva.funcionarioId = dr[7].ToString();
+                        reserva.totalAcompanhante = int.Parse(dr[8].ToString());
+                        reserva.dataReserva = DateTime.Parse(dr[9].ToString());
+                        reserva.status = dr[10].ToString();
                     }
                     return reserva;
                 }
@@ -95,12 +94,12 @@ namespace ProjectKopezkzky.src.repository
             return true;
         }
 
-        public bool AtualizarReservaValida(Reserva reserva)
+       /* public bool AtualizarReservaValida(Reserva reserva)
         {
             Comando = new SqlCommand();
-            Comando.CommandText = "UPDATE Reserva SET Quarto_ID =@quartoId, Pagamento_ID =@pagamentoId, Quant_Diaria =@quantDiaria," +
-                " Responsavel_ID =@responsavelId, Data_CheckIn =@dataCheckIn, Data_CheckOut =@dataCheckOut, Total_Acompanhante =@totalAcompanhante," +
-                " Data_Reserva =@dataReserva, Status =@status";
+            Comando.CommandText = "UPDATE Reserva SET Quarto_ID @quartoId, Pagamento_ID @pagamentoId, Quant_Diaria @quantDiaria," +
+                " Responsavel_ID @responsavelId, Data_CheckIn @dataCheckIn, Data_CheckOut @dataCheckOut, Total_Acompanhante @totalAcompanhante," +
+                " Data_Reserva @dataReserva, Status @status";
 
             //parametros
             Comando.Parameters.AddWithValue("@quartoId", reserva.id);
@@ -123,7 +122,7 @@ namespace ProjectKopezkzky.src.repository
             }
             return true;
         }
-
+       */
 
         public DataTable Grid() 
         {   
@@ -140,16 +139,15 @@ namespace ProjectKopezkzky.src.repository
 
             objAdp.Fill(dtLista);
 
+            conn.disconnect();
+
             return dtLista;
         }
+
         public List<Reserva> CarregarReservas()
         {
             Comando = new SqlCommand();
-            //Essa funcao ira pegar o texto das textbox criar no banco 
-            // Comando para inserir os dados no banco 
-
             List<Reserva> ListaReserva = new List<Reserva>();
-            
             String myquery = "SELECT * FROM Reserva";
             Comando.CommandText = myquery;
 
@@ -167,22 +165,16 @@ namespace ProjectKopezkzky.src.repository
                         quartoId = Convert.ToInt16(dr["Quarto_ID"]),
                         pagamentoId = Convert.ToInt16(dr["Pagamento_ID"]),
                         quantDiaria = Convert.ToInt16(dr["Quant_Diaria"]),
-                        responsavelId = Convert.ToInt16(dr["Responsavel_ID"]),
+                        responsavelId = Convert.ToString(dr["Responsavel_ID"]),
                         dataCheckIn = Convert.ToDateTime(dr["Data_CheckIn"]),
                         dataCheckOut = Convert.ToDateTime(dr["Data_CheckOut"]),
-                        funcionarioId = Convert.ToInt16(dr["Funcionario_ID"]),
+                        funcionarioId = Convert.ToString(dr["Funcionario_ID"]),
                         totalAcompanhante = Convert.ToInt16(dr["Total_Acompanhante"]),
                         dataReserva = Convert.ToDateTime(dr["Data_Reserva"]),
                         status = Convert.ToString(dr["Status"])
-                    });
-
-                    
+                    });                
                 } 
                   SqlDataAdapter da = new SqlDataAdapter();
-                // SqlCommandBuilder cbuilder = new SqlCommandBuilder(da);
-                // DataTable ba = new DataTable();
-                // da.Fill(ba);
-                //da.Dispose();
 
                 if (ListaReserva.Count() > 0)
                 {
@@ -201,7 +193,6 @@ namespace ProjectKopezkzky.src.repository
             {
                 conn.disconnect();
             }
-        }
-
+        }   
     }
 }

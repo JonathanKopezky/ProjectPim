@@ -12,8 +12,8 @@ namespace ProjectKopezkzky.src.model
         public int quartoId { get; set; }
         public int pagamentoId { get; set; }
         public int quantDiaria { get; set; }
-        public int responsavelId { get; set; }
-        public int funcionarioId { get; set; }
+        public string responsavelId { get; set; }
+        public string funcionarioId { get; set; }
         public DateTime dataCheckIn { get; set; }
         public DateTime dataCheckOut { get; set; }
         public int totalAcompanhante { get; set; }
@@ -26,7 +26,8 @@ namespace ProjectKopezkzky.src.model
             quartoId = 0;
             pagamentoId = 0;
             quantDiaria = 0;
-            responsavelId = 0;
+            funcionarioId = "";
+            responsavelId = "";
             //dataCheckIn = DateTime.Parse("0000-00-00 00:00:00");
             //dataCheckOut = DateTime.Parse("0000-00-00 00:00:00");
             totalAcompanhante = 0;

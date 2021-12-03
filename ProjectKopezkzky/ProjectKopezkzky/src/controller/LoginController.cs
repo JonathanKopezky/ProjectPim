@@ -28,7 +28,6 @@ namespace ProjectKopezkzky.src.controller
             {
                 return false;          
             }
-
         }
     }
 }

@@ -22,21 +22,13 @@ namespace ProjectKopezkzky.src.repository
             conn.connect();
 
             string StrSql = "SELECT ID FROM Reserva";
-            //Conexao com banco 
-
-            //comando e conecta com o banco
             objCommand = new SqlCommand(StrSql, conn.connect());
-
             dr = objCommand.ExecuteReader();
             SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);
-
             DataTable dtLista = new DataTable();
-
             dtLista.Columns.Add("ID", typeof(int));          
             dtLista.Load(dr);
-
             //objAdp.Fill(dtLista);
-
             return dtLista;
         }
     }

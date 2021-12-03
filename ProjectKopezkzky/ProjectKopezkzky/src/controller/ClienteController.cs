@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace ProjectKopezkzky.src.controller
 {
     public class ClienteController
@@ -16,16 +15,10 @@ namespace ProjectKopezkzky.src.controller
         public ClienteRepository clienteRepository = new ClienteRepository();
         public Cliente cliente = new Cliente();
 
-        public ClienteController()
-        {
-
-
-        }
+        public ClienteController(){}
 
         public bool CreateCadCliente(Cliente cliente)
         {
-
-
             if (clienteRepository.CriarCadCliente(cliente))
             {
                 return true;
@@ -36,14 +29,11 @@ namespace ProjectKopezkzky.src.controller
             }
         }
 
-
         public Cliente getCadCliente(Cliente cliente)
         {   //funcao pega o cliente da consulta do banco
             Cliente result = clienteRepository.AlteraCliente(cliente);
            
             return result;
-
-
         }
 
 
@@ -67,7 +57,6 @@ namespace ProjectKopezkzky.src.controller
             }
             else
             {
-
                 return false;
             }
         }
@@ -76,7 +65,6 @@ namespace ProjectKopezkzky.src.controller
         {   // consultar se tiver vai retornar true se não false
             if (clienteRepository.VerificaCad(cliente))
             {
-
                 return true;
             }
             else

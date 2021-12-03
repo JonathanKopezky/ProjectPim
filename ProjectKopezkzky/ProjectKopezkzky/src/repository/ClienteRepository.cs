@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
 using System.Data.SqlClient;
-
 using ProjectKopezkzky.src.model;
 using ProjectKopezkzky.src.config;
-using System.Windows.Forms;
 using ProjectKopezkzky.src.controller;
 using System.Data;
 
@@ -22,7 +18,6 @@ namespace ProjectKopezkzky.src.repository
         Connection conn = new Connection();
         Cliente cliente = new Cliente();
 
-        //VERICAR 
         public bool VerificaCad(Cliente cliente)
         {
             //Procurar no banco se existe  
@@ -52,7 +47,6 @@ namespace ProjectKopezkzky.src.repository
             }
         }
 
-
         public Cliente AlteraCliente(Cliente cliente)
         { //Procurar no banco se existe  
             Comando = new SqlCommand();
@@ -60,20 +54,17 @@ namespace ProjectKopezkzky.src.repository
 
             //PARAMETROS
             Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
-            MessageBox.Show(cliente.CPF);
             Comando.Connection = conn.connect();
             dr = Comando.ExecuteReader();
 
             if (dr.HasRows)
-            {
-               
+            {            
                 // verificando se tem linhas com os parametro 
                 using (dr)
                 {
                    
                     while (dr.Read())
-                    {
-                       
+                    {                   
                         cliente.nome = dr[0].ToString();
                         cliente.sobrenome = dr[1].ToString();
                         cliente.RG = dr[2].ToString();
@@ -90,8 +81,7 @@ namespace ProjectKopezkzky.src.repository
                         cliente.pais = dr[13].ToString();
                         cliente.dataNascimento = dr[14].ToString();
                         cliente.senha = dr[16].ToString();
-                    }
-                    
+                    }                
                     return cliente;
                 }
             }
@@ -100,8 +90,7 @@ namespace ProjectKopezkzky.src.repository
                 conn.disconnect();
                 cliente.LimpaCliente();
                 return cliente;
-            }
-          
+            }     
         }
         public bool CriarCadCliente(Cliente cliente)
         {
@@ -130,20 +119,14 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@Status", int.Parse(cliente.status));
             Comando.Parameters.AddWithValue("@Senha", cliente.senha);
             //FIM
-
             try
             {
-
                 Comando.Connection = conn.connect();
-
                 Comando.ExecuteNonQuery();
-
+                cliente.LimpaCliente();
             }
-
             finally
             {
-
-
                 conn.disconnect();
             }
             return true;
@@ -171,17 +154,14 @@ namespace ProjectKopezkzky.src.repository
             Comando.Parameters.AddWithValue("@cidade",cliente.cidade);
             Comando.Parameters.AddWithValue("@pais",cliente.pais);
             Comando.Parameters.AddWithValue("@complemento",cliente.complemento);
-            Comando.Parameters.AddWithValue("@senha",cliente.senha);
-         
+            Comando.Parameters.AddWithValue("@senha",cliente.senha);  
             Comando.Parameters.AddWithValue("@cpf",cliente.CPF);
             
             try
             {
-
                 Comando.Connection = conn.connect();
-
                 Comando.ExecuteNonQuery();
-
+                cliente.LimpaCliente();
             }
             finally
             {
@@ -191,21 +171,17 @@ namespace ProjectKopezkzky.src.repository
             cliente.LimpaCliente();
         }
 
-
         public bool DeletarCadCliente(Cliente cliente)
         {
             Comando = new SqlCommand();
-
             Comando.CommandText = "UPDATE Cliente  SET Status = @Status  WHERE  CPF = @cpf";
             Comando.Parameters.AddWithValue("@Status", int.Parse(cliente.status));
             Comando.Parameters.AddWithValue("@cpf", cliente.CPF);
             try
             {
-
                 Comando.Connection = conn.connect();
-
                 Comando.ExecuteNonQuery();
-
+                cliente.LimpaCliente();
             }
             catch (SqlException)
             {
@@ -213,38 +189,24 @@ namespace ProjectKopezkzky.src.repository
             }
             finally
             {
-
-
                 conn.disconnect();
             }
             return true;
             cliente.LimpaCliente();
         }
 
-
         public DataTable Grid()
         {
             conn.connect();
-
             string StrSql = "SELECT CPF FROM Cliente";
-            //Conexao com banco 
-
-            //comando e conecta com o banco
             Comando = new SqlCommand(StrSql, conn.connect());
-
             dr = Comando.ExecuteReader();
             SqlDataAdapter objAdp = new SqlDataAdapter(Comando);
-
             DataTable dtLista = new DataTable();
-
             dtLista.Columns.Add("CPF", typeof(string));
             dtLista.Load(dr);
-
             //objAdp.Fill(dtLista);
-
             return dtLista;
         }
-
-
     }
 }
