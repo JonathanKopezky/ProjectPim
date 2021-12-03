@@ -35,6 +35,7 @@ namespace ProjectKopezkzky.src.view
             this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarReservaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarReservaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastralClienteMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,10 +46,8 @@ namespace ProjectKopezkzky.src.view
             this.LblNome = new System.Windows.Forms.Label();
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
-            this.cadastrarFuncBTN = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,7 +74,8 @@ namespace ProjectKopezkzky.src.view
             // 
             this.reservaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarReservaToolStripMenuItem,
-            this.consultarReservaToolStripMenuItem1});
+            this.consultarReservaToolStripMenuItem1,
+            this.consultarReservaToolStripMenuItem2});
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
             this.reservaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.reservaToolStripMenuItem.Text = "Reserva";
@@ -91,6 +91,12 @@ namespace ProjectKopezkzky.src.view
             this.consultarReservaToolStripMenuItem1.Name = "consultarReservaToolStripMenuItem1";
             this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(171, 22);
             this.consultarReservaToolStripMenuItem1.Text = "Consultar Reserva ";
+            // 
+            // consultarReservaToolStripMenuItem2
+            // 
+            this.consultarReservaToolStripMenuItem2.Name = "consultarReservaToolStripMenuItem2";
+            this.consultarReservaToolStripMenuItem2.Size = new System.Drawing.Size(171, 22);
+            this.consultarReservaToolStripMenuItem2.Text = "Consultar Reserva ";
             // 
             // clientesToolStripMenuItem
             // 
@@ -185,22 +191,11 @@ namespace ProjectKopezkzky.src.view
             // 
             // panelHome
             // 
-            this.panelHome.Controls.Add(this.cadastrarFuncBTN);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHome.Location = new System.Drawing.Point(0, 24);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(784, 587);
             this.panelHome.TabIndex = 4;
-            // 
-            // cadastrarFuncBTN
-            // 
-            this.cadastrarFuncBTN.Location = new System.Drawing.Point(613, 498);
-            this.cadastrarFuncBTN.Name = "cadastrarFuncBTN";
-            this.cadastrarFuncBTN.Size = new System.Drawing.Size(145, 23);
-            this.cadastrarFuncBTN.TabIndex = 0;
-            this.cadastrarFuncBTN.Text = "Cadastrar Funcionário";
-            this.cadastrarFuncBTN.UseVisualStyleBackColor = true;
-            this.cadastrarFuncBTN.Click += new System.EventHandler(this.cadastrarFuncBTN_Click);
             // 
             // FrmHome
             // 
@@ -219,7 +214,6 @@ namespace ProjectKopezkzky.src.view
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelHome.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +236,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.Button cadastrarFuncBTN;
+        private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem2;
     }
 }

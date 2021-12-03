@@ -60,7 +60,7 @@ namespace ProjectKopezkzky.src.view
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormShow(new FrmConsultarCliente());
+             FormShow(new FrmConsultarCliente());
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +78,12 @@ namespace ProjectKopezkzky.src.view
             FrmCadastroFuncionario fmrCadastroFuncionario = new FrmCadastroFuncionario();
 
             fmrCadastroFuncionario.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmConsultarFuncionario frmConsultarFuncionario = new FrmConsultarFuncionario();
+            frmConsultarFuncionario.Show();
         }
     }
 }
