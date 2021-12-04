@@ -34,8 +34,6 @@ namespace ProjectKopezkzky.src.view
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarReservaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarReservaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,6 +43,10 @@ namespace ProjectKopezkzky.src.view
             this.LblNome = new System.Windows.Forms.Label();
             this.btnHomeSair = new System.Windows.Forms.Button();
             this.panelHome = new System.Windows.Forms.Panel();
+            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +57,8 @@ namespace ProjectKopezkzky.src.view
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.reservaToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.funcionáriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -72,12 +75,10 @@ namespace ProjectKopezkzky.src.view
             // reservaToolStripMenuItem
             // 
             this.reservaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarReservaToolStripMenuItem,
-            this.consultarReservaToolStripMenuItem1,
-            this.consultarReservaToolStripMenuItem2});
+            this.consultarReservaToolStripMenuItem});
             this.reservaToolStripMenuItem.Name = "reservaToolStripMenuItem";
-            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.reservaToolStripMenuItem.Text = "Reserva";
+            this.reservaToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.reservaToolStripMenuItem.Text = "Reservas";
             // 
             // consultarReservaToolStripMenuItem
             // 
@@ -86,22 +87,11 @@ namespace ProjectKopezkzky.src.view
             this.consultarReservaToolStripMenuItem.Text = "Nova Reserva";
             this.consultarReservaToolStripMenuItem.Click += new System.EventHandler(this.consultarReservaToolStripMenuItem_Click_1);
             // 
-            // consultarReservaToolStripMenuItem1
-            // 
-            this.consultarReservaToolStripMenuItem1.Name = "consultarReservaToolStripMenuItem1";
-            this.consultarReservaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.consultarReservaToolStripMenuItem1.Text = "Consultar Reserva ";
-            // 
-            // consultarReservaToolStripMenuItem2
-            // 
-            this.consultarReservaToolStripMenuItem2.Name = "consultarReservaToolStripMenuItem2";
-            this.consultarReservaToolStripMenuItem2.Size = new System.Drawing.Size(171, 22);
-            this.consultarReservaToolStripMenuItem2.Text = "Consultar Reserva ";
-            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarClienteToolStripMenuItem});
+            this.consultarClienteToolStripMenuItem,
+            this.cadastrarClienteToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -189,17 +179,48 @@ namespace ProjectKopezkzky.src.view
             this.panelHome.Size = new System.Drawing.Size(784, 587);
             this.panelHome.TabIndex = 4;
             // 
+            // funcionáriosToolStripMenuItem
+            // 
+            this.funcionáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarFuncionárioToolStripMenuItem,
+            this.consultarFuncionárioToolStripMenuItem});
+            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
+            // 
+            // cadastrarFuncionárioToolStripMenuItem
+            // 
+            this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
+            this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
+            this.cadastrarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionárioToolStripMenuItem_Click);
+            // 
+            // consultarFuncionárioToolStripMenuItem
+            // 
+            this.consultarFuncionárioToolStripMenuItem.Name = "consultarFuncionárioToolStripMenuItem";
+            this.consultarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.consultarFuncionárioToolStripMenuItem.Text = "Consultar Funcionário";
+            this.consultarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.consultarFuncionárioToolStripMenuItem_Click);
+            // 
+            // cadastrarClienteToolStripMenuItem
+            // 
+            this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
+            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente";
+            this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
+            // 
             // FrmHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.panelHome);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.HelpButton = true;
             this.Name = "FrmHome";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Kopesky";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -216,7 +237,6 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem reservaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
@@ -227,6 +247,9 @@ namespace ProjectKopezkzky.src.view
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarReservaToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarFuncionárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarClienteToolStripMenuItem;
     }
 }

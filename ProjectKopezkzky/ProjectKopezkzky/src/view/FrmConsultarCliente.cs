@@ -60,7 +60,7 @@ namespace ProjectKopezkzky.src.view
         private void btnDelete_Click(object sender, EventArgs e)
         {
          
-            cliente.CPF = txtcpf.Text;
+            cliente.CPF = mskTxtBoxCPF.Text;
             cliente.status = "0";
             if (clienteController.DeletCad(cliente))
             {
@@ -76,7 +76,7 @@ namespace ProjectKopezkzky.src.view
         private void btnBuscar_Click(object sender, EventArgs e)
         {
            
-            cliente.CPF = txtcpf.Text;
+            cliente.CPF = mskTxtBoxCPF.Text;
             if (clienteController.ConsultarCad(cliente))
             {// so vai ativar o botao delete e alterar se ja ouver cadastro
                 MessageBox.Show("Cliente ja cadastrado");
@@ -97,7 +97,7 @@ namespace ProjectKopezkzky.src.view
 
             public void blockBtn()
             {   //desativa e ativa o  bnt buscar caso txt for vazio
-                if (!string.IsNullOrWhiteSpace(txtcpf.Text)) 
+                if (!string.IsNullOrWhiteSpace(mskTxtBoxCPF.Text)) 
                 {
                     btnBuscar.Enabled = true;
                 } else 
@@ -109,6 +109,11 @@ namespace ProjectKopezkzky.src.view
 
      
         private void txtcpf_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void mskTxtBoxCPF_TextChanged(object sender, EventArgs e)
         {
             blockBtn();
         }

@@ -59,11 +59,11 @@ namespace ProjectKopezkzky.src.view
             // 
             // ReservationIdTb
             // 
-            this.ReservationIdTb.Location = new System.Drawing.Point(10, 177);
+            this.ReservationIdTb.Location = new System.Drawing.Point(10, 147);
             this.ReservationIdTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ReservationIdTb.Name = "ReservationIdTb";
             this.ReservationIdTb.Size = new System.Drawing.Size(110, 23);
-            this.ReservationIdTb.TabIndex = 0;
+            this.ReservationIdTb.TabIndex = 6;
             // 
             // Datein
             // 
@@ -74,17 +74,17 @@ namespace ProjectKopezkzky.src.view
             this.Datein.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Datein.Name = "Datein";
             this.Datein.Size = new System.Drawing.Size(214, 21);
-            this.Datein.TabIndex = 11;
+            this.Datein.TabIndex = 1;
             this.Datein.ValueChanged += new System.EventHandler(this.Datein_ValueChanged);
             // 
             // AddReservaBtn
             // 
             this.AddReservaBtn.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.AddReservaBtn.Location = new System.Drawing.Point(614, 104);
+            this.AddReservaBtn.Location = new System.Drawing.Point(613, 83);
             this.AddReservaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddReservaBtn.Name = "AddReservaBtn";
             this.AddReservaBtn.Size = new System.Drawing.Size(113, 40);
-            this.AddReservaBtn.TabIndex = 13;
+            this.AddReservaBtn.TabIndex = 9;
             this.AddReservaBtn.Text = "Adicionar Reserva";
             this.AddReservaBtn.UseVisualStyleBackColor = false;
             this.AddReservaBtn.Click += new System.EventHandler(this.AddReservaBtn_Click);
@@ -110,15 +110,16 @@ namespace ProjectKopezkzky.src.view
             // ReservationGridView
             // 
             this.ReservationGridView.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ReservationGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.ReservationGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReservationGridView.GridColor = System.Drawing.Color.SeaGreen;
-            this.ReservationGridView.Location = new System.Drawing.Point(7, 332);
+            this.ReservationGridView.Location = new System.Drawing.Point(7, 302);
             this.ReservationGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ReservationGridView.Name = "ReservationGridView";
             this.ReservationGridView.RowHeadersWidth = 51;
             this.ReservationGridView.RowTemplate.Height = 29;
-            this.ReservationGridView.Size = new System.Drawing.Size(788, 272);
-            this.ReservationGridView.TabIndex = 18;
+            this.ReservationGridView.Size = new System.Drawing.Size(788, 302);
+            this.ReservationGridView.TabIndex = 12;
             this.ReservationGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationGridView_CellContentClick);
             // 
             // Dateout
@@ -130,46 +131,46 @@ namespace ProjectKopezkzky.src.view
             this.Dateout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dateout.Name = "Dateout";
             this.Dateout.Size = new System.Drawing.Size(214, 21);
-            this.Dateout.TabIndex = 20;
+            this.Dateout.TabIndex = 2;
             this.Dateout.ValueChanged += new System.EventHandler(this.Dateout_ValueChanged);
             // 
             // EditReservaBtn
             // 
             this.EditReservaBtn.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.EditReservaBtn.Location = new System.Drawing.Point(614, 162);
+            this.EditReservaBtn.Location = new System.Drawing.Point(613, 141);
             this.EditReservaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditReservaBtn.Name = "EditReservaBtn";
             this.EditReservaBtn.Size = new System.Drawing.Size(113, 40);
-            this.EditReservaBtn.TabIndex = 21;
+            this.EditReservaBtn.TabIndex = 10;
             this.EditReservaBtn.Text = "Editar Reserva";
             this.EditReservaBtn.UseVisualStyleBackColor = false;
             // 
             // DeleteReservaBtn
             // 
             this.DeleteReservaBtn.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.DeleteReservaBtn.Location = new System.Drawing.Point(614, 219);
+            this.DeleteReservaBtn.Location = new System.Drawing.Point(613, 198);
             this.DeleteReservaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteReservaBtn.Name = "DeleteReservaBtn";
             this.DeleteReservaBtn.Size = new System.Drawing.Size(113, 40);
-            this.DeleteReservaBtn.TabIndex = 22;
+            this.DeleteReservaBtn.TabIndex = 11;
             this.DeleteReservaBtn.Text = "Deletar Reserva";
             this.DeleteReservaBtn.UseVisualStyleBackColor = false;
             // 
             // totalAcompTb
             // 
-            this.totalAcompTb.Location = new System.Drawing.Point(326, 177);
+            this.totalAcompTb.Location = new System.Drawing.Point(326, 147);
             this.totalAcompTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.totalAcompTb.Name = "totalAcompTb";
             this.totalAcompTb.Size = new System.Drawing.Size(133, 23);
-            this.totalAcompTb.TabIndex = 25;
+            this.totalAcompTb.TabIndex = 8;
             // 
             // pagamentoIdTb
             // 
-            this.pagamentoIdTb.Location = new System.Drawing.Point(172, 177);
+            this.pagamentoIdTb.Location = new System.Drawing.Point(172, 147);
             this.pagamentoIdTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pagamentoIdTb.Name = "pagamentoIdTb";
             this.pagamentoIdTb.Size = new System.Drawing.Size(110, 23);
-            this.pagamentoIdTb.TabIndex = 26;
+            this.pagamentoIdTb.TabIndex = 7;
             // 
             // roomcb
             // 
@@ -178,7 +179,7 @@ namespace ProjectKopezkzky.src.view
             this.roomcb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomcb.Name = "roomcb";
             this.roomcb.Size = new System.Drawing.Size(133, 23);
-            this.roomcb.TabIndex = 27;
+            this.roomcb.TabIndex = 5;
             // 
             // clientIdcb
             // 
@@ -187,7 +188,7 @@ namespace ProjectKopezkzky.src.view
             this.clientIdcb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clientIdcb.Name = "clientIdcb";
             this.clientIdcb.Size = new System.Drawing.Size(133, 23);
-            this.clientIdcb.TabIndex = 28;
+            this.clientIdcb.TabIndex = 3;
             // 
             // funcionarioIdcb
             // 
@@ -196,7 +197,7 @@ namespace ProjectKopezkzky.src.view
             this.funcionarioIdcb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.funcionarioIdcb.Name = "funcionarioIdcb";
             this.funcionarioIdcb.Size = new System.Drawing.Size(133, 23);
-            this.funcionarioIdcb.TabIndex = 29;
+            this.funcionarioIdcb.TabIndex = 4;
             this.funcionarioIdcb.SelectedIndexChanged += new System.EventHandler(this.funcionarioIdcb_SelectedIndexChanged);
             // 
             // label3
@@ -230,7 +231,7 @@ namespace ProjectKopezkzky.src.view
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(172, 160);
+            this.label6.Location = new System.Drawing.Point(172, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 15);
             this.label6.TabIndex = 33;
@@ -239,7 +240,7 @@ namespace ProjectKopezkzky.src.view
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(326, 160);
+            this.label7.Location = new System.Drawing.Point(326, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 15);
             this.label7.TabIndex = 34;
@@ -248,7 +249,7 @@ namespace ProjectKopezkzky.src.view
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 160);
+            this.label8.Location = new System.Drawing.Point(10, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 15);
             this.label8.TabIndex = 35;
@@ -276,14 +277,14 @@ namespace ProjectKopezkzky.src.view
             this.panelDadosReserva.Controls.Add(this.ReservationIdTb);
             this.panelDadosReserva.Location = new System.Drawing.Point(12, 50);
             this.panelDadosReserva.Name = "panelDadosReserva";
-            this.panelDadosReserva.Size = new System.Drawing.Size(517, 212);
+            this.panelDadosReserva.Size = new System.Drawing.Size(517, 186);
             this.panelDadosReserva.TabIndex = 36;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(23, 294);
+            this.label9.Location = new System.Drawing.Point(23, 264);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 30);
             this.label9.TabIndex = 37;
@@ -303,7 +304,7 @@ namespace ProjectKopezkzky.src.view
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(636, 61);
+            this.label11.Location = new System.Drawing.Point(635, 40);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 30);
             this.label11.TabIndex = 39;
@@ -322,8 +323,9 @@ namespace ProjectKopezkzky.src.view
             this.Controls.Add(this.EditReservaBtn);
             this.Controls.Add(this.ReservationGridView);
             this.Controls.Add(this.AddReservaBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmReserva";
             this.Text = "FrmReserva";
             this.Load += new System.EventHandler(this.FrmReserva_Load);

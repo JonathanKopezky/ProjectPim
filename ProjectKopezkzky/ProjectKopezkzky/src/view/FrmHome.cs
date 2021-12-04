@@ -60,7 +60,9 @@ namespace ProjectKopezkzky.src.view
 
         private void consultarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             FormShow(new FrmConsultarCliente());
+            FrmConsultarCliente frmConsultarCliente = new FrmConsultarCliente();
+
+            frmConsultarCliente.ShowDialog();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,6 +93,27 @@ namespace ProjectKopezkzky.src.view
             FrmReserva frmReserva = new FrmReserva();
 
             frmReserva.ShowDialog();
+        }
+
+        private void cadastrarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroFuncionario frmCadastroFuncionario = new FrmCadastroFuncionario();
+
+            frmCadastroFuncionario.ShowDialog();
+        }
+
+        private void consultarFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultarFuncionario frmConsultarFuncionario = new FrmConsultarFuncionario();
+            
+            frmConsultarFuncionario.ShowDialog();
+        }
+
+        private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadCliente formCadCliente = new FormCadCliente();
+
+            formCadCliente.ShowDialog();
         }
     }
 }
