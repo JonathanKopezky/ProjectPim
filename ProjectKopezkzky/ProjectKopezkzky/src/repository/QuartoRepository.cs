@@ -20,8 +20,7 @@ namespace ProjectKopezkzky.src.repository
         public DataTable Grid()
         {
             conn.connect();
-
-            string StrSql = "SELECT ID FROM Reserva";
+            string StrSql = "SELECT ID FROM Quarto";
             objCommand = new SqlCommand(StrSql, conn.connect());
             dr = objCommand.ExecuteReader();
             SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);

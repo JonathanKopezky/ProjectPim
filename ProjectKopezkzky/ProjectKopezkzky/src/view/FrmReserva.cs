@@ -61,7 +61,6 @@ namespace ProjectKopezkzky.src.view
             reserva.dataReserva = DateTime.Now;
             TimeSpan date = Convert.ToDateTime(Dateout.Value) - Convert.ToDateTime(Datein.Value);
             int totalDias = date.Days;
-            MessageBox.Show(totalDias.ToString());
             reserva.quantDiaria = totalDias;
             //Convert.ToInt32(Dateout.Value.Day - Datein.Value.Day);
             reserva.pagamentoId = int.Parse(pagamentoIdTb.Text);
